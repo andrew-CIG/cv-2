@@ -22,6 +22,7 @@ function mdRaw() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/cv-2/',
   plugins: [vue(), vueJsx(), mdRaw()],
   resolve: {
     alias: {
