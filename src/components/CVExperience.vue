@@ -38,7 +38,7 @@ const iconAliases: Record<string, string> = {
 const normalize = (s: string) =>
   s.trim().toLowerCase().replace(/\s+/g, '').replace(/[\.+-]/g, '');
 
-const iconSrc = (name: string, folder = 'tech') => {
+const iconSrc = (name: string, folder = 'companies') => {
   const key = normalize(name);
   const file = iconAliases[key] ?? name; // fall back to original if not aliased
   return `${BASE}${folder}/${file}.png`;
