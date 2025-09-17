@@ -1,28 +1,28 @@
 <script setup lang="ts">
 let education = [
   {
-    name: "University Of Applied Sciences of Southern Switzerland (SUPSI)",
-    location: "Lugano, Switzerland",
+    name: "University Of Prince Edward Island",
+    location: "Charlottetown, PE",
     icon: "supsi.jpg",
     titles: [
       {
-        title: "Bachelor of Science in Computer Engineering",
-        from: 2016,
-        to: 2019,
-        description: "Thesis: DUPLEX Production Management",
+        title: "Executive MBA",
+        from: 2022,
+        to: 2024,
+        description: "Innovation and Evidence-based Management",
       },
     ],
   },
   {
-    name: "Scuola Arti e Mestieri Trevano",
-    location: "Lugano, Switzerland",
+    name: "McGill University",
+    location: "Montreal, Canada",
+    icon: "placeholder",
     titles: [
       {
-        title: "FCP as Multimedia Electronics Technician and FVB",
-        from: 2011,
-        to: 2015,
-        description:
-          "Federal Certificate of Proficency (FCP) and Federal Vocational Baccalaureate (FVB)",
+        title: "Bachelors of Science",
+        from: 2004,
+        to: 2008,
+        description: "Major in Physiology",
       },
     ],
   },
