@@ -59,7 +59,7 @@ let experiences: Experience[] = [
         from: "January 2019",
         to: "December 2010",
         description: marked.parse(move2019),
-        organizations: [
+        organisations: [
           "gcp",
           "aws",
           "go",
@@ -264,8 +264,10 @@ let experiences: Experience[] = [
                     :src="`/tech/${language}.svg`"
                     :title="language"
                     v-for="language in position.technologies"
+                    :key="language"
                   />
                 </div>
+              </div>
 
               <div class="organisations-section" v-if="position.organisations">
                 <h4>Organisations</h4>
@@ -275,6 +277,7 @@ let experiences: Experience[] = [
                     :src="`/organisations/${language}.svg`"
                     :title="language"
                     v-for="language in position.organisations"
+                    :key="language"
                   />
                 </div>
               </div>
@@ -392,7 +395,18 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-
+          
+            img.tech-entry {
+              background-color: #fff;
+              width: $logoSize;
+              height: $logoSize;
+              padding: $logoPadding;
+              border-radius: 5px;
+              display: block;
+              overflow: hidden;
+            }
+          }
+          
           div.organisations {
             page-break-inside: auto;
             display: grid;
@@ -408,7 +422,7 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-
+          
             img.tech-entry {
               background-color: #fff;
               width: $logoSize;
