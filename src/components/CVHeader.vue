@@ -29,11 +29,12 @@ let contactInfo: ContactMap = {
     value: "profile",
     url: "www.linkedin.com/in/andrew-raymer-923b0a9",
   },
-  website: {
-    icon: "",
-    value: "",
-    url: "",
-  }
+  // web: { icon: "fa-solid fa-link", value: "denv.it", url: "https://denv.it" },
+  // github: {
+    // icon: "fa-brands fa-github",
+    // value: "@denysvitali",
+    // url: "https://github.com/denysvitali",
+  // },
 };
 </script>
 <template>
