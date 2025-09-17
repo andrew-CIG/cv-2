@@ -230,7 +230,8 @@ let experiences: Experience[] = [
     <h2>Experience</h2>
     <div class="experiences">
       <div class="company" v-for="exp in experiences">
-        <img :src="'/companies/square/' + exp.icon" class="company-logo" />
+        <img ::src="new URL(`/companies/square/${exp.icon}`, import.meta.env.BASE_URL).href"
+ class="company-logo" />
 
         <div class="experience-top">
           <div class="company-name">{{ exp.company }}</div>
