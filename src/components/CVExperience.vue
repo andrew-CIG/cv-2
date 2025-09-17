@@ -307,7 +307,7 @@ let experiences: Experience[] = [
                 <div class="tech-stack">
                   <img
                     class="tech-entry"
-                    :src="iconSrc(language)"
+                    :src="BASE + 'tech/' + language + '.png'"
                     :title="language"
                     v-for="language in position.technologies"
                     :key="language"
@@ -322,7 +322,7 @@ let experiences: Experience[] = [
                 <div class="organisations">
                   <img
                     class="organisations-entry"
-                    :src="iconSrc(language)"
+                    :src="BASE + 'organisations/' + language + '.png'"
                     :title="language"
                     v-for="language in position.organisations"
                     :key="language"
