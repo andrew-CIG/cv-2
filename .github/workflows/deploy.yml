@@ -23,11 +23,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '20.x'
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Install deps
         run: yarn install --frozen-lockfile
+      - run: yarn type-check
       - name: Build
         run: npm run build
       - name: Upload artifact
