@@ -2,10 +2,8 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 let basicInfo = {
-  home: { icon: "🏠", value: "Zurich, Switzerland" },
-  phone: { icon: "📞", value: "+41 79 366 43 60" },
-  birthday: { icon: "🎂", value: "September 29, 1996" },
-  citizenship: { icon: "🇨🇭", value: "Swiss Citizen" },
+  home: { icon: "🏠", value: "Charlottetown, PEI, Canada" },
+  phone: { icon: "📞", value: "+1 902 916 4466" },
 };
 
 type ContactInfo = {
@@ -21,19 +19,13 @@ type ContactMap = {
 let contactInfo: ContactMap = {
   email: {
     icon: "fa-solid fa-envelope",
-    value: "denys@denv.it",
-    url: "mailto:denys@denv.it",
-  },
-  web: { icon: "fa-solid fa-link", value: "denv.it", url: "https://denv.it" },
-  github: {
-    icon: "fa-brands fa-github",
-    value: "@denysvitali",
-    url: "https://github.com/denysvitali",
+    value: "andrew.m.raymer@gmail.com",
+    url: "mailto:andrew.m.raymer@gmail.com",
   },
   linkedin: {
     icon: "fa-brands fa-linkedin",
-    value: "denysvitali",
-    url: "https://www.linkedin.com/in/denysvitali/",
+    value: "andrew-raymer",
+    url: "www.linkedin.com/in/andrew-raymer-923b0a9",
   },
 };
 </script>
@@ -41,7 +33,7 @@ let contactInfo: ContactMap = {
   <header>
     <img class="profile-picture" src="/profile.jpg" />
     <div class="contact-info">
-      <div class="my-name">Denys Vitali</div>
+      <div class="my-name">Andrew Raymer</div>
       <div class="basic-info-grid">
         <div class="info-element" v-for="element of basicInfo">
           <div class="icon">{{ element.icon }}</div>
