@@ -2,7 +2,7 @@
 // import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 let basicInfo = {
-  home: { icon: "🏠", value: "Charlottetown, PEI, Canada" },
+  home: { icon: "🏠", value: "PEI, Canada" },
   phone: { icon: "📞", value: "+1 902 916 4466" },
   // birthday: { icon: "🎂", value: "July 14, 1986" },
   // citizenship: { icon: "🇨🇭", value: "Swiss Citizen" },
@@ -29,6 +29,11 @@ let contactInfo: ContactMap = {
     value: "profile",
     url: "www.linkedin.com/in/andrew-raymer-923b0a9",
   },
+  website: {
+    icon: "",
+    value: "",
+    url: "",
+  }
 };
 </script>
 <template>
