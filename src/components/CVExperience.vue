@@ -7,7 +7,7 @@ import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
 import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
 import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
 import NianticExp2023 from "@/assets/experiences/2023-niantic.md";
-import OpenSystems2025 from "@/assets/experiences/2025-opensystems.md";
+import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
 
 type Position = {
@@ -29,30 +29,21 @@ type Experience = {
 
 let experiences: Experience[] = [
   {
-    company: "Open Systems",
-    url: "https://open-systems.com",
-    icon: "open-systems.svg",
-    location: "Zurich, Switzerland",
+    company: "Canada's Island Garden Inc.",
+    url: "https://www.linkedin.com/company/canadasislandgarden/",
+    icon: "CIG.png",
+    location: "PEI, Canada",
     positions: [
       {
-        title: "Senior Platform Observability Engineer",
-        from: "January 2025",
+        title: "Vice President - Supply Chain",
+        from: "January 2020",
         to: "Today",
-        description: marked.parse(OpenSystems2025),
+        description: marked.parse(CIG2020),
         technologies: [
-          "go",
-          "grafana",
-          "tempo",
-          "loki",
-          "github",
-          "otel",
-          "prometheus",
-          "thanos",
-          "azure",
-          "kubernetes",
-          "clickhouse",
-          "jaeger",
-          "linux",
+          "SAP",
+          "Sage X3",
+          "Power BI",
+          "Python",
         ],
       },
     ],
