@@ -21,12 +21,12 @@ type ContactMap = {
 let contactInfo: ContactMap = {
   email: {
     icon: "fa-solid fa-envelope",
-    value: "andrew.m.raymer@gmail.com",
+    value: "email",
     url: "mailto:andrew.m.raymer@gmail.com",
   },
   linkedin: {
     icon: "fa-brands fa-linkedin",
-    value: "andrew-raymer",
+    value: "profile",
     url: "www.linkedin.com/in/andrew-raymer-923b0a9",
   },
 };
