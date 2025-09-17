@@ -6,11 +6,47 @@ import SyndeckExp2018 from "@/assets/experiences/2018-syndeck.md";
 import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
 import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
 import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
+import technoserve2009 from "@/assets/experiences/2009-ts.md"
+import CLUSA2009 from "@/assets/experiences/2009-clusa.md";
+import MM2011 from "@/assets/experiences/2011-mm.md";
+import Oakville2015 from "@/assets/experioences/2015-oakville.md"
+import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
 const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
 
+// Map normalized names -> actual PNG filenames (without extension)
+const iconAliases: Record<string, string> = {
+  // tech
+  'sap': 'SAP',
+  'powerbi': 'powerBI',
+  'sagex3': 'sageX3',
+  'python': 'python',
+  // organisations (if you use them)
+  'clusa': 'CLUSA',
+  'core': 'CORE',
+  'csp': 'CSP',
+  'fpg': 'FPG',
+  'habitat_pei': 'habitat_pei',
+  'mdg': 'MDG',
+  'mm': 'MM',
+  'oakville': 'Oakville',
+  'technoserve': 'technoserve',
+};
+
+const normalize = (s: string) =>
+  s.trim().toLowerCase().replace(/\s+/g, '').replace(/[\.+-]/g, '');
+
+const iconSrc = (name: string, folder = 'tech') => {
+  const key = normalize(name);
+  const file = iconAliases[key] ?? name; // fall back to original if not aliased
+  return `${BASE}${folder}/${file}.png`;
+};
+
+const hideOnError = (e: Event) => {
+  (e.target as HTMLImageElement).style.display = 'none';
+};
 
 type Position = {
   title: string;
@@ -275,6 +311,7 @@ let experiences: Experience[] = [
                     :title="language"
                     v-for="language in position.technologies"
                     :key="language"
+                    @error="hideOnError"
                   />
                 </div>
               </div>
@@ -289,6 +326,7 @@ let experiences: Experience[] = [
                     :title="language"
                     v-for="language in position.organisations"
                     :key="language"
+                    @error="hideOnError"
                   />
                 </div>
               </div>
