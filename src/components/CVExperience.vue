@@ -9,6 +9,8 @@ import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
+const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
+
 
 type Position = {
   title: string;
@@ -230,8 +232,7 @@ let experiences: Experience[] = [
     <h2>Experience</h2>
     <div class="experiences">
       <div class="company" v-for="exp in experiences">
-        <img ::src="new URL(`/companies/square/${exp.icon}`, import.meta.env.BASE_URL).href"
- class="company-logo" />
+        <img :src="BASE + 'companies/square/' + exp.icon" class="company-logo" />
 
         <div class="experience-top">
           <div class="company-name">{{ exp.company }}</div>
@@ -262,7 +263,7 @@ let experiences: Experience[] = [
                 <div class="tech-stack">
                   <img
                     class="tech-entry"
-                    :src="`/tech/${language}.svg`"
+                    :src="BASE + 'tech/' + language + '.svg'"
                     :title="language"
                     v-for="language in position.technologies"
                     :key="language"
@@ -275,7 +276,7 @@ let experiences: Experience[] = [
                 <div class="organisations">
                   <img
                     class="organisations-entry"
-                    :src="`/organisations/${language}.svg`"
+                    :src="BASE + 'organisations/' + language + '.svg'"
                     :title="language"
                     v-for="language in position.organisations"
                     :key="language"
