@@ -57,7 +57,7 @@ let experiences: Experience[] = [
       {
         title: "Volunteer",
         from: "January 2019",
-        to: "December 2010",
+        to: "December 2019",
         description: marked.parse(move2019),
         organisations: [
           "gcp",
@@ -406,7 +406,7 @@ div.experiences {
               overflow: hidden;
             }
           }
-          
+
           div.organisations {
             page-break-inside: auto;
             display: grid;
