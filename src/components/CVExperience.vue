@@ -17,10 +17,17 @@ type Position = {
   from: string;
   to: string;
   description: string;
-  technologies: string[];
+  technologies?: string[];
+  organisations?: string[];
 };
 
-type Experience = {
+const hasTech = (p: Position) =>
+  Array.isArray(p.technologies) && p.technologies.length > 0;
+
+const hasOrgs = (p: Position) =>
+  Array.isArray(p.organisations) && p.organisations.length > 0;
+
+  type Experience = {
   company: string;
   url?: string;
   location: string;
@@ -258,7 +265,8 @@ let experiences: Experience[] = [
 
               <div class="description" v-html="position.description"></div>
 
-              <div class="tech-stack-section" v-if="position.technologies">
+              <!-- Tech Stack (optional)-->
+              <div class="tech-stack-section" v-if="hasTech(position)">
                 <h4>Tech Stack</h4>
                 <div class="tech-stack">
                   <img
@@ -271,7 +279,8 @@ let experiences: Experience[] = [
                 </div>
               </div>
 
-              <div class="organisations-section" v-if="position.organisations">
+              <!--Organisations (optional)-->
+              <div class="organisations-section" v-if="hasOrgs(position)">
                 <h4>Organisations</h4>
                 <div class="organisations">
                   <img
