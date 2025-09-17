@@ -28,7 +28,7 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Install deps
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Build
         run: npm run build
       - name: Upload artifact
