@@ -1,3 +1,3 @@
-I am a Software Engineer and DevOps Engineer with a background in security.
+I am a Supply Chain executive with over 15 years of international experience in agribusiness and manufacturing companies.
   
-I am passionate about software development, cloud platforms, and security, with a deep commitment to excellence. I have a particular affinity for working with and contributing to open-source technologies. Problem-solving is at the core of my work, and I consistently apply my expertise and knowledge to deliver high-quality results. I am dedicated to continuous learning and always eager to expand my skill set.
+I am passionate about building high-performance, operations. I have a particular affinity for data-driven decision-making and evidence-based management. Problem-solving is at the core of my work, and I consistently apply my expertise and knowledge to deliver high-quality results. I am dedicated to continuous learning and always eager to expand my skill set.
