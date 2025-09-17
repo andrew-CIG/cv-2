@@ -7,8 +7,8 @@ let education = [
     titles: [
       {
         title: "Executive MBA",
-        from: 2022,
-        to: 2024,
+        from: 2021,
+        to: 2023,
         description: "Innovation and Evidence-based Management",
       },
     ],
