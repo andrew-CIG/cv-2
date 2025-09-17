@@ -3,7 +3,7 @@ let education = [
   {
     name: "University Of Prince Edward Island",
     location: "Charlottetown, PE",
-    icon: "supsi.jpg",
+    icon: "upei.jpg",
     titles: [
       {
         title: "Executive MBA",
@@ -16,7 +16,7 @@ let education = [
   {
     name: "McGill University",
     location: "Montreal, Canada",
-    icon: "placeholder",
+    icon: "mcgill.svg",
     titles: [
       {
         title: "Bachelors of Science",
