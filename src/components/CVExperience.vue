@@ -315,13 +315,9 @@ div.experiences {
     grid-auto-rows: minmax(100px, auto);
     column-gap: 40px;
 
-    div.page-break {
-      display: none;
-    }
+    div.page-break { display: none; }
 
-    div.company-name {
-      font-size: 1.2em;
-    }
+    div.company-name { font-size: 1.2em; }
 
     img.company-logo {
       page-break-inside: avoid;
@@ -350,14 +346,8 @@ div.experiences {
       height: $companyLogoSize;
       page-break-before: avoid;
 
-      div.company-name {
-        font-weight: bold;
-      }
-
-      div.location {
-        font-size: 1em;
-        color: var(--color-text-soft);
-      }
+      div.company-name { font-weight: bold; }
+      div.location { font-size: 1em; color: var(--color-text-soft); }
     }
 
     div.experience-desc {
@@ -373,10 +363,7 @@ div.experiences {
         div.position {
           page-break-before: auto;
 
-          div.title {
-            font-weight: bold;
-            font-size: 1em;
-          }
+          div.title { font-weight: bold; font-size: 1em; }
 
           div.from-to {
             display: flex;
@@ -386,10 +373,7 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description {
-            margin-top: 2em;
-            page-break-after: auto;
-          }
+          div.description { margin-top: 2em; page-break-after: auto; }
 
           div.tech-stack {
             page-break-inside: auto;
@@ -406,7 +390,7 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-          
+
             img.tech-entry {
               background-color: #fff;
               width: $logoSize;
@@ -433,8 +417,8 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-          
-            img.tech-entry {
+
+            img.organisations-entry {
               background-color: #fff;
               width: $logoSize;
               height: $logoSize;
@@ -449,6 +433,108 @@ div.experiences {
     }
   }
 }
+
+@media print {
+  $companyLogoSize: 50px;
+
+  div.experiences {
+    row-gap: 1em;
+
+    div.company {
+      grid-template-columns: $companyLogoSize 1fr;
+      grid-auto-rows: auto;
+
+      div.experience-top {
+        height: $companyLogoSize;
+        margin-bottom: 1em;
+      }
+
+      div.page-break { display: block; page-break-after: always; }
+
+      img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
+
+      div.experience-desc {
+        div.positions {
+          div.position {
+            div.description { margin-top: 1em; }
+
+            div.tech-stack {
+              $logoSize: 35px;
+              $countColumns: 8;
+              $gap: 8px;
+              $logoPadding: 4px;
+              grid-template-columns: repeat($countColumns, $logoSize);
+              width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+              column-gap: $gap;
+              row-gap: $gap;
+
+              img.tech-entry {
+                width: $logoSize;
+                height: $logoSize;
+                padding: $logoPadding;
+              }
+            }
+
+            div.organisations {
+              $logoSize: 35px;
+              $countColumns: 8;
+              $gap: 8px;
+              $logoPadding: 4px;
+              grid-template-columns: repeat($countColumns, $logoSize);
+              width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+              column-gap: $gap;
+              row-gap: $gap;
+
+              img.organisations-entry {
+                width: $logoSize;
+                height: $logoSize;
+                padding: $logoPadding;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  $logoSize: 50px;
+
+  div.experiences {
+    div.company {
+      grid-template-columns: $logoSize 1fr;
+      column-gap: 20px;
+
+      img.company-logo { width: $logoSize; height: $logoSize; }
+    }
+
+    div.company div.experience-desc {
+      div.positions {
+        div.position {
+          div.tech-stack {
+            $logoSize: 60px;
+            $countColumns: 3;
+            $gap: 8px;
+            $logoPadding: 8px;
+            grid-template-columns: repeat($countColumns, $logoSize);
+            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+          }
+          div.organisations {
+            $logoSize: 60px;
+            $countColumns: 3;
+            $gap: 8px;
+            $logoPadding: 8px;
+            grid-template-columns: repeat($countColumns, $logoSize);
+            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+          }
+        }
+      }
+    }
+  }
+}
+</style>
+
 
 @media print {
   * {
