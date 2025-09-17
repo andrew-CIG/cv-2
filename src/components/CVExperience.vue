@@ -6,7 +6,7 @@ import SyndeckExp2018 from "@/assets/experiences/2018-syndeck.md";
 import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
 import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
 import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
-import NianticExp2023 from "@/assets/experiences/2023-niantic.md";
+import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
 
@@ -41,26 +41,25 @@ let experiences: Experience[] = [
         description: marked.parse(CIG2020),
         technologies: [
           "SAP",
-          "Sage X3",
-          "Power BI",
-          "Python",
+          "sageX3",
+          "powerBI",
+          "python",
         ],
       },
     ],
     pageBreak: false,
   },
   {
-    company: "Niantic",
-    url: "https://nianticlabs.com",
-    icon: "niantic.svg",
-    location: "Zurich, Switzerland",
+    company: "Move to Canada",
+    icon: "Canada.png",
+    location: "PEI, Canada",
     positions: [
       {
-        title: "Security Engineer, Production",
-        from: "November 2023",
-        to: "December 2024",
-        description: marked.parse(NianticExp2023),
-        technologies: [
+        title: "Volunteer",
+        from: "January 2019",
+        to: "December 2010",
+        description: marked.parse(move2019),
+        organizations: [
           "gcp",
           "aws",
           "go",
@@ -267,6 +266,17 @@ let experiences: Experience[] = [
                     v-for="language in position.technologies"
                   />
                 </div>
+
+              <div class="organisations-section" v-if="position.organisations">
+                <h4>Organisations</h4>
+                <div class="organisations">
+                  <img
+                    class="organisations-entry"
+                    :src="`/organisations/${language}.svg`"
+                    :title="language"
+                    v-for="language in position.organisations"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -383,6 +393,22 @@ div.experiences {
             row-gap: $gap;
             margin-top: 1em;
 
+          div.organisations {
+            page-break-inside: auto;
+            display: grid;
+            margin-left: auto;
+            margin-right: auto;
+            justify-items: center;
+            $logoSize: 60px;
+            $countColumns: 5;
+            $gap: 8px;
+            $logoPadding: 8px;
+            grid-template-columns: repeat($countColumns, $logoSize);
+            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+            column-gap: $gap;
+            row-gap: $gap;
+            margin-top: 1em;
+
             img.tech-entry {
               background-color: #fff;
               width: $logoSize;
@@ -441,6 +467,16 @@ div.experiences {
               column-gap: $gap;
               row-gap: $gap;
 
+            div.organisations {
+              $logoSize: 35px;
+              $countColumns: 8;
+              $gap: 8px;
+              $logoPadding: 4px;
+              grid-template-columns: repeat($countColumns, $logoSize);
+              width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+              column-gap: $gap;
+              row-gap: $gap;
+              
               img.tech-entry {
                 width: $logoSize;
                 height: $logoSize;
@@ -472,6 +508,14 @@ div.experiences {
       div.positions {
         div.position {
           div.tech-stack {
+            $logoSize: 60px;
+            $countColumns: 3;
+            $gap: 8px;
+            $logoPadding: 8px;
+            grid-template-columns: repeat($countColumns, $logoSize);
+            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+          }
+          div.organisations {
             $logoSize: 60px;
             $countColumns: 3;
             $gap: 8px;
