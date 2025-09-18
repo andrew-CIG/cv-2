@@ -40,7 +40,7 @@ const normalize = (s: string) =>
 
 const iconSrc = (name: string, folder = 'companies') => {
   const key = normalize(name);
-  const file = iconAliases[key] ?? name; // fall back to original if not aliased
+  const file = iconAliases[key] ?? name;
   return `${BASE}${folder}/${file}.png`;
 };
 
