@@ -251,11 +251,11 @@ let experiences: Experience[] = [
 
               <!-- Tech Stack (optional)-->
               <div class="tech-stack-section" v-if="hasTech(position)">
-                <h4>Tech Stack</h4>
+                <h4>Technologies</h4>
                 <div class="tech-stack">
                   <img
                     class="tech-entry"
-                    :src="'${}companies\square/${language}.png'"
+                    :src="'${BASE}companies/square/${language}.png'"
                     :title="language"
                     v-for="language in position.technologies"
                     :key="language"
@@ -270,7 +270,7 @@ let experiences: Experience[] = [
                 <div class="organisations">
                   <img
                     class="organisations-entry"
-                    :src="'${}companies\square/${language}.png'"
+                    :src="'${BASE}companies/square/${language}.png'"
                     :title="language"
                     v-for="language in position.organisations"
                     :key="language"
