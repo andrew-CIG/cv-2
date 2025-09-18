@@ -63,7 +63,7 @@ const hasTech = (p: Position) =>
 const hasOrgs = (p: Position) =>
   Array.isArray(p.organisations) && p.organisations.length > 0;
 
-  type Experience = {
+type Experience = {
   company: string;
   url?: string;
   location: string;
@@ -85,10 +85,10 @@ let experiences: Experience[] = [
         to: "Today",
         description: marked.parse(CIG2020),
         technologies: [
-          "SAP.png",
-          "sageX3.png",
-          "powerBI.png",
-          "python.png"
+          "SAP",
+          "sageX3",
+          "powerBI",
+          "python"
         ],
       },
     ],
