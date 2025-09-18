@@ -85,10 +85,10 @@ let experiences: Experience[] = [
         to: "Today",
         description: marked.parse(CIG2020),
         technologies: [
-          "SAP",
-          "sageX3",
-          "powerBI",
-          "python"
+          "SAP.png",
+          "sageX3.png",
+          "powerBI.png",
+          "python.png"
         ],
       },
     ],
