@@ -292,13 +292,13 @@ $companyLogoSize: 70px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
+  row-gap: 48px;
 
   div.company {
     display: grid;
     grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(64px, auto);
-    column-gap: 30px;
+    column-gap: 32px;
 
     div.page-break { display: none; }
 
@@ -358,7 +358,7 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description { margin-top: 2em; page-break-after: auto; }
+          div.description { margin-top: 1em; page-break-after: auto; }
 
           div.tech-stack {
             page-break-inside: auto;
