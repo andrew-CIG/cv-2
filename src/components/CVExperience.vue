@@ -337,13 +337,13 @@ $companyLogoSize: 70px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 60px;
+  row-gap: 50px;
 
   div.company {
     display: grid;
     grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(100px, auto);
-    column-gap: 35px;
+    column-gap: 30px;
 
     div.page-break { display: none; }
 
@@ -355,8 +355,8 @@ div.experiences {
       height: $companyLogoSize;
       background-color: #fff;
       object-fit: contain;
-      padding: 5px;
-      border-radius: 5px;
+      padding: 3px;
+      border-radius: 3px;
     }
 
     div.line {
