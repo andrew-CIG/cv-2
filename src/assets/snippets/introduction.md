@@ -1,3 +1,3 @@
 I am a Supply Chain executive with over 15 years of international experience in agribusiness and manufacturing companies.
 <br><br>
-I am passionate about building high-performance, operations. I have a particular affinity for data-driven decision-making and evidence-based management. Problem-solving is at the core of my work, and I consistently apply my expertise and knowledge to deliver high-quality results. I am dedicated to continuous learning and always eager to expand my skill set.
+I am passionate about building high-performance, highly-profitable operations. I have a particular affinity for data-driven decision-making and evidence-based management. Problem-solving is at the core of my work, and I consistently apply my expertise and knowledge to deliver high-quality results. I am dedicated to continuous learning and always eager to expand my skill set.
