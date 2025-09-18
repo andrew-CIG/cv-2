@@ -292,7 +292,7 @@ $companyLogoSize: 70px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
+  row-gap: 32px;
 
   div.company {
     display: grid;

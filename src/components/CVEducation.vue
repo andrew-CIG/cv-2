@@ -78,7 +78,7 @@ $schoolLogoSize: 70px;
 div.education-list {
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
+  row-gap: 32px;
   div.school {
     display: grid;
     grid-template-columns: $schoolLogoSize 1fr;
