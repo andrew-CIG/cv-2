@@ -78,12 +78,12 @@ $schoolLogoSize: 70px;
 div.education-list {
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
+  row-gap: 50px;
   div.school {
     display: grid;
     grid-template-columns: $schoolLogoSize 1fr;
     grid-auto-rows: auto;
-    column-gap: 40px;
+    column-gap: 30px;
 
     div.school-name {
       font-size: 1em;
