@@ -15,6 +15,8 @@ import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
 const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
+const mdToHtml = (s: string): string=>
+  marked.parse(s, { async: false }) as string;
 
 // Map normalized names -> actual PNG filenames (without extension)
 const iconAliases: Record<string, string> = {
@@ -83,7 +85,7 @@ let experiences: Experience[] = [
         title: "Vice President - Supply Chain",
         from: "January 2020",
         to: "Today",
-        description: marked.parse(CIG2020),
+        description: mdToHtml(CIG2020),
         technologies: [
           "SAP",
           "sageX3",
@@ -103,7 +105,7 @@ let experiences: Experience[] = [
         title: "Volunteer",
         from: "January 2019",
         to: "December 2019",
-        description: marked.parse(move2019),
+        description: mdToHtml(move2019),
         organisations: [
           "CORE",
           "MDG",
@@ -124,10 +126,7 @@ let experiences: Experience[] = [
         title: "Category Manager",
         from: "October 2015",
         to: "December 2018",
-        description: marked.parse(FPG2015),
-        technologies: [
-          "netsuite",
-        ],
+        description: mdToHtml(FPG2015),
       },
     ],
     pageBreak: false,
@@ -142,7 +141,7 @@ let experiences: Experience[] = [
         title: "DevOps / Backend Engineer",
         from: "Sep 2019",
         to: "Feb 2020",
-        description: marked.parse(NanosExp2019),
+        description: mdToHtml(NanosExp2019),
         technologies: [
           "go",
           "nodejs",
@@ -163,7 +162,7 @@ let experiences: Experience[] = [
         title: "Software Engieeer",
         from: "Jul 2018",
         to: "Dec 2018",
-        description: marked.parse(SyndeckExp2018),
+        description: mdToHtml(SyndeckExp2018),
         technologies: ["go", "nodejs", "bluetooth", "vue"],
       },
     ],
@@ -179,7 +178,7 @@ let experiences: Experience[] = [
         title: "Head of IT Department / Co-Founder",
         from: "Nov 2014",
         to: "Oct 2017",
-        description: marked.parse(CoelisExp2014),
+        description: mdToHtml(CoelisExp2014),
         technologies: ["php", "c-sharp", "js", "linux", "gitlab"],
       },
     ],
@@ -195,7 +194,7 @@ let experiences: Experience[] = [
         title: "Web Developer",
         from: "Feb 2011",
         to: "Feb 2015",
-        description: marked.parse(TrueflavaExp2011),
+        description: mdToHtml(TrueflavaExp2011),
         technologies: ["php", "js"],
       },
     ],
@@ -210,7 +209,7 @@ let experiences: Experience[] = [
         title: "Web Developer",
         from: "Nov 2012",
         to: "Feb 2014",
-        description: marked.parse(PhoneLocatorProExp2012),
+        description: mdToHtml(PhoneLocatorProExp2012),
         technologies: ["php", "js"],
       },
     ],
