@@ -396,7 +396,7 @@ div.experiences {
 }
 
 @media print {
-  $companyLogoSize: 50px;
+  $companyLogoSize: 80px;
 
   div.experiences {
     row-gap: 1em;
