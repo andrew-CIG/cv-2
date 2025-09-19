@@ -520,7 +520,7 @@ div.experiences {
       div.positions {
         div.position {
           div.tech-stack {
-            $logoSize: 60px;
+            $logoSize: 80px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
@@ -528,7 +528,7 @@ div.experiences {
             width: $logoSize * $countColumns + $gap * ($countColumns - 1);
           }
           div.organisations {
-            $logoSize: 60px;
+            $logoSize: 80px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
