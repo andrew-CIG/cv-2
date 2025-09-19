@@ -76,7 +76,7 @@ type Experience = {
 let experiences: Experience[] = [
   {
     company: "Canada's Island Garden Inc.",
-    about: "Legal cannabis cultivation, processing, and distribution.",
+    about: "Legal cannabis cultivation, processing, and distribution",
     //url: "https://www.linkedin.com/company/canadasislandgarden/",
     icon: "CIG.png",
     location: "PEI, Canada",
@@ -118,7 +118,7 @@ let experiences: Experience[] = [
   },
   {
     company: "Fresh Produce Group - Western Australia",
-    about: "One of Australia’s largest fresh produce suppliers.",
+    about: "One of Australia’s largest fresh produce suppliers",
     //url: "https://fpg.com.au",
     location: "Perth, Australia",
     icon: "FPG.png",
@@ -138,13 +138,13 @@ let experiences: Experience[] = [
   },
   {
     company: "Oakville Produce Group",
-    about: "Vertically integrated fresh produce wholesaler.",
+    about: "Vertically integrated fresh produce wholesaler",
     //url: "",
     location: "Australia",
     icon: "Oakville.png",
     positions: [
       {
-        title: "National Category Manager and Facility.",
+        title: "National Category Manager and Facility Manager",
         from: "Feb 2015",
         to: "Sep 2015",
         description: mdToHtml(Oakville2015),
@@ -156,9 +156,9 @@ let experiences: Experience[] = [
     ],
   },
   {
-    company: "Syndeck",
-    location: "Lugano, Switzerland",
-    icon: "syndeck.png",
+    company: "Various roles",
+    location: "Mozambique",
+    icon: "mozambique.png",
     positions: [
       {
         title: "Software Engieeer",
