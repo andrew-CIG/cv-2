@@ -340,9 +340,9 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 8px;
-            column-gap: 10 * $gap;
-            row-gap: 1.5 * $gap;
+            $gap: 20px;
+            column-gap: 1.5 * $gap;
+            row-gap: $gap;
             margin-top: 1em;
             $logoHeight: 40px;
 
@@ -360,9 +360,9 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 8px;
-            column-gap: 10 * $gap;
-            row-gap: 1.5 * $gap;
+            $gap: 20px;
+            column-gap: 1.5 * $gap;
+            row-gap: $gap;
             margin-top: 1em;
             $logoHeight: 40px;
 
