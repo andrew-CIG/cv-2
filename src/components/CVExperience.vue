@@ -342,7 +342,6 @@ div.experiences {
             justify-content: center;
             align-items: center;
             $gap: 8px;
-            $logoPadding: 6px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -363,7 +362,6 @@ div.experiences {
             justify-content: center;
             align-items: center;
             $gap: 8px;
-            $logoPadding: 6px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -408,16 +406,11 @@ div.experiences {
 
             div.tech-stack {
               page-break-inside: avoid;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              align-items: center;
               $gap: 8px;
-              $logoPadding: 6px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
-              $logoHeight: 40px;
+              $logoHeight: 32px;
 
               .tech-logo {
                 height: $logoHeight;
@@ -429,16 +422,11 @@ div.experiences {
 
             div.organisations {
               page-break-inside: avoid;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              align-items: center;
               $gap: 8px;
-              $logoPadding: 6px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
-              $logoHeight: 40px;
+              $logoHeight: 32px;
 
               .org-logo {
                 height: $logoHeight;
