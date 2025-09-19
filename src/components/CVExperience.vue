@@ -347,7 +347,7 @@ div.experiences {
           font-weight: normal;
           font-style: italic;
           color: var(--color-text-soft);
-          font-size: 1em;
+          font-size: 0.8em;
         }
       }
 
