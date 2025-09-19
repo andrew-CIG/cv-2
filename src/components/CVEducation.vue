@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+const BASE = import.meta.env.BASE_URL;
+
 let education = [
   {
     name: "University Of Prince Edward Island",
@@ -35,8 +38,9 @@ let education = [
     <div class="education-list">
       <div class="school" v-for="school in education">
         <img
-          :src="'/schools/' + school.icon"
           class="school-logo"
+          :src="`${BASE}schools/${school.icon}`"
+          :alt="school.name"
           v-if="school.icon"
         />
         <div class="school-logo" v-else>
