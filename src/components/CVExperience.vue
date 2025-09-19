@@ -319,7 +319,7 @@ div.experiences {
         page-break-before: avoid;
         display: flex;
         flex-direction: column;
-        row-gap: 1.5em;
+        row-gap: 1.8em;
 
         div.position {
           page-break-before: auto;
@@ -334,7 +334,7 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description { margin-top: 1.2em; page-break-after: auto; }
+          div.description { margin-top: 1.5em; page-break-after: auto; }
 
           div.tech-stack {
             page-break-inside: auto;
@@ -342,7 +342,7 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 60px;
+            $logoSize: 80px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
@@ -369,7 +369,7 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 60px;
+            $logoSize: 80px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
