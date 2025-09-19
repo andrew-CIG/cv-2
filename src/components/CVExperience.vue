@@ -274,6 +274,29 @@ div.experiences {
       border-radius: 3px;
     }
 
+    .icon-tile {
+      $logoSize: 60px;     /* match your grid's $logoSize */
+      $logoPadding: 6px;   /* try 6; use 4 if logos still feel small */
+
+      width: $logoSize;
+      height: $logoSize;
+      padding: $logoPadding;
+      border-radius: 6px;
+      background: #fff;
+
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    
+    .icon-tile img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     div.line {
       page-break-before: avoid;
       page-break-after: avoid;
@@ -419,6 +442,21 @@ div.experiences {
       div.page-break { display: block; page-break-after: always; }
 
       img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
+
+      .icon-tile {
+        $logoSize: 35px;
+        $logoPadding: 4px;
+
+        width: $logoSize;
+        height: $logoSize;
+        padding: $logoPadding;
+      }
+
+      .icon-tile img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
 
       div.experience-desc {
         div.positions {
