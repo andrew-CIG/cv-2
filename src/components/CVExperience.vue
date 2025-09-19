@@ -241,7 +241,7 @@ let experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
-$companyLogoSize: 80px;
+$companyLogoHeight: 80px;
 
 div.experiences {
   display: flex;
@@ -260,8 +260,8 @@ div.experiences {
 
     img.company-logo {
       page-break-inside: avoid;
-      width: $companyLogoSize;
-      height: $companyLogoSize;
+      width: $auto;
+      height: $companyLogoHeight;
       background-color: #fff;
       object-fit: contain;
       padding: 3px;
