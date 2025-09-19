@@ -246,13 +246,13 @@ $companyLogoSize: 80px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 64px;
+  row-gap: 56px;
 
   div.company {
     display: grid;
     grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(72px, auto);
-    column-gap: 32px;
+    column-gap: 40px;
 
     div.page-break { display: none; }
 
@@ -314,7 +314,7 @@ div.experiences {
         page-break-before: avoid;
         display: flex;
         flex-direction: column;
-        row-gap: 1.8em;
+        row-gap: 1.2em;
 
         div.position {
           page-break-before: auto;
@@ -340,7 +340,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 8px;
+            $gap: 10px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -360,7 +360,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 8px;
+            $gap: 10px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -405,7 +405,7 @@ div.experiences {
 
             div.tech-stack {
               page-break-inside: avoid;
-              $gap: 8px;
+              $gap: 10px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
@@ -421,7 +421,7 @@ div.experiences {
 
             div.organisations {
               page-break-inside: avoid;
-              $gap: 8px;
+              $gap: 10px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
