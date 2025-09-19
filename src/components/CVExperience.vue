@@ -156,16 +156,19 @@ let experiences: Experience[] = [
     ],
   },
   {
-    company: "Various roles",
+    company: "Various organisations",
     location: "Mozambique",
     icon: "mozambique.png",
     positions: [
       {
-        title: "Software Engieeer",
-        from: "Jul 2018",
-        to: "Dec 2018",
-        description: mdToHtml(SyndeckExp2018),
-        technologies: ["go", "nodejs", "bluetooth", "vue"],
+        title: "Consultant, Project Coordinator",
+        from: "Mar 2009",
+        to: "Nov 2010",
+        description: mdToHtml(Moz2009),
+        organisations: [
+          "technoserve", 
+          "CLUSA"
+        ],
       },
     ],
     pageBreak: false,
