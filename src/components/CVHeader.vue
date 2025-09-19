@@ -3,7 +3,7 @@
 
 let basicInfo = {
   home: { icon: "🏠", value: "PEI, Canada" },
-  phone: { icon: "📞", value: "+1 902 916 4466" },
+  // phone: { icon: "📞", value: "+1 902 916 4466" },
   // birthday: { icon: "🎂", value: "July 14, 1986" },
   // citizenship: { icon: "🇨🇭", value: "Swiss Citizen" },
 };
@@ -22,7 +22,7 @@ let contactInfo: ContactMap = {
   email: {
     icon: "fa-solid fa-envelope",
     value: "email",
-    url: "mailto:andrew.m.raymer@gmail.com",
+    url: "mailto:andrew@greensandco.ca",
   },
   linkedin: {
     icon: "fa-brands fa-linkedin",
