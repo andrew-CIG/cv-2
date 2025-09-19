@@ -133,7 +133,7 @@ let experiences: Experience[] = [
         technologies: [
           "netsuite",
           "microsoft",
-        ]
+        ],
       },
     ],
     pageBreak: false,
