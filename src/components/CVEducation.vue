@@ -37,9 +37,8 @@ let education = [
     <div class="education-list">
       <div class="school" v-for="school in education">
         <img
+          :src="'/schools/' + school.icon"
           class="school-logo"
-          :src="`${BASE}schools/${school.icon}.png`"
-          :alt="school.name || school.icon"
           v-if="school.icon"
         />
         <div class="school-logo" v-else>
