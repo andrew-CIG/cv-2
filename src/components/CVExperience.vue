@@ -11,12 +11,10 @@ const mdToHtml = (s: string): string=>
 
 // Map normalized names -> actual PNG filenames (without extension)
 const iconAliases: Record<string, string> = {
-  // tech
   'sap': 'SAP',
   'powerbi': 'powerBI',
   'sagex3': 'sageX3',
   'python': 'python',
-  // organisations (if you use them)
   'clusa': 'CLUSA',
   'core': 'CORE',
   'csp': 'CSP',
@@ -447,6 +445,7 @@ div.experiences {
 
   div.experiences {
     div.company {
+      $logoHeight: 24px;
       grid-template-columns: $logoHeight 1fr;
       column-gap: 20px;
 
