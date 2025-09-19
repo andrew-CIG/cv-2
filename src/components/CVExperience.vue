@@ -444,26 +444,25 @@ div.experiences {
 
 
 @media screen and (max-width: 600px) {
-  $logoSize: 50px;
 
   div.experiences {
     div.company {
-      grid-template-columns: $logoSize 1fr;
+      grid-template-columns: $logoHeight 1fr;
       column-gap: 20px;
 
-      img.company-logo { width: $logoSize; height: $logoSize; }
+      img.company-logo { width: auto; height: $logoHeight; }
     }
 
     div.company div.experience-desc {
       div.positions {
         div.position {
           div.tech-stack {
-            $logoHeight: 40px;
+            $logoHeight: 24px;
             $gap: 8px;
             $logoPadding: 8px;
           }
           div.organisations {
-            $logoHeight: 40px;
+            $logoHeight: 24px;
             $gap: 8px;
             $logoPadding: 8px;
           }
