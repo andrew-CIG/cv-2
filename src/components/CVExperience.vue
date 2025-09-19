@@ -250,7 +250,7 @@ div.experiences {
 
   div.company {
     display: grid;
-    grid-template-columns: $companyLogoSize 1fr;
+    grid-template-columns: $companyLogoHeight 1fr;
     grid-auto-rows: minmax(72px, auto);
     column-gap: 40px;
 
@@ -340,7 +340,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 10px;
+            $gap: 12px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -360,7 +360,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 10px;
+            $gap: 12px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
