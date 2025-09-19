@@ -81,7 +81,8 @@ let experiences: Experience[] = [
           "SAP",
           "sageX3",
           "powerBI",
-          "python"
+          "python",
+          "office"
         ],
       },
     ],
@@ -102,8 +103,7 @@ let experiences: Experience[] = [
           "CORE",
           "MDG",
           "CSP",
-          "habitat_pei",
-          "office"
+          "habitat_pei"
         ],
       },
     ],
