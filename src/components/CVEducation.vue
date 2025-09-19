@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const BASE = import.meta.env.BASE_URL; // "/cv-2/"
-
 let education = [
   {
     name: "University Of Prince Edward Island",
