@@ -6,10 +6,8 @@ import SyndeckExp2018 from "@/assets/experiences/2018-syndeck.md";
 import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
 import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
 import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
-import technoserve2009 from "@/assets/experiences/2009-ts.md"
-import CLUSA2009 from "@/assets/experiences/2009-clusa.md";
-import MM2011 from "@/assets/experiences/2011-mm.md";
-import Oakville2015 from "@/assets/experioences/2015-oakville.md"
+import Moz2009 from "@/assets/experiences/2009-mozambique.md";
+import Oakville2011 from "@/assets/experioences/2011-oakville.md"
 import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
@@ -139,9 +137,9 @@ let experiences: Experience[] = [
     pageBreak: false,
   },
   {
-    company: "Oakville Produce",
+    company: "Oakville Produce Group",
     about: "Vertically integrated fresh produce wholesaler.",
-    //url: "https://nanos.ai",
+    //url: "",
     location: "Australia",
     icon: "Oakville.png",
     positions: [
