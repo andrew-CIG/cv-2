@@ -210,7 +210,7 @@ let experiences: Experience[] = [
                 <div class="tech-stack">
                   <img
                     class="tech-logo"
-                    v-for="language in position.organisations"
+                    v-for="language in position.technologies"
                     :key="language"
                     :src="`${BASE}companies/square/${language}.png`"
                     :alt="language"
