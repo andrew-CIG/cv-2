@@ -23,7 +23,7 @@ import CVAIPromptInjection from "@/components/CVAIPromptInjection.vue";
 
 <style scoped>
 .cv-header {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 div.page-break {
@@ -48,6 +48,6 @@ div.page-break {
 div.sections {
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 32px;
 }
 </style>
