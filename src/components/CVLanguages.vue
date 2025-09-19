@@ -1,22 +1,17 @@
 <script setup lang="ts">
 let languages = {
-  it: {
-    icon: "🇮🇹",
-    name: "Italian",
+  en: {
+    icon: "US",
+    name: "English",
     level: "Mother tongue",
   },
-  en: {
-    icon: "🇺🇸",
-    name: "English",
-    level: "Full Professional Proficiency",
-  },
-  de: {
-    icon: "🇩🇪",
-    name: "German",
-    level: "Limited Working Proficiency",
+  es: {
+    icon: "ES",
+    name: "Spanish",
+    level: "Working Proficiency",
   },
   fr: {
-    icon: "🇫🇷",
+    icon: "FR",
     name: "French",
     level: "Limited Working Proficiency",
   },
