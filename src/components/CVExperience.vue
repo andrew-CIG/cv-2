@@ -203,14 +203,18 @@ let experiences: Experience[] = [
               </div>
 
               <div class="description" v-html="position.description"></div>
-
+              
               <!-- Technologies -->
               <div class="tech-stack-section" v-if="hasTech(position)">
                 <h4>Technologies</h4>
                 <div class="tech-stack">
-                  <div class="icon-tile" v-for="language in position.technologies" :key="language">
-                    <img :src="`${BASE}companies/square/${language}.png`" :alt="language" />
-                  </div>
+                  <img
+                    class="tech-logo"
+                    v-for="language in position.organisations"
+                    :key="language"
+                    :src="`${BASE}companies/square/${language}.png`"
+                    :alt="language"
+                  />
                 </div>
               </div>
 
@@ -218,9 +222,13 @@ let experiences: Experience[] = [
               <div class="organisations-section" v-if="hasOrgs(position)">
                 <h4>Organisations</h4>
                 <div class="organisations">
-                  <div class="icon-tile" v-for="language in position.organisations" :key="language">
-                    <img :src="`${BASE}companies/square/${language}.png`" :alt="language" />
-                  </div>
+                  <img
+                    class="org-logo"
+                    v-for="language in position.organisations"
+                    :key="language"
+                    :src="`${BASE}companies/square/${language}.png`"
+                    :alt="language"
+                  />
                 </div>
               </div>
 
@@ -333,31 +341,21 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 60px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoSize);
-            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+            $logoHeight: 60px;
+            grid-template-columns: repeat($countColumns, $logoHeight);
+            width: auto * $countColumns + $gap * ($countColumns - 1);
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
 
-            .icon-tile {
-              width: $logoSize;
-              height: $logoSize;
-              padding: $logoPadding;
-              border-radius: 5px;
-              background: #fff;
-              display: grid;
-              place-items: center;
-              overflow: hidden;
-            }
-            .icon-tile img {
-              max-width: 100%;
-              max-height: 100%;
-              object-fit: contain;
+            .tech-logo {
+              height: $logoHeight;
+              width: auto;
               display: block;
+              object-fit: contain;
             }
           }
 
@@ -367,31 +365,21 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 60px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoSize);
-            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+            $logoHeight: 60px;
+            grid-template-columns: repeat($countColumns, $logoHeight);
+            width: auto * $countColumns + $gap * ($countColumns - 1);
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
 
-            .icon-tile {
-              width: $logoSize;
-              height: $logoSize;
-              padding: $logoPadding;
-              border-radius: 5px;
-              background: #fff;
-              display: grid;
-              place-items: center;
-              overflow: hidden;
-            }
-            .icon-tile img {
-              max-width: 100%;
-              max-height: 100%;
-              object-fit: contain;
+            .org-logo {
+              height: $logoHeight;
+              width: auto;
               display: block;
+              object-fit: contain;
             }
           }
         }
@@ -425,58 +413,51 @@ div.experiences {
             div.description { margin-top: 1em; }
 
             div.tech-stack {
-              $logoSize: 35px;
-              $countColumns: 8;
+              page-break-inside: auto;
+              display: grid;
+              margin-left: auto;
+              margin-right: auto;
+              justify-items: center;
+              $countColumns: 5;
               $gap: 8px;
-              $logoPadding: 4px;
-              grid-template-columns: repeat($countColumns, $logoSize);
-              width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+              $logoPadding: 8px;
+              $logoHeight: 40px;
+              grid-template-columns: repeat($countColumns, $logoHeight);
+              width: auto * $countColumns + $gap * ($countColumns - 1);
               column-gap: $gap;
               row-gap: $gap;
+              margin-top: 1em;
 
-              .icon-tile {
-                width: $logoSize;
-                height: $logoSize;
-                padding: $logoPadding;
-                border-radius: 5px;
-                background: #fff;
-                display: grid;
-                place-items: center;
-                overflow: hidden;
-              }
-              .icon-tile img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
+              .tech-logo {
+                height: $logoHeight;
+                width: auto;
                 display: block;
+                object-fit: contain;
               }
             }
 
             div.organisations {
-              $logoSize: 35px;
-              $countColumns: 8;
-              $gap: 8px;
-              $logoPadding: 4px;
-              grid-template-columns: repeat($countColumns, $logoSize);
-              width: $logoSize * $countColumns + $gap * ($countColumns - 1);
-              column-gap: $gap;
-              row-gap: $gap;
-
-              .icon-tile {
-                width: $logoSize;
-                height: $logoSize;
-                padding: $logoPadding;
-                border-radius: 5px;
-                background: #fff;
+                page-break-inside: auto;
                 display: grid;
-                place-items: center;
-                overflow: hidden;
-              }
-              .icon-tile img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                justify-items: center;
+                $countColumns: 5;
+                $gap: 8px;
+                $logoPadding: 8px;
+                $logoHeight: 40px;
+                grid-template-columns: repeat($countColumns, $logoHeight);
+                width: auto * $countColumns + $gap * ($countColumns - 1);
+                column-gap: $gap;
+                row-gap: $gap;
+                margin-top: 1em;
+
+                .org-logo {
+                  height: $logoHeight;
+                  width: auto;
+                  display: block;
+                  object-fit: contain;
+                }
               }
             }
           }
@@ -484,7 +465,7 @@ div.experiences {
       }
     }
   }
-}
+
 
 @media screen and (max-width: 600px) {
   $logoSize: 50px;
@@ -501,20 +482,20 @@ div.experiences {
       div.positions {
         div.position {
           div.tech-stack {
-            $logoSize: 60px;
+            $logoHeight: 40px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoSize);
-            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+            grid-template-columns: repeat($countColumns, $logoHeight);
+            width: auto * $countColumns + $gap * ($countColumns - 1);
           }
           div.organisations {
-            $logoSize: 60px;
+            $logoHeight: 40px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoSize);
-            width: $logoSize * $countColumns + $gap * ($countColumns - 1);
+            grid-template-columns: repeat($countColumns, $logoHeight);
+            width: auto * $countColumns + $gap * ($countColumns - 1);
           }
         }
       }
