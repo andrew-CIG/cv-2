@@ -302,7 +302,10 @@ div.experiences {
         }
       }
 
-      div.location { font-size: 1em; color: var(--color-text-soft); }
+      div.location { 
+        font-size: 1em; 
+        color: var(--color-text-soft); 
+      }
     }
 
     div.experience-desc {
@@ -328,7 +331,10 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description { margin-top: 1.5em; page-break-after: auto; }
+          div.description { 
+            margin-top: 1.5em; 
+            page-break-after: auto; 
+          }
 
           div.tech-stack {
             page-break-inside: auto;
@@ -336,7 +342,7 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 80px;
+            $logoSize: 60px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
@@ -354,6 +360,7 @@ div.experiences {
               border-radius: 5px;
               display: block;
               overflow: hidden;
+              object-fit: contain;
             }
           }
 
@@ -363,7 +370,7 @@ div.experiences {
             margin-left: auto;
             margin-right: auto;
             justify-items: center;
-            $logoSize: 80px;
+            $logoSize: 60px;
             $countColumns: 5;
             $gap: 8px;
             $logoPadding: 8px;
@@ -381,6 +388,7 @@ div.experiences {
               border-radius: 5px;
               display: block;
               overflow: hidden;
+              object-fit: contain;
             }
           }
         }
@@ -390,7 +398,7 @@ div.experiences {
 }
 
 @media print {
-  $companyLogoSize: 80px;
+  $companyLogoSize: 50px;
 
   div.experiences {
     row-gap: 1em;
@@ -414,7 +422,7 @@ div.experiences {
             div.description { margin-top: 1em; }
 
             div.tech-stack {
-              $logoSize: 60px;
+              $logoSize: 35px;
               $countColumns: 8;
               $gap: 8px;
               $logoPadding: 4px;
@@ -427,11 +435,12 @@ div.experiences {
                 width: $logoSize;
                 height: $logoSize;
                 padding: $logoPadding;
+                object-fit: contain;
               }
             }
 
             div.organisations {
-              $logoSize: 60px;
+              $logoSize: 35px;
               $countColumns: 8;
               $gap: 8px;
               $logoPadding: 4px;
@@ -441,9 +450,10 @@ div.experiences {
               row-gap: $gap;
 
               img.organisations-entry {
-                width: $logoSize *2;
+                width: $logoSize;
                 height: $logoSize;
                 padding: $logoPadding;
+                object-fit: contain;
               }
             }
           }
@@ -468,7 +478,7 @@ div.experiences {
       div.positions {
         div.position {
           div.tech-stack {
-            $logoSize: 80px;
+            $logoSize: 60px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
@@ -476,7 +486,7 @@ div.experiences {
             width: $logoSize * $countColumns + $gap * ($countColumns - 1);
           }
           div.organisations {
-            $logoSize: 80px;
+            $logoSize: 60px;
             $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
