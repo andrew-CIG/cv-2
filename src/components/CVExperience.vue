@@ -82,7 +82,7 @@ let experiences: Experience[] = [
           "sageX3",
           "powerBI",
           "python",
-          "office"
+          "microsoft_logo"
         ],
       },
     ],
@@ -123,7 +123,7 @@ let experiences: Experience[] = [
         description: mdToHtml(FPG2015),
         technologies: [
           "netsuite",
-          "office",
+          "microsoft_logo",
         ],
       },
     ],
@@ -143,7 +143,7 @@ let experiences: Experience[] = [
         description: mdToHtml(Oakville2011),
         technologies: [
           "dynamicsNav",
-          "office",
+          "microsoft_logo",
         ],
       },
     ],
