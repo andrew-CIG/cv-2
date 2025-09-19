@@ -380,23 +380,23 @@ div.experiences {
 }
 
 @media print {
-  $companyLogoSize: 50px;
+  $companyLogoHeight: 50px;
 
   div.experiences {
     row-gap: 1em;
 
     div.company {
-      grid-template-columns: $companyLogoSize 1fr;
+      grid-template-columns: $companyLogoHeight 1fr;
       grid-auto-rows: auto;
 
       div.experience-top {
-        height: $companyLogoSize;
+        height: $companyLogoHeight;
         margin-bottom: 1em;
       }
 
       div.page-break { display: block; page-break-after: always; }
 
-      img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
+      img.company-logo { width: auto; height: $companyLogoHeight; }
 
       div.experience-desc {
         div.positions {
