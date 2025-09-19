@@ -292,7 +292,7 @@ let experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
-$companyLogoSize: 70px;
+$companyLogoSize: 80px;
 
 div.experiences {
   display: flex;
