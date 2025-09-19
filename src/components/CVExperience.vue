@@ -282,7 +282,7 @@ div.experiences {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: $companyLogoSize;
+      height: $companyLogoHeight;
       page-break-before: avoid;
 
       div.company-name { 
