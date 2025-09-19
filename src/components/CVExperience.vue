@@ -241,7 +241,7 @@ let experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
-$companyLogoHeight: 80px;
+$companyLogoSize: 80px;
 
 div.experiences {
   display: flex;
@@ -250,7 +250,7 @@ div.experiences {
 
   div.company {
     display: grid;
-    grid-template-columns: $companyLogoHeight 1fr;
+    grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(72px, auto);
     column-gap: 40px;
 
@@ -260,8 +260,8 @@ div.experiences {
 
     img.company-logo {
       page-break-inside: avoid;
-      width: auto;
-      height: $companyLogoHeight;
+      width: companyLogoSize;
+      height: $companyLogoSize;
       background-color: #fff;
       object-fit: contain;
       padding: 3px;
@@ -282,7 +282,7 @@ div.experiences {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: $companyLogoHeight;
+      height: $companyLogoSize;
       page-break-before: avoid;
 
       div.company-name { 
@@ -380,23 +380,23 @@ div.experiences {
 }
 
 @media print {
-  $companyLogoHeight: 50px;
+  $companyLogoSize: 50px;
 
   div.experiences {
     row-gap: 1em;
 
     div.company {
-      grid-template-columns: $companyLogoHeight 1fr;
+      grid-template-columns: $companyLogoSize 1fr;
       grid-auto-rows: auto;
 
       div.experience-top {
-        height: $companyLogoHeight;
+        height: $companyLogoSize;
         margin-bottom: 1em;
       }
 
       div.page-break { display: block; page-break-after: always; }
 
-      img.company-logo { width: auto; height: $companyLogoHeight; }
+      img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
 
       div.experience-desc {
         div.positions {
