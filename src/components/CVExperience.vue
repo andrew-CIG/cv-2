@@ -78,7 +78,7 @@ type Experience = {
 let experiences: Experience[] = [
   {
     company: "Canada's Island Garden Inc.",
-    about: "World leader in cannabis cultivation, processing, and distribution.",
+    about: "Legal cannabis cultivation, processing, and distribution.",
     url: "https://www.linkedin.com/company/canadasislandgarden/",
     icon: "CIG.png",
     location: "PEI, Canada",
