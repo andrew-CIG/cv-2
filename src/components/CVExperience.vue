@@ -329,7 +329,7 @@ div.experiences {
           }
 
           div.description { 
-            margin-top: 1.5em; 
+            margin-top: 1.2em; 
             page-break-after: auto; 
           }
 
