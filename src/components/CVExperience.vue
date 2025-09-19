@@ -7,7 +7,7 @@ import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
 import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
 import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
 import Moz2009 from "@/assets/experiences/2009-mozambique.md";
-import Oakville2011 from "@/assets/experioences/2011-oakville.md"
+import Oakville2011 from "@/assets/experiences/2011-oakville.md"
 import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
