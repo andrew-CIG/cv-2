@@ -173,52 +173,6 @@ let experiences: Experience[] = [
     ],
     pageBreak: false,
   },
-  {
-    company: "Coelis",
-    url: "https://coelis.ch",
-    location: "Lugano, Switzerland",
-    icon: "coelis.png",
-    positions: [
-      {
-        title: "Head of IT Department / Co-Founder",
-        from: "Nov 2014",
-        to: "Oct 2017",
-        description: mdToHtml(CoelisExp2014),
-        technologies: ["php", "c-sharp", "js", "linux", "gitlab"],
-      },
-    ],
-    pageBreak: false,
-  },
-  {
-    company: "TRUE FLAVA",
-    url: "https://trueflava.com",
-    location: "Remote (Turin, Italy)",
-    icon: "trueflava.png",
-    positions: [
-      {
-        title: "Web Developer",
-        from: "Feb 2011",
-        to: "Feb 2015",
-        description: mdToHtml(TrueflavaExp2011),
-        technologies: ["php", "js"],
-      },
-    ],
-    pageBreak: false,
-  },
-  {
-    company: "PhoneLocator Pro",
-    location: "Remote",
-    icon: "plpro.jpg",
-    positions: [
-      {
-        title: "Web Developer",
-        from: "Nov 2012",
-        to: "Feb 2014",
-        description: mdToHtml(PhoneLocatorProExp2012),
-        technologies: ["php", "js"],
-      },
-    ],
-  },
 ];
 </script>
 
