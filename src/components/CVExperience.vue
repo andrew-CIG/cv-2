@@ -72,6 +72,7 @@ type Experience = {
   icon: string;
   positions: Position[];
   pageBreak?: boolean;
+  about?: string;
 };
 
 let experiences: Experience[] = [
@@ -225,7 +226,10 @@ let experiences: Experience[] = [
         <img :src="BASE + 'companies/square/' + exp.icon" class="company-logo" />
 
         <div class="experience-top">
-          <div class="company-name">{{ exp.company }}</div>
+            <div class="company-name">
+              {{ exp.company }}
+              <span class="company-desc" v-if="exp.about"><em>— {{ exp.about }}</em></span>
+            </div>
           <div class="location">{{ exp.location }}</div>
           <a :href="exp.url" v-if="exp.url" target="_blank">{{ exp.url }}</a>
         </div>
@@ -331,7 +335,21 @@ div.experiences {
       height: $companyLogoSize;
       page-break-before: avoid;
 
-      div.company-name { font-weight: bold; }
+      div.company-name { 
+        font-weight: bold; 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 0.5em;
+
+        .company-desc {
+          font-weight: normal;
+          font-style: italic;
+          color: var(--color-text-soft);
+          font-size: 1em;
+        }
+      }
+
       div.location { font-size: 1em; color: var(--color-text-soft); }
     }
 
