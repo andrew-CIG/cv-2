@@ -292,7 +292,7 @@ $companyLogoSize: 70px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 56px;
+  row-gap: 64px;
 
   div.company {
     display: grid;
@@ -343,7 +343,7 @@ div.experiences {
         page-break-before: avoid;
         display: flex;
         flex-direction: column;
-        row-gap: 2em;
+        row-gap: 1.5em;
 
         div.position {
           page-break-before: auto;
@@ -358,7 +358,7 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description { margin-top: 1.5em; page-break-after: auto; }
+          div.description { margin-top: 1.2em; page-break-after: auto; }
 
           div.tech-stack {
             page-break-inside: auto;
