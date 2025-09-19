@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // import { faGithub } from "@fortawesome/free-brands-svg-icons";
-const BASE = import.meta.env.BASE_URL;
 
 let basicInfo = {
   home: { icon: "🏠", value: "PEI, Canada" },
@@ -40,7 +39,7 @@ let contactInfo: ContactMap = {
 </script>
 <template>
   <header>
-    <img :src="`${BASE}profile.jpg`" alt="Profile photo" />
+    <img class="profile-picture" src="/profile.jpg" />
     <div class="contact-info">
       <div class="my-name">Andrew Raymer</div>
       <div class="basic-info-grid">
