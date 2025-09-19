@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const BASE = import.meta.env.BASE_URL; // "/cv-2/"
+
 let education = [
   {
     name: "University Of Prince Edward Island",
@@ -16,7 +18,7 @@ let education = [
   {
     name: "McGill University",
     location: "Montreal, Canada",
-    icon: "mcgill.svg",
+    icon: "mcgill.png",
     titles: [
       {
         title: "Bachelors of Science",
@@ -35,8 +37,9 @@ let education = [
     <div class="education-list">
       <div class="school" v-for="school in education">
         <img
-          :src="'/schools/' + school.icon"
           class="school-logo"
+          :src="`${BASE}schools/${school.icon}.png`"
+          :alt="school.name || school.icon"
           v-if="school.icon"
         />
         <div class="school-logo" v-else>
