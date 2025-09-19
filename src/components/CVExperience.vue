@@ -447,7 +447,7 @@ div.experiences {
               row-gap: $gap;
 
               img.organisations-entry {
-                width: $logoSize;
+                width: $logoSize *2;
                 height: $logoSize;
                 padding: $logoPadding;
               }
