@@ -1,10 +1,10 @@
 <script setup lang="ts">
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 let basicInfo = {
   home: { icon: "🏠", value: "PEI, Canada" },
-  // phone: { icon: "📞", value: "+1 902 916 4466" },
-  // birthday: { icon: "🎂", value: "July 14, 1986" },
+  phone: { icon: "📞", value: "+1 902 916 4466" },
+  birthday: { icon: "🎂", value: "July 14, 1986" },
   // citizenship: { icon: "🇨🇭", value: "Swiss Citizen" },
 };
 
