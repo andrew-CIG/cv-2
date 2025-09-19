@@ -3,7 +3,7 @@ let education = [
   {
     name: "University Of Prince Edward Island",
     location: "Charlottetown, PE",
-    icon: "upei.jpg",
+    icon: "upei.png",
     titles: [
       {
         title: "Executive MBA",
