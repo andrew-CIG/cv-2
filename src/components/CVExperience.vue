@@ -90,7 +90,8 @@ let experiences: Experience[] = [
     pageBreak: false,
   },
   {
-    company: "Move to Canada",
+    company: "Sabbatical",
+    about: "Moved to Canada, 12-months for visa processing",
     icon: "Canada.png",
     location: "PEI, Canada",
     positions: [
