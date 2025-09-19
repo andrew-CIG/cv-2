@@ -79,7 +79,7 @@ let experiences: Experience[] = [
   {
     company: "Canada's Island Garden Inc.",
     about: "Legal cannabis cultivation, processing, and distribution.",
-    url: "https://www.linkedin.com/company/canadasislandgarden/",
+    //url: "https://www.linkedin.com/company/canadasislandgarden/",
     icon: "CIG.png",
     location: "PEI, Canada",
     positions: [
@@ -120,7 +120,8 @@ let experiences: Experience[] = [
   },
   {
     company: "Fresh Produce Group - Western Australia",
-    url: "https://fpg.com.au",
+    about: "One of Australia’s largest fresh produce suppliers.",
+    //url: "https://fpg.com.au",
     location: "Perth, Australia",
     icon: "FPG.png",
     positions: [
@@ -129,28 +130,29 @@ let experiences: Experience[] = [
         from: "October 2015",
         to: "December 2018",
         description: mdToHtml(FPG2015),
+        technologies: [
+          "netsuite",
+          "microsoft",
+        ]
       },
     ],
     pageBreak: false,
   },
   {
-    company: "Nanos",
-    url: "https://nanos.ai",
-    location: "Zurich, Switzerland",
-    icon: "nanos.png",
+    company: "Oakville Produce",
+    about: "Vertically integrated fresh produce wholesaler.",
+    //url: "https://nanos.ai",
+    location: "Australia",
+    icon: "Oakville.png",
     positions: [
       {
-        title: "DevOps / Backend Engineer",
-        from: "Sep 2019",
-        to: "Feb 2020",
-        description: mdToHtml(NanosExp2019),
+        title: "National Category Manager and Facility.",
+        from: "Feb 2015",
+        to: "Sep 2015",
+        description: mdToHtml(Oakville2015),
         technologies: [
-          "go",
-          "nodejs",
-          "react",
-          "kubernetes",
-          "gcp",
-          "digitalocean",
+          "dynamicsNav",
+          "microsoft",
         ],
       },
     ],
