@@ -471,19 +471,13 @@ div.experiences {
         div.position {
           div.tech-stack {
             $logoHeight: 40px;
-            $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoHeight);
-            width: auto * $countColumns + $gap * ($countColumns - 1);
           }
           div.organisations {
             $logoHeight: 40px;
-            $countColumns: 3;
             $gap: 8px;
             $logoPadding: 8px;
-            grid-template-columns: repeat($countColumns, $logoHeight);
-            width: auto * $countColumns + $gap * ($countColumns - 1);
           }
         }
       }
