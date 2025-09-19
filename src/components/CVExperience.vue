@@ -336,20 +336,17 @@ div.experiences {
           }
 
           div.tech-stack {
-            page-break-inside: auto;
-            display: grid;
-            margin-left: auto;
-            margin-right: auto;
-            justify-items: center;
-            $countColumns: 5;
+            page-break-inside: avoid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             $gap: 8px;
-            $logoPadding: 8px;
-            $logoHeight: 60px;
-            grid-template-columns: repeat($countColumns, $logoHeight);
-            width: auto * $countColumns + $gap * ($countColumns - 1);
+            $logoPadding: 6px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
+            $logoHeight: 60px;
 
             .tech-logo {
               height: $logoHeight;
@@ -360,20 +357,17 @@ div.experiences {
           }
 
           div.organisations {
-            page-break-inside: auto;
-            display: grid;
-            margin-left: auto;
-            margin-right: auto;
-            justify-items: center;
-            $countColumns: 5;
+            page-break-inside: avoid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             $gap: 8px;
-            $logoPadding: 8px;
-            $logoHeight: 60px;
-            grid-template-columns: repeat($countColumns, $logoHeight);
-            width: auto * $countColumns + $gap * ($countColumns - 1);
+            $logoPadding: 6px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
+            $logoHeight: 60px;
 
             .org-logo {
               height: $logoHeight;
@@ -413,50 +407,44 @@ div.experiences {
             div.description { margin-top: 1em; }
 
             div.tech-stack {
-              page-break-inside: auto;
-              display: grid;
-              margin-left: auto;
-              margin-right: auto;
-              justify-items: center;
-              $countColumns: 5;
+              page-break-inside: avoid;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
               $gap: 8px;
-              $logoPadding: 8px;
-              $logoHeight: 40px;
-              grid-template-columns: repeat($countColumns, $logoHeight);
-              width: auto * $countColumns + $gap * ($countColumns - 1);
+              $logoPadding: 6px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
+              $logoHeight: 40px;
 
               .tech-logo {
                 height: $logoHeight;
                 width: auto;
                 display: block;
                 object-fit: contain;
-              }
+                }
             }
 
             div.organisations {
-                page-break-inside: auto;
-                display: grid;
-                margin-left: auto;
-                margin-right: auto;
-                justify-items: center;
-                $countColumns: 5;
-                $gap: 8px;
-                $logoPadding: 8px;
-                $logoHeight: 40px;
-                grid-template-columns: repeat($countColumns, $logoHeight);
-                width: auto * $countColumns + $gap * ($countColumns - 1);
-                column-gap: $gap;
-                row-gap: $gap;
-                margin-top: 1em;
+              page-break-inside: avoid;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              $gap: 8px;
+              $logoPadding: 6px;
+              column-gap: $gap;
+              row-gap: $gap;
+              margin-top: 1em;
+              $logoHeight: 40px;
 
-                .org-logo {
-                  height: $logoHeight;
-                  width: auto;
-                  display: block;
-                  object-fit: contain;
+              .org-logo {
+                height: $logoHeight;
+                width: auto;
+                display: block;
+                object-fit: contain;
                 }
               }
             }
