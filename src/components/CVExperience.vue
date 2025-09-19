@@ -204,39 +204,26 @@ let experiences: Experience[] = [
 
               <div class="description" v-html="position.description"></div>
 
-              <!-- Tech Stack (optional)-->
+              <!-- Technologies -->
               <div class="tech-stack-section" v-if="hasTech(position)">
                 <h4>Technologies</h4>
                 <div class="tech-stack">
-                  <div
-                    class="icon-tile"
-                    v-for="language in position.technologies"
-                    :key="language"
-                  >
-                    <img
-                      :src="`${BASE}companies/square/${language}.png`"
-                      :alt="language"
-                    />
+                  <div class="icon-tile" v-for="language in position.technologies" :key="language">
+                    <img :src="`${BASE}companies/square/${language}.png`" :alt="language" />
                   </div>
                 </div>
               </div>
 
-              <!--Organisations (optional)-->
+              <!-- Organisations -->
               <div class="organisations-section" v-if="hasOrgs(position)">
                 <h4>Organisations</h4>
                 <div class="organisations">
-                  <div 
-                    class="icon-title"
-                    v-for="language in position.organisations"
-                    :key="language"
-                  >
-                    <img
-                      :src="`${BASE}companies/square/${language}.png`"
-                      :alt="language"
-                    />
+                  <div class="icon-tile" v-for="language in position.organisations" :key="language">
+                    <img :src="`${BASE}companies/square/${language}.png`" :alt="language" />
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -272,29 +259,6 @@ div.experiences {
       object-fit: contain;
       padding: 3px;
       border-radius: 3px;
-    }
-
-    .icon-tile {
-      $logoSize: 60px;     /* match your grid's $logoSize */
-      $logoPadding: 6px;   /* try 6; use 4 if logos still feel small */
-
-      width: $logoSize;
-      height: $logoSize;
-      padding: $logoPadding;
-      border-radius: 6px;
-      background: #fff;
-
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-
-    
-    .icon-tile img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
     }
 
     div.line {
@@ -379,15 +343,21 @@ div.experiences {
             row-gap: $gap;
             margin-top: 1em;
 
-            img.tech-entry {
-              background-color: #fff;
+            .icon-tile {
               width: $logoSize;
               height: $logoSize;
               padding: $logoPadding;
               border-radius: 5px;
-              display: block;
+              background: #fff;
+              display: grid;
+              place-items: center;
               overflow: hidden;
+            }
+            .icon-tile img {
+              max-width: 100%;
+              max-height: 100%;
               object-fit: contain;
+              display: block;
             }
           }
 
@@ -407,15 +377,21 @@ div.experiences {
             row-gap: $gap;
             margin-top: 1em;
 
-            img.organisations-entry {
-              background-color: #fff;
+            .icon-tile {
               width: $logoSize;
               height: $logoSize;
               padding: $logoPadding;
               border-radius: 5px;
-              display: block;
+              background: #fff;
+              display: grid;
+              place-items: center;
               overflow: hidden;
+            }
+            .icon-tile img {
+              max-width: 100%;
+              max-height: 100%;
               object-fit: contain;
+              display: block;
             }
           }
         }
@@ -443,21 +419,6 @@ div.experiences {
 
       img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
 
-      .icon-tile {
-        $logoSize: 35px;
-        $logoPadding: 4px;
-
-        width: $logoSize;
-        height: $logoSize;
-        padding: $logoPadding;
-      }
-
-      .icon-tile img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-      }
-
       div.experience-desc {
         div.positions {
           div.position {
@@ -473,11 +434,21 @@ div.experiences {
               column-gap: $gap;
               row-gap: $gap;
 
-              img.tech-entry {
+              .icon-tile {
                 width: $logoSize;
                 height: $logoSize;
                 padding: $logoPadding;
+                border-radius: 5px;
+                background: #fff;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+              }
+              .icon-tile img {
+                max-width: 100%;
+                max-height: 100%;
                 object-fit: contain;
+                display: block;
               }
             }
 
@@ -491,11 +462,21 @@ div.experiences {
               column-gap: $gap;
               row-gap: $gap;
 
-              img.organisations-entry {
+              .icon-tile {
                 width: $logoSize;
                 height: $logoSize;
                 padding: $logoPadding;
+                border-radius: 5px;
+                background: #fff;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+              }
+              .icon-tile img {
+                max-width: 100%;
+                max-height: 100%;
                 object-fit: contain;
+                display: block;
               }
             }
           }
