@@ -437,7 +437,7 @@ div.experiences {
             }
 
             div.organisations {
-              $logoSize: 35px;
+              $logoSize: 60px;
               $countColumns: 8;
               $gap: 8px;
               $logoPadding: 4px;
