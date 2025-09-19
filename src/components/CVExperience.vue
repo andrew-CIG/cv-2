@@ -345,7 +345,7 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-            $logoHeight: 60px;
+            $logoHeight: 40px;
 
             .tech-logo {
               height: $logoHeight;
@@ -365,7 +365,7 @@ div.experiences {
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
-            $logoHeight: 60px;
+            $logoHeight: 40px;
 
             .org-logo {
               height: $logoHeight;
