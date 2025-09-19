@@ -23,7 +23,7 @@ import CVAIPromptInjection from "@/components/CVAIPromptInjection.vue";
 
 <style scoped>
 .cv-header {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 div.page-break {
