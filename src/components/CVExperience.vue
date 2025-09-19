@@ -396,7 +396,7 @@ div.experiences {
 }
 
 @media print {
-  $companyLogoSize: 80px;
+  $companyLogoSize: 50px;
 
   div.experiences {
     row-gap: 1em;
@@ -420,7 +420,7 @@ div.experiences {
             div.description { margin-top: 1em; }
 
             div.tech-stack {
-              $logoSize: 35px;
+              $logoSize: 60px;
               $countColumns: 8;
               $gap: 8px;
               $logoPadding: 4px;
