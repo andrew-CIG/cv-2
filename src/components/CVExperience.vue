@@ -1,11 +1,4 @@
 <script setup lang="ts">
-import PhoneLocatorProExp2012 from "@/assets/experiences/2012-plpro.md";
-import TrueflavaExp2011 from "@/assets/experiences/2011-trueflava.md";
-import CoelisExp2014 from "@/assets/experiences/2014-coelis.md";
-import SyndeckExp2018 from "@/assets/experiences/2018-syndeck.md";
-import NanosExp2019 from "@/assets/experiences/2019-nanos.md";
-import SwisscomExp2020 from "@/assets/experiences/2020-scs.md";
-import SwisscomExp2021 from "@/assets/experiences/2021-scs.md";
 import Moz2009 from "@/assets/experiences/2009-mozambique.md";
 import Oakville2011 from "@/assets/experiences/2011-oakville.md"
 import FPG2015 from "@/assets/experiences/2015-fpg.md";
@@ -186,7 +179,7 @@ let experiences: Experience[] = [
         <div class="experience-top">
             <div class="company-name">
               {{ exp.company }}
-              <span class="company-desc" v-if="exp.about"><em>— {{ exp.about }}</em></span>
+              <span class="company-desc" v-if="exp.about"><em> {{ exp.about }}</em></span>
             </div>
           <div class="location">{{ exp.location }}</div>
           <a :href="exp.url" v-if="exp.url" target="_blank">{{ exp.url }}</a>
