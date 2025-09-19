@@ -102,7 +102,8 @@ let experiences: Experience[] = [
           "CORE",
           "MDG",
           "CSP",
-          "habitat_pei"
+          "habitat_pei",
+          "office"
         ],
       },
     ],
@@ -122,7 +123,7 @@ let experiences: Experience[] = [
         description: mdToHtml(FPG2015),
         technologies: [
           "netsuite",
-          "microsoft",
+          "office",
         ],
       },
     ],
@@ -142,7 +143,7 @@ let experiences: Experience[] = [
         description: mdToHtml(Oakville2011),
         technologies: [
           "dynamicsNav",
-          "microsoft",
+          "office",
         ],
       },
     ],
