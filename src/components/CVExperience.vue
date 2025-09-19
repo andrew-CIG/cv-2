@@ -440,7 +440,6 @@ div.experiences {
     }
   }
 
-
 @media screen and (max-width: 600px) {
 
   div.experiences {
