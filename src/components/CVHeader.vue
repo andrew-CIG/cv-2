@@ -1,162 +1,149 @@
 <script setup lang="ts">
+
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-let basicInfo = {
-  home: { icon: "🏠", value: "PEI, Canada" },
-  phone: { icon: "📞", value: "+1 902 916 4466" },
-  birthday: { icon: "🎂", value: "July 14, 1986" },
-  // citizenship: { icon: "🇨🇭", value: "Swiss Citizen" },
+const BASE = import.meta.env.BASE_URL;
+const HEADSHOT = `${BASE}profile.jpg`;
+
+// Row 1 data (monochrome FA icons)
+const contactTop = {
+  home:  { icon: "fa-solid fa-house", text: "PEI, Canada" },
+  phone: { icon: "fa-solid fa-phone", text: "+1 902 916 4466", href: "tel:+19029164466" }
 };
 
-type ContactInfo = {
-  icon: string;
-  value: string;
-  url?: string;
-};
 
-type ContactMap = {
-  [id: string]: ContactInfo;
-};
+// Row 2 data (citizenships)
+const citizenships = [
+  { flag: "🇺🇸", name: "USA" },
+  { flag: "🇦🇺", name: "Australia" },
+  { flag: "🇨🇴", name: "Colombia" }
+];
 
-let contactInfo: ContactMap = {
-  email: {
-    icon: "fa-solid fa-envelope",
-    value: "email",
-    url: "mailto:andrew@greensandco.ca",
-  },
-  linkedin: {
-    icon: "fa-brands fa-linkedin",
-    value: "profile",
-    url: "www.linkedin.com/in/andrew-raymer-923b0a9",
-  },
-  // web: { icon: "fa-solid fa-link", value: "denv.it", url: "https://denv.it" },
-  // github: {
-    // icon: "fa-brands fa-github",
-    // value: "@denysvitali",
-    // url: "https://github.com/denysvitali",
-  // },
-};
+// Row 3 data (only email)
+const email = { icon: "fa-solid fa-envelope", text: "andrew@greensandco.ca", href: "mailto:andrew@greensandco.ca" };
+
 </script>
+
 <template>
-  <header>
-    <img class="profile-picture" src="/profile.jpg" />
-    <div class="contact-info">
-      <div class="my-name">Andrew Raymer</div>
-      <div class="basic-info-grid">
-        <div class="info-element" v-for="element of basicInfo">
-          <div class="icon">{{ element.icon }}</div>
-          <div class="text">{{ element.value }}</div>
+  <header class="cv-header">
+    <div class="left">
+      <img :src="HEADSHOT" alt="Profile photo" class="headshot" />
+    </div>
+
+    <div class="right">
+      <h1 class="my-name">Andrew Raymer</h1>
+
+      <!-- Row 1: location + phone (2-column) -->
+      <div class="row row-1">
+        <div class="item">
+          <i :class="contactTop.home.icon" class="icon"></i>
+          <span>{{ contactTop.home.text }}</span>
+        </div>
+        <div class="item">
+          <i :class="contactTop.phone.icon" class="icon"></i>
+          <a :href="contactTop.phone.href">{{ contactTop.phone.text }}</a>
         </div>
       </div>
 
-      <hr />
+      <!-- Row 2: citizenships single line -->
+      <div class="row row-2">
+        <span class="label">Citizen:</span>
+        <span
+          class="citizen"
+          v-for="c in citizenships"
+          :key="c.name"
+        >
+          <span class="flag">{{ c.flag }}</span> {{ c.name }}
+        </span>
+      </div>
 
-      <div class="contact-info-grid">
-        <div class="info-element" v-for="element of contactInfo">
-          <div class="icon">
-            <font-awesome-icon :icon="element.icon" />
-          </div>
-          <a
-            v-if="element.url"
-            :href="element.url"
-            target="_blank"
-            class="text"
-          >
-            {{ element.value }}
-          </a>
-          <div class="text" v-else>{{ element.value }}</div>
-        </div>
+      <hr class="divider" />
+
+      <!-- Row 3: email only -->
+      <div class="row row-3">
+        <i :class="email.icon" class="icon"></i>
+        <a class="email" :href="email.href">{{ email.text }}</a>
       </div>
     </div>
   </header>
 </template>
 
-<style lang="scss" scoped>
-header {
-  display: flex;
-  justify-content: space-around;
+<style scoped>
+.cv-header {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
   align-items: center;
-
-  img.profile-picture {
-    $size: 200px;
-    width: $size;
-    height: $size;
-    object-fit: cover;
-    border-radius: $size;
-    box-shadow: 0px 3px 24px 3px var(--color-shadow);
-  }
-
-  div.contact-info {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    row-gap: 0.5em;
-
-    div.my-name {
-      font-size: 3em;
-      font-weight: 700;
-      width: 100%;
-      text-align: center;
-    }
-
-    div.basic-info-grid,
-    div.contact-info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 1em;
-      font-size: 1em;
-
-      div.info-element {
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        column-gap: 8px;
-        height: 24px;
-        line-height: 20px;
-
-        div.icon {
-          height: 1em;
-          font-size: 1em;
-          width: 1em;
-        }
-
-        div.text {
-          font-weight: 600;
-        }
-      }
-    }
-  }
+}
+.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
+/* name */
+.my-name {
+  margin: 0 0 8px 0;
+}
+
+/* shared rows */
+.row { margin-top: 6px; }
+.item { display: flex; align-items: center; gap: 10px; }
+
+/* Row 1: keep as 2-column grid */
+.row-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  align-items: center;
+}
+
+/* Row 2: single line, italic secondary tone */
+.row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: baseline;
+  color: var(--color-text-soft);
+  font-style: italic;
+  margin-top: 4px;
+}
+.row-2 .label {
+  font-style: normal;
+  color: var(--color-text);
+  margin-right: 6px;
+}
+.row-2 .flag { font-size: 16px; line-height: 1; }
+
+/* divider */
+.divider {
+  border: none;
+  border-top: 2px solid var(--color-text-soft);
+  opacity: 0.4;
+  margin: 10px 0;
+}
+
+/* Row 3: email only */
+.row-3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* monochrome FA icons */
+.icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-text);        /* same color as the email icon/link */
+}
+
+/* links */
+a { color: inherit; text-decoration: underline; }
+
+/* small screens */
 @media (max-width: 700px) {
-  header {
-    img.profile-picture {
-      $size: 150px;
-      width: $size;
-      height: $size;
-      object-fit: cover;
-      border-radius: $size;
-      box-shadow: 0px 3px 24px 3px var(--color-shadow);
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    div.contact-info {
-      min-width: 80px;
-
-      div.basic-info-grid,
-      div.contact-info-grid {
-        grid-template-columns: 1fr;
-        align-items: center;
-        column-gap: 8px;
-      }
-    }
-  }
+  .cv-header { grid-template-columns: 1fr; }
+  .row-1 { grid-template-columns: 1fr; }
 }
 </style>
