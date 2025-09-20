@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const BASE = import.meta.env.BASE_URL;
 const HEADSHOT = `${BASE}profile.jpg`;
