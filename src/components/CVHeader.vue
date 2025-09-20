@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const BASE = import.meta.env.BASE_URL;
 const HEADSHOT = `${BASE}profile.jpg`;
@@ -22,7 +22,7 @@ const citizenships = [
 ]
 
 const email = { 
-  icon: "Fa-solid fa-envelope", 
+  icon: "fa-solid fa-envelope", 
   text: "andrew@greensandco.ca", 
   href: "mailto:andrew@greensandco.ca" 
 };
