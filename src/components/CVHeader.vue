@@ -128,7 +128,7 @@ const email = {
 .row-3 {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px; /* new version = 12px */
+  gap: 10px; /* new version = 12px */
   align-items: baseline;
   text-align: justify;
   font-style: normal;
@@ -151,43 +151,6 @@ const email = {
 }
 
 a { color: inherit; text-decoration: underline; }
-
-/* Old version: 
-  div.contact-info {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    row-gap: 0.5em;
-
-    div.basic-info-grid,
-    div.contact-info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 1em;
-      font-size: 1em;
-
-      div.info-element {
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        column-gap: 8px;
-        height: 24px;
-        line-height: 20px;
-
-        div.icon {
-          height: 1em;
-          font-size: 1em;
-          width: 1em;
-        }
-
-        div.text {
-          font-weight: 600;
-        }
-      }
-    }
-  }
-}
-*/
 
 @media (max-width: 700px) {
   .cv-header {grid-template-columns: 1fr; }
