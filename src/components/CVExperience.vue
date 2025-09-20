@@ -78,11 +78,11 @@ let experiences: Experience[] = [
         to: "Today",
         description: mdToHtml(CIG2020),
         technologies: [
-          "SAP",
-          "sageX3",
-          "powerBI",
           "python",
-          "microsoft_logo"
+          "powerBI",
+          "microsoft_logo",
+          "sageX3",
+          "SAP",
         ],
       },
     ],
@@ -101,9 +101,9 @@ let experiences: Experience[] = [
         description: mdToHtml(move2019),
         organisations: [
           "CORE",
-          "MDG",
           "CSP",
-          "habitat_pei"
+          "habitat_pei",
+          "MDG",
         ],
       },
     ],
@@ -122,8 +122,8 @@ let experiences: Experience[] = [
         to: "December 2018",
         description: mdToHtml(FPG2015),
         technologies: [
-          "netsuite",
           "microsoft_logo",
+          "netsuite",
         ],
       },
     ],
@@ -159,8 +159,8 @@ let experiences: Experience[] = [
         to: "Nov 2010",
         description: mdToHtml(Moz2009),
         organisations: [
-          "technoserve", 
-          "CLUSA"
+          "CLUSA",
+          "technoserve",
         ],
       },
     ],
