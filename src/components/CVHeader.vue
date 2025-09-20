@@ -6,13 +6,14 @@ const HEADSHOT = `${BASE}profile.jpg`;
 
 const contactTop = {
   home: { 
-    icon: "fa-solid fa-house", 
+    icon: ['fas', 'house'] as const, 
     text: "PEI, Canada" 
   },
   phone: { 
-    icon: "fa-solid fa-phone", 
+    icon: ['fas', 'phone'] as const, 
     text: "+1 902 916 4466", 
-    href: "tel:+19029164466" }
+    href: "tel:+19029164466" 
+  }
 };
 
 const citizenships = [
@@ -22,7 +23,7 @@ const citizenships = [
 ]
 
 const email = { 
-  icon: "fa-solid fa-envelope", 
+  icon: ['fas', 'envelope'] as const, 
   text: "andrew@greensandco.ca", 
   href: "mailto:andrew@greensandco.ca" 
 };
@@ -40,11 +41,11 @@ const email = {
       <!-- Row 1: location + phone (2-column) -->
       <div class="row row-1">
         <div class="item">
-          <i :class="contactTop.home.icon" class="icon"></i>
+          <font-awesome-icon :icon="contactTop.home.icon" class="fa-icon" />
           <span>{{ contactTop.home.text }}</span>
         </div>
         <div class="item">
-          <i :class="contactTop.phone.icon" class="icon"></i>
+          <font-awesome-icon :icon="contactTop.phone.icon" class="fa-icon" />
           <a :href="contactTop.phone.href">{{ contactTop.phone.text }}</a>
         </div>
       </div>
@@ -65,7 +66,7 @@ const email = {
 
       <!-- Row 3: email only -->
       <div class="row row-3">
-        <i :class="email.icon" class="icon"></i>
+        <font-awesome-icon :icon="email.icon" class="fa-icon" />
         <a class="email" :href="email.href">{{ email.text }}</a>
       </div>
     </div>
@@ -94,6 +95,7 @@ const email = {
   text-align: left;
 }
 
+.fa-icon { font-size: 1.1rem; color: var(--color-text); }
 .row { margin-top: 6px; }
 .item { display: flex; align-items: left; gap: 6px; }
 
