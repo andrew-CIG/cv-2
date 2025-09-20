@@ -100,12 +100,12 @@ const email = {
 .row-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* column-gap: 8px; /* old version */
-  /* min-width: 300px;  /* old version */
-  /* row-gap: 0.5em; /* old version */
-  /* height: 24px;  /* old version */
-  /* line-height: 20px;  /* old version */
-  gap: 12px 24px; /* new version */
+  column-gap: 8px; /* old version */
+  min-width: 300px;  /* old version */
+  row-gap: 0.5em; /* old version */
+  height: 24px;  /* old version */
+  line-height: 20px;  /* old version */
+  /* gap: 12px 24px; /* new version */
   align-items: center; /* new version */
 }
 
@@ -116,6 +116,7 @@ const email = {
   align-items: baseline;
   text-align: justify;
   font-style: normal;
+  min-width: 300px;
   /* new version *//* color: var(--color-text-soft); */ 
   /* new version *//* font-style: italic; */ 
   /* new version *//* margin-top: 4px; */ 
