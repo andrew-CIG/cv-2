@@ -97,13 +97,6 @@ const email = {
 .row { margin-top: 6px; }
 .item { display: flex; align-items: left; gap: 6px; }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
 .row-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,7 +106,7 @@ const email = {
   height: 24px;  /* old version */
   line-height: 20px;  /* old version */
   /* gap: 12px 24px; /* new version */
-  justify-items: start; /* new version */
+  align-items: center; /* new version */
 }
 
 .row-2 {
@@ -123,9 +116,10 @@ const email = {
   align-items: baseline;
   text-align: justify;
   font-style: normal;
-  justify-content: flex-start;
-  text-align: left;
-  min-width: 300px;
+  /* min-width: 300px; */
+  /* new version *//* color: var(--color-text-soft); */ 
+  /* new version *//* font-style: italic; */ 
+  /* new version *//* margin-top: 4px; */ 
 }
 .row-2 .label {
   font-style: normal;
@@ -143,8 +137,7 @@ const email = {
 
 .row-3 {
   display: flex;
-  justify-content: flex-start;
-  text-align: left;
+  align-items: center;
   gap: 8px;
 }
 
