@@ -17,9 +17,9 @@ const contactTop = {
 };
 
 const citizenships = [
-  { flag: "🇺🇸", name: "USA" },
-  { flag: "🇦🇺", name: "Australia" },
-  { flag: "🇨🇴", name: "Colombia" },
+  { flag: "🇺🇸", name: "USA " },
+  { flag: "🇦🇺", name: "Australia " },
+  { flag: "🇨🇴", name: "Colombia " },
 ]
 
 const email = { 
