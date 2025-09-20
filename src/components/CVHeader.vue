@@ -100,13 +100,13 @@ const email = {
 .row-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 8px; /* old version */
-  min-width: 300px;  /* old version */
-  row-gap: 0.5em; /* old version */
-  height: 24px;  /* old version */
-  line-height: 20px;  /* old version */
-  /* new version = gap: 12px 24px; */
-  /* new version = align-items: center; */
+  /* column-gap: 8px; /* old version */
+  /* min-width: 300px;  /* old version */
+  /* row-gap: 0.5em; /* old version */
+  /* height: 24px;  /* old version */
+  /* line-height: 20px;  /* old version */
+  gap: 12px 24px; /* new version */
+  align-items: center; /* new version */
 }
 
 .row-2 {
@@ -114,7 +114,7 @@ const email = {
   flex-wrap: wrap;
   gap: 6px; /* new version = 12px */
   align-items: baseline;
-  text-align: left;
+  text-align: justify;
   font-style: normal;
   /* new version *//* color: var(--color-text-soft); */ 
   /* new version *//* font-style: italic; */ 
