@@ -50,8 +50,16 @@ const email = {
         </div>
       </div>
 
-      <!-- Row 2: citizenships single line -->
+      <!-- Row 2: email only -->
       <div class="row row-2">
+        <font-awesome-icon :icon="email.icon" class="fa-icon" />
+        <a class="email" :href="email.href">{{ email.text }}</a>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Row 3: citizenships single line -->
+      <div class="row row-3">
         <span class="label">Citizen:</span>
         <span
           class="citizen"
@@ -62,13 +70,6 @@ const email = {
         </span>
       </div>
 
-      <hr class="divider" />
-
-      <!-- Row 3: email only -->
-      <div class="row row-3">
-        <font-awesome-icon :icon="email.icon" class="fa-icon" />
-        <a class="email" :href="email.href">{{ email.text }}</a>
-      </div>
     </div>
   </header>
 </template>
@@ -113,22 +114,9 @@ const email = {
 
 .row-2 {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px; /* new version = 12px */
-  align-items: baseline;
-  text-align: justify;
-  font-style: normal;
-  /* min-width: 300px; */
-  /* new version *//* color: var(--color-text-soft); */ 
-  /* new version *//* font-style: italic; */ 
-  /* new version *//* margin-top: 4px; */ 
+  align-items: center;
+  gap: 8px;
 }
-.row-2 .label {
-  font-style: normal;
-  color: var(--color-text);
-  margin-right: 6px;
-}
-.row-2 .flag { font-size: 16px; line-height: 1; }
 
 .divider {
   border: none;
@@ -139,9 +127,22 @@ const email = {
 
 .row-3 {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px; /* new version = 12px */
+  align-items: baseline;
+  text-align: justify;
+  font-style: normal;
+  /* min-width: 300px; */
+  /* new version *//* color: var(--color-text-soft); */ 
+  /* new version *//* font-style: italic; */ 
+  /* new version *//* margin-top: 4px; */ 
 }
+.row-3 .label {
+  font-style: normal;
+  color: var(--color-text);
+  margin-right: 6px;
+}
+.row-3 .flag { font-size: 16px; line-height: 1; }
 
 .icon {
   font-size: 1.1rem;
