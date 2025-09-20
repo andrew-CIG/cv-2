@@ -91,11 +91,11 @@ const email = {
   font-size: 3em;
   font-weight: 700;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .row { margin-top: 6px; }
-.item { display: flex; align-items: center; gap: 10px; }
+.item { display: flex; align-items: left; gap: 6px; }
 
 .row-1 {
   display: grid;
@@ -112,8 +112,9 @@ const email = {
 .row-2 {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* new version = 12px */
+  gap: 6px; /* new version = 12px */
   align-items: baseline;
+  text-align: left;
   font-style: normal;
   /* new version *//* color: var(--color-text-soft); */ 
   /* new version *//* font-style: italic; */ 
