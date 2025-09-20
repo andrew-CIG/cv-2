@@ -16,9 +16,9 @@ const contactTop = {
 };
 
 const citizenships = [
-  { flag: "us", name: "USA" },
-  { flag: "au", name: "Australia" },
-  { flag: "co", name: "Colombia" },
+  { flag: "🇺🇸", name: "USA" },
+  { flag: "🇦🇺", name: "Australia" },
+  { flag: "🇨🇴", name: "Colombia" },
 ]
 
 const email = { 
@@ -97,6 +97,13 @@ const email = {
 .row { margin-top: 6px; }
 .item { display: flex; align-items: left; gap: 6px; }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .row-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,7 +113,7 @@ const email = {
   height: 24px;  /* old version */
   line-height: 20px;  /* old version */
   /* gap: 12px 24px; /* new version */
-  align-items: center; /* new version */
+  justify-items: start; /* new version */
 }
 
 .row-2 {
@@ -116,10 +123,9 @@ const email = {
   align-items: baseline;
   text-align: justify;
   font-style: normal;
-  /* min-width: 300px; */
-  /* new version *//* color: var(--color-text-soft); */ 
-  /* new version *//* font-style: italic; */ 
-  /* new version *//* margin-top: 4px; */ 
+  justify-content: flex-start;
+  text-align: left;
+  min-width: 300px;
 }
 .row-2 .label {
   font-style: normal;
@@ -137,7 +143,8 @@ const email = {
 
 .row-3 {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
   gap: 8px;
 }
 
