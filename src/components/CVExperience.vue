@@ -201,7 +201,11 @@ let experiences: Experience[] = [
                 </span>
               </div>
 
-              <div class="description" v-html="position.description"></div>
+              <!-- <div class="description" v-html="position.description"></div> -->
+              <details class="desc">
+                <summary>Highlights</summary>
+                <div class="markdown" v-html="position.description"></div>
+              </details>
               
               <!-- Technologies -->
               <div class="tech-stack-section" v-if="hasTech(position)">
@@ -334,6 +338,30 @@ div.experiences {
             page-break-after: auto; 
           }
 
+          details.desc {
+            margin-top: 1em;
+            border-radius: 6px;
+          }
+          details.desc > summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--color-text-soft);
+            list-style: none;
+          }
+          details.desc[open] > summary {
+            color: interit;
+          }
+          details.desc .markdown {
+            margin-top: 0.75em
+          }
+          details.desc .markdown ul {
+            margin: 0.75em 0 0;
+            padding-left: 1.25em;
+            list-style: disc outside;
+          }
+          details.desc .markdown li { margin: 0.3em 0; }
+          details.desc .markdown li::marker { color: var(--color-text-soft)}
+
           div.tech-stack {
             page-break-inside: avoid;
             display: flex;
@@ -402,6 +430,8 @@ div.experiences {
         div.positions {
           div.position {
             div.description { margin-top: 1em; }
+            
+            details.desc { break-inside: avoid; page-break-inside: avoid; }
 
             div.tech-stack {
               page-break-inside: avoid;
