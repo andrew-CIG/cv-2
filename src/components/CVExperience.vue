@@ -50,14 +50,22 @@ type Position = {
   organisations?: string[];
 };
 
-const splitDescription = (html: string) => {
-  const i = html.indexOf('<ul');
-  if (i === -1) return { intro: html, rest: '' };
+const splitDescription3 = (html: string) => {
+  const match = html.match(/<(ul|ol)\b[^>]*>[\s\S]*?<\/\1>/i);
+  if (!match || match.index === undefined) {
+    return { intro: html, bullets: "", tail: "" };
+  }
+  const start = match.index;
+  const listHTML = match[0];
+  const end = start + listHTML.length;
   return {
-    intro: html.slice(0, i).trim(),
-    rest: html.slice(i).trim(),
+    intro: html.slice(0, start).trim(),
+    bullets: listHTML.trim(),
+    tail: html.slice(end).trim(),
   };
 };
+
+const partsFrom = (desc: string) => splitDescription3(desc);
 
 const hasTech = (p: Position) =>
   Array.isArray(p.technologies) && p.technologies.length > 0;
@@ -214,16 +222,26 @@ let experiences: Experience[] = [
               <!-- Intro paragraph always visible -->
                <div
                 class="intro markdown"
-                v-html="splitDescription(position.description).intro"
+                v-html="partsFrom(position.description).intro"
               />
               
               <!-- Bullets hidden until expanded -->
-              <details class="desc" v-if="splitDescription(position.description).rest">
-                <summary>Highlights</summary>
-                <div class="markdown" v-html="splitDescription(position.description).rest"></div>
+              <details class="desc" v-if="partsFrom(position.description).bullets">
+                <summary>Responsibilities</summary>
+                <div class="markdown" v-html="partsFrom(position.description).bullets"></div>
+              </details>
 
+              <!-- Acheivements section -->
+               <div
+                class="after-list markdown"
+                v-if="partsFrom(position.description).tail"
+                v-html="partsFrom(position.description).tail"
+              />
+
+              <!-- Technologies & Organisations -->
+              <div class="tech-org-container" v-if="hasTech(position) || hasOrgs(position)">
                 <!-- Technologies -->
-                <div class="tech-stack-section" v-if="hasTech(position)">
+                <div class="tech-stack-section" v-if="hasTech(position)"></div>
                   <h4>Technologies</h4>
                   <div class="tech-stack">
                     <img
@@ -236,22 +254,21 @@ let experiences: Experience[] = [
                   </div>
                 </div>
 
-              <!-- Organisations -->
-              <div class="organisations-section" v-if="hasOrgs(position)">
-                <h4>Organisations</h4>
-                <div class="organisations">
-                  <img
-                    class="org-logo"
-                    v-for="language in position.organisations"
-                    :key="language"
-                    :src="`${BASE}companies/square/${language}.png`"
-                    :alt="language"
-                  />
+                <!-- Organisations -->
+                <div class="organisations-section" v-if="hasOrgs(position)">
+                  <h4>Organisations</h4>
+                  <div class="organisations">
+                    <img
+                      class="org-logo"
+                      v-for="language in position.organisations"
+                      :key="language"
+                      :src="`${BASE}companies/square/${language}.png`"
+                      :alt="language"
+                    />
+                  </div>
                 </div>
               </div>
-            </details>
 
-            </div>
           </div>
         </div>
         <div v-if="exp.pageBreak" class="page-break"></div>
@@ -502,6 +519,14 @@ div.experiences {
 /* base styling for the new details section */
 details.desc {
   margin-top: 0.25rem;
+}
+
+.after-list.markdown {
+  margin: 0.75rem 0 0.75rem
+}
+
+details.desc ~ .tech-org-container {
+  display: block;
 }
 
 details.desc > summary {
