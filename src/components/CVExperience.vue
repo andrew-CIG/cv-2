@@ -467,6 +467,8 @@ div.experiences {
 
 @media screen and (max-width: 600px) {
 
+  $logoHeight: 50px;
+
   div.experiences {
     div.company {
       grid-template-columns: $logoHeight 1fr;
