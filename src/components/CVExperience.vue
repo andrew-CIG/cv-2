@@ -220,25 +220,22 @@ let experiences: Experience[] = [
               <!-- Bullets hidden until expanded -->
               <details class="desc" v-if="splitDescription(position.description).rest">
                 <summary>Highlights</summary>
-                <div
-                  class="markdown"
-                  v-html="splitDescription(position.description).rest"
-                />
-              </details>
+                <div class="markdown" v-html="position.description"></div>
 
-              <!-- Technologies -->
-              <div class="tech-stack-section" v-if="hasTech(position)">
-                <h4>Technologies</h4>
-                <div class="tech-stack">
-                  <img
-                    class="tech-logo"
-                    v-for="language in position.technologies"
-                    :key="language"
-                    :src="`${BASE}companies/square/${language}.png`"
-                    :alt="language"
-                  />
+                <!-- Technologies -->
+                <div class="tech-stack-section" v-if="hasTech(position)">
+                  <h4>Technologies</h4>
+                  <div class="tech-stack">
+                    <img
+                      class="tech-logo"
+                      v-for="language in position.technologies"
+                      :key="language"
+                      :src="`${BASE}companies/square/${language}.png`"
+                      :alt="language"
+                    />
+                  </div>
                 </div>
-              </div>
+              </details>
 
               <!-- Organisations -->
               <div class="organisations-section" v-if="hasOrgs(position)">
