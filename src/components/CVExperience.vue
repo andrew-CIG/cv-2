@@ -227,7 +227,7 @@ let experiences: Experience[] = [
               
               <!-- Bullets hidden until expanded -->
               <details class="desc" v-if="partsFrom(position.description).bullets">
-                <summary>Activities</summary>
+                <summary>Details</summary>
                 <div class="markdown" v-html="partsFrom(position.description).bullets"></div>
               </details>
 
