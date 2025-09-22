@@ -142,8 +142,8 @@ let experiences: Experience[] = [
         to: "Sep 2015",
         description: mdToHtml(Oakville2011),
         technologies: [
-          "dynamicsNav",
           "microsoft_logo",
+          "dynamicsNav",
         ],
       },
     ],
