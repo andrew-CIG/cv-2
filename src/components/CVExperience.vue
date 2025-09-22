@@ -5,6 +5,8 @@ import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
+
+
 const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
 const mdToHtml = (s: string): string=>
   marked.parse(s, { async: false }) as string;
@@ -23,10 +25,7 @@ const iconAliases: Record<string, string> = {
   'mdg': 'MDG',
   'mm': 'MM',
   'oakville': 'Oakville',
-  'technoserve': 'Technoserve',
-  'microsoft': 'Microsoft',
-  'dynamicsNav': 'dynamicsNAV',
-  'netsuite': 'Netsuite'
+  'technoserve': 'technoserve',
 };
 
 const normalize = (s: string) =>
@@ -49,6 +48,15 @@ type Position = {
   description: string;
   technologies?: string[];
   organisations?: string[];
+};
+
+const splitDescription = (html: string) => {
+  const i = html.indexOf('<ul');
+  if (i === -1) return { intro: html, rest: '' };
+  return {
+    intro: html.slice(0, i).trim(),
+    rest: html.slice(i).trim(),
+  };
 };
 
 const hasTech = (p: Position) =>
@@ -81,11 +89,10 @@ let experiences: Experience[] = [
         to: "Today",
         description: mdToHtml(CIG2020),
         technologies: [
-          "python",
-          "powerBI",
-          "microsoft_logo",
-          "sageX3",
           "SAP",
+          "sageX3",
+          "powerBI",
+          "python"
         ],
       },
     ],
@@ -104,9 +111,9 @@ let experiences: Experience[] = [
         description: mdToHtml(move2019),
         organisations: [
           "CORE",
-          "CSP",
-          "habitat_pei",
           "MDG",
+          "CSP",
+          "habitat_pei"
         ],
       },
     ],
@@ -125,8 +132,8 @@ let experiences: Experience[] = [
         to: "December 2018",
         description: mdToHtml(FPG2015),
         technologies: [
-          "microsoft_logo",
           "netsuite",
+          "microsoft",
         ],
       },
     ],
@@ -145,8 +152,8 @@ let experiences: Experience[] = [
         to: "Sep 2015",
         description: mdToHtml(Oakville2011),
         technologies: [
-          "microsoft_logo",
           "dynamicsNav",
+          "microsoft",
         ],
       },
     ],
@@ -162,8 +169,8 @@ let experiences: Experience[] = [
         to: "Nov 2010",
         description: mdToHtml(Moz2009),
         organisations: [
-          "CLUSA",
-          "technoserve",
+          "technoserve", 
+          "CLUSA"
         ],
       },
     ],
@@ -204,12 +211,21 @@ let experiences: Experience[] = [
                 </span>
               </div>
 
-              <!-- <div class="description" v-html="position.description"></div> -->
-              <details class="desc">
-                <summary>Highlights</summary>
-                <div class="markdown" v-html="position.description"></div>
-              </details>
+              <!-- Intro paragraph always visible -->
+               <div
+                class="intro markdown"
+                v-html="splitDescription(position.description).intro"
+              />
               
+              <!-- Bullets hidden until expanded -->
+              <details class="desc" v-if="splitDescription(position.description).rest">
+                <summary>Highlights</summary>
+                <div
+                  class="markdown"
+                  v-html="splitDescription(position.description).rest"
+                />
+              </details>
+
               <!-- Technologies -->
               <div class="tech-stack-section" v-if="hasTech(position)">
                 <h4>Technologies</h4>
@@ -253,13 +269,13 @@ $companyLogoSize: 80px;
 div.experiences {
   display: flex;
   flex-direction: column;
-  row-gap: 56px;
+  row-gap: 64px;
 
   div.company {
     display: grid;
     grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(72px, auto);
-    column-gap: 40px;
+    column-gap: 32px;
 
     div.page-break { display: none; }
 
@@ -321,7 +337,7 @@ div.experiences {
         page-break-before: avoid;
         display: flex;
         flex-direction: column;
-        row-gap: 1.2em;
+        row-gap: 1.8em;
 
         div.position {
           page-break-before: auto;
@@ -337,32 +353,9 @@ div.experiences {
           }
 
           div.description { 
-            margin-top: 1.2em; 
+            margin-top: 1.5em; 
             page-break-after: auto; 
           }
-
-          details.desc {
-            margin-top: 1em;
-            border-radius: 6px;
-          }
-          details.desc > summary {
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--color-text-soft);
-          }
-          details.desc[open] > summary {
-            color: interit;
-          }
-          details.desc .markdown {
-            margin-top: 0.75em
-          }
-          details.desc .markdown ul {
-            margin: 0.75em 0 0;
-            padding-left: 1.25em;
-            list-style: disc outside;
-          }
-          details.desc .markdown li { margin: 0.3em 0; }
-          details.desc .markdown li::marker { color: var(--color-text-soft)}
 
           div.tech-stack {
             page-break-inside: avoid;
@@ -370,8 +363,8 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 20px;
-            column-gap: 1.5 * $gap;
+            $gap: 8px;
+            column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
             $logoHeight: 40px;
@@ -390,8 +383,8 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 20px;
-            column-gap: 1.5 * $gap;
+            $gap: 8px;
+            column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
             $logoHeight: 40px;
@@ -432,12 +425,10 @@ div.experiences {
         div.positions {
           div.position {
             div.description { margin-top: 1em; }
-            
-            details.desc { break-inside: avoid; page-break-inside: avoid; }
 
             div.tech-stack {
               page-break-inside: avoid;
-              $gap: 10px;
+              $gap: 8px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
@@ -453,7 +444,7 @@ div.experiences {
 
             div.organisations {
               page-break-inside: avoid;
-              $gap: 10px;
+              $gap: 8px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
@@ -473,11 +464,11 @@ div.experiences {
     }
   }
 
+
 @media screen and (max-width: 600px) {
 
   div.experiences {
     div.company {
-      $logoHeight: 24px;
       grid-template-columns: $logoHeight 1fr;
       column-gap: 20px;
 
@@ -502,4 +493,27 @@ div.experiences {
     }
   }
 }
+
+/* spacing for the always-visible intro */
+.intro.markdown {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* base styling for the new details section */
+details.desc {
+  margin-top: 0.25rem;
+}
+
+details.desc > summary {
+  cursor: pointer;
+  list-style: none;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--color-text);
+}
+
+details.desc > summary::marker { 
+  content: ""; 
+}
+
 </style>
