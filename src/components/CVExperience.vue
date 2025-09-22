@@ -346,7 +346,6 @@ div.experiences {
             cursor: pointer;
             font-weight: 600;
             color: var(--color-text-soft);
-            list-style: none;
           }
           details.desc[open] > summary {
             color: interit;
