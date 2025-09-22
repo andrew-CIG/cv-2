@@ -235,7 +235,6 @@ let experiences: Experience[] = [
                     />
                   </div>
                 </div>
-              </details>
 
               <!-- Organisations -->
               <div class="organisations-section" v-if="hasOrgs(position)">
@@ -250,6 +249,7 @@ let experiences: Experience[] = [
                   />
                 </div>
               </div>
+            </details>
 
             </div>
           </div>
