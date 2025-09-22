@@ -513,8 +513,4 @@ details.desc > summary {
   color: var(--color-text);
 }
 
-details.desc > summary::marker { 
-  content: ""; 
-}
-
 </style>
