@@ -509,7 +509,6 @@ details.desc {
 
 details.desc > summary {
   cursor: pointer;
-  list-style: none;
   margin: 0.25rem 0 0.5rem;
   color: var(--color-text);
 }
