@@ -267,6 +267,7 @@ let experiences: Experience[] = [
                     />
                   </div>
                 </div>
+                
               </div>
 
           </div>
