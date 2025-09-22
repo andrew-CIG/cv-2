@@ -23,7 +23,10 @@ const iconAliases: Record<string, string> = {
   'mdg': 'MDG',
   'mm': 'MM',
   'oakville': 'Oakville',
-  'technoserve': 'technoserve',
+  'technoserve': 'Technoserve',
+  'microsoft': 'Microsoft',
+  'dynamicsNav': 'dynamicsNAV',
+  'netsuite': 'Netsuite'
 };
 
 const normalize = (s: string) =>
