@@ -220,7 +220,7 @@ let experiences: Experience[] = [
               <!-- Bullets hidden until expanded -->
               <details class="desc" v-if="splitDescription(position.description).rest">
                 <summary>Highlights</summary>
-                <div class="markdown" v-html="position.description"></div>
+                <div class="markdown" v-html="splitDescription(position.description).rest"></div>
 
                 <!-- Technologies -->
                 <div class="tech-stack-section" v-if="hasTech(position)">
