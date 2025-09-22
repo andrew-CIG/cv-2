@@ -241,7 +241,7 @@ let experiences: Experience[] = [
               <!-- Technologies & Organisations -->
               <div class="tech-org-container" v-if="hasTech(position) || hasOrgs(position)">
                 <!-- Technologies -->
-                <div class="tech-stack-section" v-if="hasTech(position)"></div>
+                <div class="tech-stack-section" v-if="hasTech(position)">
                   <h4>Technologies</h4>
                   <div class="tech-stack">
                     <img
@@ -255,7 +255,7 @@ let experiences: Experience[] = [
                 </div>
 
                 <!-- Organisations -->
-                <div class="organisations-section" v-if="hasOrgs(position)"></div>
+                <div class="organisations-section" v-if="hasOrgs(position)">
                   <h4>Organisations</h4>
                   <div class="organisations">
                     <img
@@ -267,7 +267,8 @@ let experiences: Experience[] = [
                     />
                   </div>
                 </div>
-
+              </div>
+            </div>
           </div>
         </div>
         <div v-if="exp.pageBreak" class="page-break"></div>
