@@ -255,7 +255,7 @@ let experiences: Experience[] = [
                 </div>
 
                 <!-- Organisations -->
-                <div class="organisations-section" v-if="hasOrgs(position)">
+                <div class="organisations-section" v-if="hasOrgs(position)"></div>
                   <h4>Organisations</h4>
                   <div class="organisations">
                     <img
@@ -267,8 +267,6 @@ let experiences: Experience[] = [
                     />
                   </div>
                 </div>
-                
-              </div>
 
           </div>
         </div>
