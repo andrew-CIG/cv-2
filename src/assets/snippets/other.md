@@ -1,5 +1,5 @@
-Born in 1986.
-
+Born in 1986.</br>
+</br>
 Hobbies & Interests
 - Alpine and nordic skiing
 - Hiking and trail running
