@@ -164,6 +164,28 @@ let experiences: Experience[] = [
           "microsoft",
         ],
       },
+      {
+        title: "Operations Manager",
+        from: "Jul 2013",
+        to: "Aug 2015",
+        description: mdToHtml(Oakville2011),
+        technologies: [
+          "dynamicsNav",
+          "sap",
+          "microsoft",
+        ]
+      },
+      {
+        title: "Analyst",
+        from: "May 2011",
+        to: "Jun 2013",
+        description: mdToHtml(Oakville2011),
+        technologies: [
+          "dynamicsNav",
+          "sap",
+          "microsoft",
+        ]
+      },
     ],
   },
   {
