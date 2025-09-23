@@ -2,3 +2,4 @@
 - Hiking and trail running
 - Cycling
 - Refurbishing old bicycles
+- Computer programming (data analysis and app development)
