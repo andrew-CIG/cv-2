@@ -304,88 +304,143 @@ let experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
-$companyLogoSize: 72px;
-$gap: 12px;
+$companyLogoSize: 80px;
 
-.experiences {
-  display: grid;
-  row-gap: 1.25rem;
-}
-
-.company {
-  display: grid;
-  grid-template-columns: $companyLogoSize 1fr;
-  column-gap: 1rem;
-  align-items: start;
-}
-
-.company-name { 
-  font-size: 1.2em; 
-}
-
-.experience-top {
+div.experiences {
   display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  min-height: $companyLogoSize;
-  height: auto;
-  margin-bottom: 1em;
+  flex-direction: column;
+  row-gap: 16px;
+
+  div.company {
+    display: grid;
+    grid-template-columns: $companyLogoSize 1fr;
+    grid-auto-rows: minmax(72px, auto);
+    column-gap: 32px;
+
+    div.page-break { display: none; }
+
+    div.company-name { font-size: 1.2em; }
+
+    img.company-logo {
+      page-break-inside: avoid;
+      width: max($companyLogoSize * 1.1);
+      height: $companyLogoSize;
+      background-color: #fff;
+      object-fit: contain;
+      padding: 3px;
+      border-radius: 3px;
+    }
+
+    div.line {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--color-position-line);
+      width: 2px;
+      height: auto;
+    }
+
+    div.experience-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: $companyLogoSize;
+      page-break-before: avoid;
+
+      div.company-name { 
+        font-weight: bold; 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 0.5em;
+
+        .company-desc {
+          font-weight: normal;
+          font-style: italic;
+          color: var(--color-text-soft);
+          font-size: 0.8em;
+        }
+      }
+
+      div.location { 
+        font-size: 1em; 
+        color: var(--color-text-soft); 
+      }
+    }
+
+    div.experience-desc {
+      page-break-before: avoid;
+      page-break-after: auto;
+
+      div.positions {
+        page-break-before: avoid;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.8em;
+
+        div.position {
+          page-break-before: auto;
+
+          div.title { font-weight: bold; font-size: 1em; }
+
+          div.from-to {
+            display: flex;
+            flex-direction: row;
+            column-gap: 5px;
+            color: var(--color-text-soft);
+            font-size: 0.9em;
+          }
+
+          div.description { 
+            margin-top: 1.5em; 
+            page-break-after: auto; 
+          }
+
+          div.tech-stack {
+            page-break-inside: avoid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            $gap: 32px;
+            column-gap: $gap;
+            row-gap: $gap;
+            margin-top: 1em;
+            $logoHeight: 40px;
+
+            .tech-logo {
+              height: $logoHeight;
+              width: auto;
+              display: block;
+              object-fit: contain;
+            }
+          }
+
+          div.organisations {
+            page-break-inside: avoid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            $gap: 32px;
+            column-gap: $gap;
+            row-gap: $gap;
+            margin-top: 1em;
+            $logoHeight: 40px;
+
+            .org-logo {
+              height: $logoHeight;
+              width: auto;
+              display: block;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-.positions {
-  display: grid;
-  gap: 1rem;
-}
-
-/* --- Intro & Details --- */
-.intro.markdown {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-details.desc > summary {
-  cursor: pointer;
-  margin: 0.25rem 0 0 0.5rem;
-  color: var(--color-text);
-}
-
-details.desc .markdown ul{
-  margin: 0.75em 0 0;
-  padding-left: 1.25em;
-  list-style: disc outside;
-}
-
-details.desc markdown li { margin: 0.3em 0; }
-details.desc .markdown li::marker { color: var(--color-text-soft); }
-
-.after-list.markdown {
-  margin: 0.75rem 0;
-}
-
-/* --- Tech / Orgs --- */
-.tech-org-container { margin-top: 0.5rem; }
-
-.tech-stack-section, .organisations-section {
-  margin-top: 0.75rem;
-  h4 { margin: 0.75rem 0 0.5rem; }
-}
-
-.tech-stack, .organisations {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 0.75rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.tech-logo, .org-logo {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-
-details.desc ~ .tech-org-container { display: none; }
-details.desc[open] ~ .tech-org-container { display: block; }
 
 @media print {
   $companyLogoSize: 50px;
