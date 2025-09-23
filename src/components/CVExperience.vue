@@ -316,8 +316,6 @@ div.experiences {
     grid-auto-rows: minmax(72px, auto);
     column-gap: 32px;
 
-    div.page-break { display: none; }
-
     img.company-logo {
       page-break-inside: avoid;
       max-width: $companyLogoSize * 1.1;
@@ -368,14 +366,17 @@ div.experiences {
     }
 
     div.experience-desc {
-
+      page-break-before: avoid;
+      page-break-after: auto;
 
       div.positions {
+        page-break-before: avoid;
         display: flex;
         flex-direction: column;
         row-gap: 1.8em;
 
         div.position {
+          page-break-before: auto;
 
           div.title { font-weight: bold; font-size: 1em; }
 
@@ -509,6 +510,7 @@ div.experiences {
     $companyLogoSize: 40px;
       
     img.company-logo {
+      page-break-inside: avoid; 
       max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       object-fit: contain;
