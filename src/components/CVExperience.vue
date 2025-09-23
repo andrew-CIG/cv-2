@@ -320,7 +320,7 @@ div.experiences {
 
     img.company-logo {
       page-break-inside: avoid;
-      width: max($companyLogoSize * 1.2);
+      width: max($companyLogoSize * 1.1);
       height: $companyLogoSize;
       background-color: #fff;
       object-fit: contain;
