@@ -368,17 +368,14 @@ div.experiences {
     }
 
     div.experience-desc {
-      page-break-before: avoid;
-      page-break-after: auto;
+
 
       div.positions {
-        page-break-before: avoid;
         display: flex;
         flex-direction: column;
         row-gap: 1.8em;
 
         div.position {
-          page-break-before: auto;
 
           div.title { font-weight: bold; font-size: 1em; }
 
