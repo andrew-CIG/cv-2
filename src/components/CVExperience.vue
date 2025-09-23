@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Moz2009 from "@/assets/experiences/2009-mozambique.md";
-import Oakville2011 from "@/assets/experiences/2011-oakville.md"
+import MM2011 from "@/assets/experiences/2011-MM.md";
+import MM2013 from "@/assets/experiences/2013-MM.md";
+import Oakville2015 from "@/assets/experiences/2015-oakville.md";
 import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
@@ -158,7 +160,7 @@ let experiences: Experience[] = [
         title: "National Category Manager and Facility Manager",
         from: "Feb 2015",
         to: "Sep 2015",
-        description: mdToHtml(Oakville2011),
+        description: mdToHtml(Oakville2015),
         technologies: [
           "dynamicsNav",
           "microsoft",
@@ -166,9 +168,9 @@ let experiences: Experience[] = [
       },
       {
         title: "Operations Manager",
-        from: "Jul 2013",
-        to: "Aug 2015",
-        description: mdToHtml(Oakville2011),
+        from: "Jan 2013",
+        to: "Jan 2015",
+        description: mdToHtml(MM2013),
         technologies: [
           "dynamicsNav",
           "microsoft",
@@ -177,8 +179,8 @@ let experiences: Experience[] = [
       {
         title: "Analyst",
         from: "May 2011",
-        to: "Jun 2013",
-        description: mdToHtml(Oakville2011),
+        to: "Dec 2013",
+        description: mdToHtml(MM2011),
         technologies: [
           "SAP",
           "microsoft",
