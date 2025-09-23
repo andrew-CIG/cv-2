@@ -327,8 +327,7 @@ $gap: 12px;
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  min-height: $companyLogoSize;
-  height: auto;
+  height: $companyLogoSize;
   margin-bottom: 1em;
 }
 
