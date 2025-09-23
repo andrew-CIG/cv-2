@@ -109,7 +109,7 @@ let experiences: Experience[] = [
   {
     company: "Sabbatical",
     about: "Moved to Canada, 12-months for visa processing",
-    icon: "Canada.png",
+    icon: "CanadaV2.png",
     location: "Eleuthera Island, Bahamas & PEI, Canada",
     positions: [
       {
