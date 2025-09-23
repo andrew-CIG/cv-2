@@ -1,0 +1,4 @@
+- Alpine and nordic skiing
+- Hiking and trail running
+- Cycling
+- Refurbishing old bicycles
