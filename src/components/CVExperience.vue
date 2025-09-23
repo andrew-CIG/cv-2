@@ -220,10 +220,10 @@ let experiences: Experience[] = [
               </div>
 
               <!-- Intro paragraph always visible -->
-               <div
+              <div
                 class="intro markdown"
                 v-html="partsFrom(position.description).intro"
-              />
+              />  
               
               <!-- Bullets hidden until expanded -->
               <details class="desc" v-if="partsFrom(position.description).bullets">
@@ -237,9 +237,10 @@ let experiences: Experience[] = [
                 v-if="partsFrom(position.description).tail"
                 v-html="partsFrom(position.description).tail"
               />
-
-              <!-- Technologies & Organisations -->
+              
+              <!-- Tech and Orgs -->
               <div class="tech-org-container" v-if="hasTech(position) || hasOrgs(position)">
+
                 <!-- Technologies -->
                 <div class="tech-stack-section" v-if="hasTech(position)"></div>
                   <h4>Technologies</h4>
@@ -252,7 +253,7 @@ let experiences: Experience[] = [
                       :alt="language"
                     />
                   </div>
-                
+                </div>
 
                 <!-- Organisations -->
                 <div class="organisations-section" v-if="hasOrgs(position)"></div>
@@ -266,15 +267,14 @@ let experiences: Experience[] = [
                       :alt="language"
                     />
                   </div>
-                
+                </div> 
               </div>
+
             </div>  
+            <div v-if="exp.pageBreak" class="page-break"></div>
           </div>
         </div>
-        <div v-if="exp.pageBreak" class="page-break"></div>
       </div>
-    </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>
