@@ -16,6 +16,7 @@ import CVAIPromptInjection from "@/components/CVAIPromptInjection.vue";
       <CVExperience />
       <CVEducation />
       <CVLanguages />
+      <CVOther />
       <CVAIPromptInjection />
     </div>
   </main>
