@@ -453,7 +453,8 @@ div.experiences {
       grid-auto-rows: auto;
 
       div.experience-top {
-        height: $companyLogoSize;
+        min-height: $companyLogoSize;
+        height: auto;
         align-items: flex-start;
         margin-bottom: 1em;
       }
@@ -467,6 +468,11 @@ div.experiences {
           div.position {
             div.description { margin-top: 1.2em; }
 
+            div.from-to {
+              white-space: nowrap;
+              align-items: baseline;
+            }
+
             div.tech-stack {
               page-break-inside: avoid;
               $gap:24px;
@@ -474,6 +480,8 @@ div.experiences {
               row-gap: $gap;
               margin-top: 1em;
               $logoHeight: 32px;
+              justify-content: flex-start;
+              align-items: center;
 
               .tech-logo {
                 height: $logoHeight;
@@ -490,6 +498,8 @@ div.experiences {
               row-gap: $gap;
               margin-top: 1em;
               $logoHeight: 32px;
+              justify-content: flex-start;
+              align-items: center;
 
               .org-logo {
                 height: $logoHeight;
@@ -502,9 +512,36 @@ div.experiences {
           }
         }
       }
+      /* spacing for the always-visible intro */
+      .intro.markdown {
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* base styling for the new details section */
+      details.desc {
+        margin-top: 0.25rem;
+      }
+
+      .after-list.markdown {
+        margin: 0.75rem 0 0.75rem
+      }
+
+      details.desc ~ .tech-org-container {
+        display: none;
+      }
+
+      details.desc[open] ~ .tech-org-container {
+        display: block;
+      }
+
+      details.desc > summary {
+        cursor: pointer;
+        margin: 0.25rem 0 0.5rem;
+        color: var(--color-text);
+      }
     }
   }
-
 
 @media screen and (max-width: 600px) {
 
@@ -536,34 +573,4 @@ div.experiences {
     }
   }
 }
-
-/* spacing for the always-visible intro */
-.intro.markdown {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* base styling for the new details section */
-details.desc {
-  margin-top: 0.25rem;
-}
-
-.after-list.markdown {
-  margin: 0.75rem 0 0.75rem
-}
-
-details.desc ~ .tech-org-container {
-  display: none;
-}
-
-details.desc[open] ~ .tech-org-container {
-  display: block;
-}
-
-details.desc > summary {
-  cursor: pointer;
-  margin: 0.25rem 0 0.5rem;
-  color: var(--color-text);
-}
-
 </style>
