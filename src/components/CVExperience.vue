@@ -463,11 +463,11 @@ div.experiences {
       div.experience-desc {
         div.positions {
           div.position {
-            div.description { margin-top: 1em; }
+            div.description { margin-top: 1.2em; }
 
             div.tech-stack {
               page-break-inside: avoid;
-              $gap: 8px;
+              $gap:24px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
@@ -483,7 +483,7 @@ div.experiences {
 
             div.organisations {
               page-break-inside: avoid;
-              $gap: 8px;
+              $gap:24px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
