@@ -444,8 +444,7 @@ details.desc[open] ~ .tech-org-container { display: block; }
     grid-template-columns: 1fr;
   }
   .experience-top {
-    min-height: initial;
-    height: auto;
+    max-height: $logoHeight;
   }
   .tech-stack, .organisations {
     justify-content: flex-start;
