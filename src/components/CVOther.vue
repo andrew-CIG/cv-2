@@ -5,7 +5,7 @@ import { marked } from "marked";
 
 <template>
   <div class="other">
-    <h2>Hobbies & Interests</h2>
+    <h2>Other</h2>
     <p v-html="marked.parse(Other)"></p>
   </div>
 </template>
