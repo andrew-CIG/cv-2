@@ -328,16 +328,6 @@ div.experiences {
       border-radius: 3px;
     }
 
-    div.line {
-      page-break-before: avoid;
-      page-break-after: avoid;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: var(--color-position-line);
-      width: 2px;
-      height: auto;
-    }
-
     div.experience-top {
       display: flex;
       flex-direction: column;
@@ -361,10 +351,20 @@ div.experiences {
         }
       }
 
-      div.location { 
-        font-size: 1em; 
-        color: var(--color-text-soft); 
+      div.location {
+        font-size: 1em;
+        color: var(--color-text-soft);
       }
+    }
+
+    div.line {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--color-position-line);
+      width: 2px;
+      height: auto;
     }
 
     div.experience-desc {
@@ -448,7 +448,7 @@ div.experiences {
 
 @media print {
 
-  $companyLogoSize: 50px;
+  $companyLogoSize: 64px;
 
   div.experiences {
     row-gap: 1em;
@@ -456,6 +456,12 @@ div.experiences {
       align-items: start;
       grid-template-columns: $companyLogoSize 1fr;
       grid-auto-rows: auto;
+      
+      img.company-logo { 
+        height: $companyLogoSize; 
+        max-width: 1.2 * $companyLogoSize;
+      }
+      
       div.experience-top {
         height: $companyLogoSize;
         align-items: flex-start;
@@ -463,11 +469,6 @@ div.experiences {
       }
 
       div.page-break { display: block; page-break-after: always; }
-
-      img.company-logo { 
-        height: $companyLogoSize; 
-        max-width: 1.2 * $companyLogoSize;
-      }
 
       div.experience-desc {
         div.positions {
@@ -531,7 +532,7 @@ div.experiences {
       img.company-logo { width: auto; height: $logoHeight; }
     }
 
-    div.company div.experience-desc {
+    div.experience-desc {
       div.positions {
         div.position {
           div.tech-stack {
