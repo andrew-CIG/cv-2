@@ -314,7 +314,7 @@ $gap: 12px;
 
 .company {
   display: grid;
-  grid-template-columns: $companyLogoSize 1fr;
+  grid-template-columns: $companyLogoSize;
   column-gap: 1rem;
   align-items: start;
 }
