@@ -267,10 +267,11 @@ let experiences: Experience[] = [
                       :alt="language"
                     />
                   </div>
-                </div> 
+                </div>
+
               </div>
 
-            </div>  
+            </div>
             <div v-if="exp.pageBreak" class="page-break"></div>
           </div>
         </div>
@@ -525,15 +526,11 @@ details.desc {
   margin: 0.75rem 0 0.75rem
 }
 
-details.desc ~ .tech-org-container,
-details.desc ~ .tech-stack-section,
-details.desc ~ .organisations-section {
+details.desc ~ .tech-org-container {
   display: none;
 }
 
-details.desc[open] ~ .tech-org-container,
-details.desc[open] ~ .tech-stack-section,
-details.desc[open] ~ .organisations-section {
+details.desc[open] ~ .tech-org-container {
   display: block;
 }
 
