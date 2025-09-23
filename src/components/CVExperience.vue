@@ -314,7 +314,7 @@ $gap: 12px;
 
 .company {
   display: grid;
-  grid-template-columns: $companyLogoSize;
+  grid-template-columns: $companyLogoSize 1fr;
   column-gap: 1rem;
   align-items: start;
 }
@@ -327,7 +327,8 @@ $gap: 12px;
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  height: $companyLogoSize;
+  min-height: $companyLogoSize;
+  height: auto;
   margin-bottom: 1em;
 }
 
@@ -388,66 +389,134 @@ details.desc[open] ~ .tech-org-container { display: block; }
 
 @media print {
   $companyLogoSize: 50px;
-  .experiences .company { align-items: start; }
 
-  .experience-top {
-    min-height: $companyLogoSize;
-    height: auto;
-    align-items: flex-start;
-    margin-bottom: 1em;
-  }
+  div.experiences {
+    row-gap: 1em;
 
-  .positions .from-to {
-    white-space: nowrap;
-    align-items: baseline;
-  }
+    div.company {
+      align-items: start;
+      grid-template-columns: $companyLogoSize 1fr;
+      grid-auto-rows: auto;
 
-  details.desc .markdown ul {
-    list-style-position: outside;
-    padding-left: 1.25em;
-    margin: 0.5rem 0;
-  }
-  details.desc .markdown li { margin: 0.2rem 0; }
+      div.experience-top {
+        min-height: $companyLogoSize;
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 1em;
+      }
 
-  details.desc ~ .tech-org-container {
-    display: none !important;
-  }
-  details.desc[open] ~ .tech-org-container {
-    display: block !important;
-  }
+      div.page-break { display: block; page-break-after: always; }
 
-  .tech-stack, .organisations {
-    justify-content: flex-start !important;
-    align-items: center;
-  }
+      img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
 
-  .company,
-  .experience-top,
-  .positions,
-  .position,
-  .tech-org-container,
-  .after-list,
-  details.desc {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+      div.experience-desc {
+        div.positions {
+          div.position {
+            div.description { margin-top: 1.2em; }
 
-  details.desc > summary {
-    break-after: avoid;
-    page-break-before: avoid;
+            div.from-to {
+              white-space: nowrap;
+              align-items: baseline;
+            }
+
+            div.tech-stack {
+              page-break-inside: avoid;
+              $gap:24px;
+              column-gap: $gap;
+              row-gap: $gap;
+              margin-top: 1em;
+              $logoHeight: 32px;
+              justify-content: flex-start;
+              align-items: center;
+
+              .tech-logo {
+                height: $logoHeight;
+                width: auto;
+                display: block;
+                object-fit: contain;
+                }
+            }
+
+            div.organisations {
+              page-break-inside: avoid;
+              $gap:24px;
+              column-gap: $gap;
+              row-gap: $gap;
+              margin-top: 1em;
+              $logoHeight: 32px;
+              justify-content: flex-start;
+              align-items: center;
+
+              .org-logo {
+                height: $logoHeight;
+                width: auto;
+                display: block;
+                object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+      /* spacing for the always-visible intro */
+      .intro.markdown {
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* base styling for the new details section */
+      details.desc {
+        margin-top: 0.25rem;
+      }
+
+      .after-list.markdown {
+        margin: 0.75rem 0 0.75rem
+      }
+
+      details.desc ~ .tech-org-container {
+        display: none;
+      }
+
+      details.desc[open] ~ .tech-org-container {
+        display: block;
+      }
+
+      details.desc > summary {
+        cursor: pointer;
+        margin: 0.25rem 0 0.5rem;
+        color: var(--color-text);
+      }
+    }
   }
-}
 
 @media screen and (max-width: 600px) {
+
   $logoHeight: 50px;
-  .company {
-    grid-template-columns: 1fr;
-  }
-  .experience-top {
-    max-height: $logoHeight;
-  }
-  .tech-stack, .organisations {
-    justify-content: flex-start;
+
+  div.experiences {
+    div.company {
+      grid-template-columns: $logoHeight 1fr;
+      column-gap: 20px;
+
+      img.company-logo { width: auto; height: $logoHeight; }
+    }
+
+    div.company div.experience-desc {
+      div.positions {
+        div.position {
+          div.tech-stack {
+            $logoHeight: 24px;
+            $gap: 8px;
+            $logoPadding: 8px;
+          }
+          div.organisations {
+            $logoHeight: 24px;
+            $gap: 8px;
+            $logoPadding: 8px;
+          }
+        }
+      }
+    }
   }
 }
 </style>
