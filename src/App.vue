@@ -4,6 +4,7 @@ import CVIntroduction from "@/components/CVIntroduction.vue";
 import CVExperience from "@/components/CVExperience.vue";
 import CVEducation from "@/components/CVEducation.vue";
 import CVLanguages from "@/components/CVLanguages.vue";
+import CVOther from "@/components/CVOther.vue";
 import CVAIPromptInjection from "@/components/CVAIPromptInjection.vue";
 </script>
 
