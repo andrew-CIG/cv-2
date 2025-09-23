@@ -189,7 +189,7 @@ let experiences: Experience[] = [
   {
     company: "Various organisations",
     location: "Mozambique",
-    icon: "mozambique.png",
+    icon: "mozambiqueV2.png",
     positions: [
       {
         title: "Consultant, Project Coordinator",
