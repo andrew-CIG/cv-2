@@ -229,48 +229,47 @@ let experiences: Experience[] = [
               <details class="desc" v-if="partsFrom(position.description).bullets">
                 <summary>Details</summary>
                 <div class="markdown" v-html="partsFrom(position.description).bullets"></div>
-
-                <!-- Acheivements section -->
-                <div
-                  class="after-list markdown"
-                  v-if="partsFrom(position.description).tail"
-                  v-html="partsFrom(position.description).tail"
-                />
-
-                <!-- Technologies & Organisations -->
-                <div class="tech-org-container" v-if="hasTech(position) || hasOrgs(position)">
-                  <!-- Technologies -->
-                  <div class="tech-stack-section" v-if="hasTech(position)">
-                    <h4>Technologies</h4>
-                    <div class="tech-stack">
-                      <img
-                        class="tech-logo"
-                        v-for="language in position.technologies"
-                        :key="language"
-                        :src="`${BASE}companies/square/${language}.png`"
-                        :alt="language"
-                      />
-                    </div>
-                  </div>
-
-                  <!-- Organisations -->
-                  <div class="organisations-section" v-if="hasOrgs(position)">
-                    <h4>Organisations</h4>
-                    <div class="organisations">
-                      <img
-                        class="org-logo"
-                        v-for="language in position.organisations"
-                        :key="language"
-                        :src="`${BASE}companies/square/${language}.png`"
-                        :alt="language"
-                      />
-                    </div>
-                  </div>
-                </div>  
               </details>
-            </div>
+
+              <!-- Acheivements section -->
+               <div
+                class="after-list markdown"
+                v-if="partsFrom(position.description).tail"
+                v-html="partsFrom(position.description).tail"
+              />
+
+              <!-- Technologies & Organisations -->
+              <div class="tech-org-container" v-if="hasTech(position) || hasOrgs(position)">
+                <!-- Technologies -->
+                <div class="tech-stack-section" v-if="hasTech(position)"></div>
+                  <h4>Technologies</h4>
+                  <div class="tech-stack">
+                    <img
+                      class="tech-logo"
+                      v-for="language in position.technologies"
+                      :key="language"
+                      :src="`${BASE}companies/square/${language}.png`"
+                      :alt="language"
+                    />
+                  </div>
+                
+
+                <!-- Organisations -->
+                <div class="organisations-section" v-if="hasOrgs(position)"></div>
+                  <h4>Organisations</h4>
+                  <div class="organisations">
+                    <img
+                      class="org-logo"
+                      v-for="language in position.organisations"
+                      :key="language"
+                      :src="`${BASE}companies/square/${language}.png`"
+                      :alt="language"
+                    />
+                  </div>
+                
+              </div>
+            </div>  
           </div>
-        
         </div>
         <div v-if="exp.pageBreak" class="page-break"></div>
       </div>
@@ -526,11 +525,13 @@ details.desc {
   margin: 0.75rem 0 0.75rem
 }
 
-details.desc ~ .tech-org-container {
+details.desc ~ .tech-stack-section,
+details.desc ~ .organisations-section {
   display: none;
 }
 
-details.desc[open] ~ .tech-org-container {
+details.desc[open] ~ .tech-stack-section,
+details.desc[open] ~ .organisations-section {
   display: block;
 }
 
