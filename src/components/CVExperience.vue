@@ -550,33 +550,4 @@ div.experiences {
   }
 }
 
-/* spacing for the always-visible intro */
-.intro.markdown {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* base styling for the new details section */
-details.desc {
-  margin-top: 0.25rem;
-}
-
-.after-list.markdown {
-  margin: 0.75rem 0 0.75rem
-}
-
-details.desc ~ .tech-org-container {
-  display: none;
-}
-
-details.desc[open] ~ .tech-org-container {
-  display: block;
-}
-
-details.desc > summary {
-  cursor: pointer;
-  margin: 0.25rem 0 0.5rem;
-  color: var(--color-text);
-}
-
 </style>
