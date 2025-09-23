@@ -254,7 +254,7 @@ let experiences: Experience[] = [
               </details>
 
               <!-- Achievements section -->
-               <div
+              <div
                 class="after-list markdown"
                 v-if="partsFrom(position.description).tail"
                 v-html="partsFrom(position.description).tail"
@@ -318,8 +318,6 @@ div.experiences {
 
     div.page-break { display: none; }
 
-    div.company-name { font-size: 1.2em; }
-
     img.company-logo {
       page-break-inside: avoid;
       width: max($companyLogoSize * 1.1);
@@ -348,6 +346,7 @@ div.experiences {
       page-break-before: avoid;
 
       div.company-name { 
+        font-size: 1.2em;
         font-weight: bold; 
         display: flex;
         flex-wrap: wrap;
@@ -391,10 +390,16 @@ div.experiences {
             font-size: 0.9em;
           }
 
-          div.description { 
-            margin-top: 1.5em; 
-            page-break-after: auto; 
-          }
+          div.intro.markdown { margin-top: 0.5rem; margin-bottom: 0.75rem; }
+
+          details.desc { margin-top: 0.25rem; page-break-after: auto; }
+            details.desc>summary { cursor: pointer; margin: 0.25rem 0 0.5rem ; color: var(--color-text); }
+
+          div.after-list.markdown { margin: 0.75rem 0 0.75rem }
+
+          details.desc ~ .tech-org-container { display: none; }
+
+          details.desc[open] ~ .tech-org-container {display: block; }
 
           div.tech-stack {
             page-break-inside: avoid;
@@ -442,50 +447,49 @@ div.experiences {
 }
 
 @media print {
+
   $companyLogoSize: 50px;
 
   div.experiences {
     row-gap: 1em;
-
     div.company {
       align-items: start;
       grid-template-columns: $companyLogoSize 1fr;
       grid-auto-rows: auto;
-
       div.experience-top {
-        min-height: $companyLogoSize;
-        height: auto;
+        height: $companyLogoSize;
         align-items: flex-start;
         margin-bottom: 1em;
       }
 
       div.page-break { display: block; page-break-after: always; }
 
-      img.company-logo { width: $companyLogoSize; height: $companyLogoSize; }
+      img.company-logo { 
+        height: $companyLogoSize; 
+        max-width: 1.2 * $companyLogoSize;
+      }
 
       div.experience-desc {
         div.positions {
           div.position {
             div.description { margin-top: 1.2em; }
-
-            div.from-to {
-              white-space: nowrap;
-              align-items: base;
-            }
+            div.from-to { white-space: nowrap; align-items: base; }
+            $logoSize: 32px;
+            $logoPadding: 4px;
+            $gap: 8px;
 
             div.tech-stack {
               page-break-inside: avoid;
-              $gap:24px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
-              $logoHeight: 32px;
-              justify-content: flex-start;
+              justify-content: center;
               align-items: center;
 
               .tech-logo {
-                height: $logoHeight;
+                height: $logoSize;
                 width: auto;
+                padding: $logoPadding;
                 display: block;
                 object-fit: contain;
                 }
@@ -493,17 +497,16 @@ div.experiences {
 
             div.organisations {
               page-break-inside: avoid;
-              $gap:24px;
               column-gap: $gap;
               row-gap: $gap;
               margin-top: 1em;
-              $logoHeight: 32px;
-              justify-content: flex-start;
+              justify-content: center;
               align-items: center;
 
               .org-logo {
-                height: $logoHeight;
+                height: $logoSize;
                 width: auto;
+                padding: $logoPadding;
                 display: block;
                 object-fit: contain;
                 }
