@@ -320,7 +320,7 @@ div.experiences {
 
     img.company-logo {
       page-break-inside: avoid;
-      width: max($companyLogoSize * 1.1);
+      max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       background-color: #fff;
       object-fit: contain;
@@ -448,103 +448,115 @@ div.experiences {
 
 @media print {
 
-  $companyLogoSize: 64px;
-
-  div.experiences {
-    row-gap: 1em;
-    div.company {
-      align-items: start;
-      grid-template-columns: $companyLogoSize 1fr;
-      grid-auto-rows: auto;
+  div.company{
+    column-gap: 24px;
+    $companyLogoSize: 64px;
       
-      img.company-logo { 
-        height: $companyLogoSize; 
-        max-width: 1.2 * $companyLogoSize;
+    img.company-logo {
+      page-break-inside: avoid; 
+      max-width: $companyLogoSize * 1.1;
+      height: $companyLogoSize;
+      object-fit: contain;
+      padding: 3px;
+    }
+
+    div.position{
+      $gap: 24px;
+      $logoHeight: 32px;
+      $margin-top: 1em;
+
+      div.tech-stack {
+        page-break-inside: avoid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;      
+        column-gap: $gap;
+        row-gap: $gap;
+        margin-top: $margin-top;
+
+        .tech-logo {
+          height: $logoHeight;
+          width: auto;
+          display: block;
+          object-fit: contain;
+        }
       }
-      
-      div.experience-top {
-        height: $companyLogoSize;
-        align-items: flex-start;
-        margin-bottom: 1em;
-      }
 
-      div.page-break { display: block; page-break-after: always; }
+      div.organisations {
+        page-break-inside: avoid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: $gap;
+        row-gap: $gap;
+        margin-top: $margin-top;
 
-      div.experience-desc {
-        div.positions {
-          div.position {
-            div.description { margin-top: 1.2em; }
-            div.from-to { white-space: nowrap; align-items: base; }
-            $logoSize: 32px;
-            $logoPadding: 4px;
-            $gap: 8px;
-
-            div.tech-stack {
-              page-break-inside: avoid;
-              column-gap: $gap;
-              row-gap: $gap;
-              margin-top: 1em;
-              justify-content: center;
-              align-items: center;
-
-              .tech-logo {
-                height: $logoSize;
-                width: auto;
-                padding: $logoPadding;
-                display: block;
-                object-fit: contain;
-                }
-            }
-
-            div.organisations {
-              page-break-inside: avoid;
-              column-gap: $gap;
-              row-gap: $gap;
-              margin-top: 1em;
-              justify-content: center;
-              align-items: center;
-
-              .org-logo {
-                height: $logoSize;
-                width: auto;
-                padding: $logoPadding;
-                display: block;
-                object-fit: contain;
-                }
-              }
-            }
-          }
+        .org-logo {
+          height: $logoHeight;
+          width: auto;
+          display: block;
+          object-fit: contain;
         }
       }
     }
   }
+}
 
 
 @media screen and (max-width: 600px) {
 
-  $logoHeight: 50px;
-
-  div.experiences {
-    div.company {
-      grid-template-columns: $logoHeight 1fr;
-      column-gap: 20px;
-
-      img.company-logo { width: auto; height: $logoHeight; }
+  div.company{
+    column-gap: 32px;
+    $companyLogoSize: 40px;
+      
+    img.company-logo {
+      page-break-inside: avoid; 
+      max-width: $companyLogoSize * 1.1;
+      height: $companyLogoSize;
+      object-fit: contain;
+      padding: 3px;
     }
 
-    div.experience-desc {
-      div.positions {
-        div.position {
-          div.tech-stack {
-            $logoHeight: 24px;
-            $gap: 8px;
-            $logoPadding: 8px;
-          }
-          div.organisations {
-            $logoHeight: 24px;
-            $gap: 8px;
-            $logoPadding: 8px;
-          }
+    div.position{
+      $gap: 24px;
+      $logoHeight: 32px;
+      $margin-top: 1em;
+
+      div.tech-stack {
+        page-break-inside: avoid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;      
+        column-gap: $gap;
+        row-gap: $gap;
+        margin-top: $margin-top;
+
+        .tech-logo {
+          height: $logoHeight;
+          width: auto;
+          display: block;
+          object-fit: contain;
+        }
+      }
+
+      div.organisations {
+        page-break-inside: avoid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: $gap;
+        row-gap: $gap;
+        margin-top: $margin-top;
+
+        .org-logo {
+          height: $logoHeight;
+          width: auto;
+          display: block;
+          object-fit: contain;
         }
       }
     }
