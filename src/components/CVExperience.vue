@@ -402,7 +402,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 24px;
+            $gap: 32px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
@@ -422,7 +422,7 @@ div.experiences {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            $gap: 24px;
+            $gap: 32px;
             column-gap: $gap;
             row-gap: $gap;
             margin-top: 1em;
