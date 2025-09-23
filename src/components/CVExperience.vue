@@ -448,11 +448,13 @@ div.experiences {
     row-gap: 1em;
 
     div.company {
+      align-items: start;
       grid-template-columns: $companyLogoSize 1fr;
       grid-auto-rows: auto;
 
       div.experience-top {
         height: $companyLogoSize;
+        align-items: flex-start;
         margin-bottom: 1em;
       }
 
