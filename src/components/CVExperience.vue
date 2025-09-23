@@ -99,10 +99,11 @@ let experiences: Experience[] = [
         to: "Today",
         description: mdToHtml(CIG2020),
         technologies: [
-          "SAP",
-          "sageX3",
-          "powerBI",
-          "python"
+        "microsoft_logo",
+        "powerBI",
+        "python",
+        "sageX3",
+        "SAP",
         ],
       },
     ],
@@ -143,7 +144,7 @@ let experiences: Experience[] = [
         description: mdToHtml(FPG2015),
         technologies: [
           "netsuite",
-          "microsoft",
+          "microsoft_logo",
         ],
       },
     ],
@@ -163,7 +164,7 @@ let experiences: Experience[] = [
         description: mdToHtml(Oakville2015),
         technologies: [
           "dynamicsNav",
-          "microsoft",
+          "microsoft_logo",
         ],
       },
       {
@@ -173,7 +174,7 @@ let experiences: Experience[] = [
         description: mdToHtml(MM2013),
         technologies: [
           "dynamicsNav",
-          "microsoft",
+          "microsoft_logo",
         ]
       },
       {
@@ -183,7 +184,7 @@ let experiences: Experience[] = [
         description: mdToHtml(MM2011),
         technologies: [
           "SAP",
-          "microsoft",
+          "microsoft_logo",
         ]
       },
     ],
