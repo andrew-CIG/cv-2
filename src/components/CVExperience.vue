@@ -99,11 +99,10 @@ let experiences: Experience[] = [
         to: "Today",
         description: mdToHtml(CIG2020),
         technologies: [
-        "microsoft_logo",
-        "powerBI",
-        "python",
-        "sageX3",
-        "SAP",
+          "SAP",
+          "sageX3",
+          "powerBI",
+          "python"
         ],
       },
     ],
@@ -144,7 +143,7 @@ let experiences: Experience[] = [
         description: mdToHtml(FPG2015),
         technologies: [
           "netsuite",
-          "microsoft_logo",
+          "microsoft",
         ],
       },
     ],
@@ -164,7 +163,7 @@ let experiences: Experience[] = [
         description: mdToHtml(Oakville2015),
         technologies: [
           "dynamicsNav",
-          "microsoft_logo",
+          "microsoft",
         ],
       },
       {
@@ -174,7 +173,7 @@ let experiences: Experience[] = [
         description: mdToHtml(MM2013),
         technologies: [
           "dynamicsNav",
-          "microsoft_logo",
+          "microsoft",
         ]
       },
       {
@@ -184,7 +183,7 @@ let experiences: Experience[] = [
         description: mdToHtml(MM2011),
         technologies: [
           "SAP",
-          "microsoft_logo",
+          "microsoft",
         ]
       },
     ],
@@ -514,35 +513,37 @@ div.experiences {
         }
       }
       /* spacing for the always-visible intro */
-      .intro.markdown {
-        margin-top: 0.5rem;
-        margin-bottom: 0.75rem;
-      }
+    .intro.markdown {
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
 
-      /* base styling for the new details section */
-      details.desc {
-        margin-top: 0.25rem;
-      }
+    /* base styling for the new details section */
+    details.desc {
+      margin-top: 0.25rem;
+    }
 
-      .after-list.markdown {
-        margin: 0.75rem 0 0.75rem
-      }
+    .after-list.markdown {
+      margin: 0.75rem 0 0.75rem
+    }
 
-      details.desc ~ .tech-org-container {
-        display: none;
-      }
+    details.desc ~ .tech-org-container {
+      display: none;
+    }
 
-      details.desc[open] ~ .tech-org-container {
-        display: block;
-      }
+    details.desc[open] ~ .tech-org-container {
+      display: block;
+    }
 
-      details.desc > summary {
-        cursor: pointer;
-        margin: 0.25rem 0 0.5rem;
-        color: var(--color-text);
-      }
+    details.desc > summary {
+      cursor: pointer;
+      margin: 0.25rem 0 0.5rem;
+      color: var(--color-text);
+    }
+
     }
   }
+
 
 @media screen and (max-width: 600px) {
 
@@ -574,4 +575,6 @@ div.experiences {
     }
   }
 }
+
+
 </style>
