@@ -171,7 +171,6 @@ let experiences: Experience[] = [
         description: mdToHtml(Oakville2011),
         technologies: [
           "dynamicsNav",
-          "sap",
           "microsoft",
         ]
       },
@@ -181,8 +180,7 @@ let experiences: Experience[] = [
         to: "Jun 2013",
         description: mdToHtml(Oakville2011),
         technologies: [
-          "dynamicsNav",
-          "sap",
+          "SAP",
           "microsoft",
         ]
       },
