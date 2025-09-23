@@ -400,7 +400,7 @@ div.experiences {
             page-break-inside: avoid;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             $gap: 32px;
             column-gap: $gap;
@@ -420,7 +420,7 @@ div.experiences {
             page-break-inside: avoid;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             $gap: 32px;
             column-gap: $gap;
