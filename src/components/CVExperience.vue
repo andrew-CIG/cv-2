@@ -455,7 +455,7 @@ div.experiences {
   } */
 
   div.experiences { 
-    /* display: block !important; */
+    display: block !important;
 
     div.company{
       column-gap: 24px;
