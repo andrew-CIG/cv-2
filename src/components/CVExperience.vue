@@ -454,8 +454,6 @@ div.experiences {
     height: 0; margin: 0; padding: 0;
   }
 
-  div.experiences { display: block !important; }
-
   div.experiences-top {
     min-height: $companyLogoSize;
     height: auto;
