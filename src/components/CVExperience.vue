@@ -492,10 +492,9 @@ div.experiences {
             $margin-top: 1em;
             break-inside: auto;
 
-            div.from-to { white-space: nowrap; }
-
+            div.title { break-inside: auto; }
+            div.from-to { white-space: nowrap; break-inside: auto;}
             div.intro.markdown { break-inside: auto; }
-
             details.desc { break-inside: auto; }
 
             details.desc > summary { break-inside: auto; }
