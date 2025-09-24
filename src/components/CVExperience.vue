@@ -504,7 +504,10 @@ div.experiences {
               margin: 0.5rem 0;
               break-inside: auto;
             }
-            details.desc .markdown li { margin: 0.2rem 0; }
+            details.desc .markdown li { 
+              margin: 0.2rem 0; 
+              break-inside: auto;
+            }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
 
             details.desc ~ .tech-org-container { display: none !important; }
