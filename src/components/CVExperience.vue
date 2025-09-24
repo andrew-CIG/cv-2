@@ -456,7 +456,7 @@ div.experiences {
 
   div.experiences { display: block !important; }
 
-  div.experiences-top {
+  div.experience-top {
     min-height: $companyLogoSize;
     height: auto;
     align-items: flex-start; 
@@ -490,14 +490,14 @@ div.experiences {
       details.desc .markdown li { margin: 0.2rem 0; }
       details.desc .markdown li::marker { color: var(--color-text-soft); }
 
-      details.desc ~ .tech-org-container { display: non !important; }
+      details.desc ~ .tech-org-container { display: none !important; }
       details.desc[open] ~ .tech-org-container { display: block !important; }
 
       div.tech-stack {
         page-break-inside: avoid;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;      
         column-gap: $gap;
         row-gap: $gap;
@@ -515,7 +515,7 @@ div.experiences {
         page-break-inside: avoid;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         column-gap: $gap;
         row-gap: $gap;
@@ -532,12 +532,12 @@ div.experiences {
   }
 }
 
-
 @media screen and (max-width: 600px) {
 
   div.company{
     column-gap: 32px;
     $companyLogoSize: 40px;
+    grid-template-columns: 1fr;
       
     img.company-logo {
       page-break-inside: avoid; 
