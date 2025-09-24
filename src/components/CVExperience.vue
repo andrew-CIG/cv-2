@@ -494,14 +494,15 @@ div.experiences {
 
             div.from-to { white-space: nowrap; }
 
-            details.desc > summary {
-              break-after: auto;
-            }
+            div.intro.markdown { break-inside: auto; }
+
+            details.desc > summary { break-inside: auto; }
 
             details.desc .markdown ul {
               list-style-position: outside;
               padding-left: 1.25em;
               margin: 0.5rem 0;
+              break-inside: auto;
             }
             details.desc .markdown li { margin: 0.2rem 0; }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
