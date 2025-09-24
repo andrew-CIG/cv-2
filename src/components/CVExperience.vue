@@ -448,14 +448,14 @@ div.experiences {
 .page-break { display: none; }
 
 @media print {
-  .page-break {
-    /* display: block; */
-    /* break-after: page; */
+  /* .page-break {
+    display: block;
+    break-after: page;
     height: 0; margin: 0; padding: 0;
-  }
+  } */
 
   div.experiences { 
-    display: block !important;
+    /* display: block !important; */
 
     div.company{
       column-gap: 24px;
