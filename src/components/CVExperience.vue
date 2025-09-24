@@ -448,11 +448,11 @@ div.experiences {
 .page-break { display: none; }
 
 @media print {
-  /* .page-break {
+  .page-break {
     display: block;
     break-after: page;
     height: 0; margin: 0; padding: 0;
-  } */
+  }
 
   div.experiences { 
     display: block !important;
