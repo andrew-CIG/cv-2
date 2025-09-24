@@ -455,25 +455,33 @@ div.experiences {
   }
 
   div.experiences { display: block !important; }
-
-  div.experience-top {
-    min-height: $companyLogoSize;
-    height: auto;
-    align-items: flex-start; 
-  }
+  /* div.company { */
+    /* .company-logo {} */
 
   div.company{
     column-gap: 24px;
     $companyLogoSize: 64px;
     grid-template-columns: 64px 1fr;
+    grid-auto-rows: auto;
+    break-inside: auto;
       
     img.company-logo {
-      page-break-inside: avoid; 
+      break-inside: avoid; 
       max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       object-fit: contain;
       padding: 3px;
     }
+    
+    div.experience-top {
+      min-height: $companyLogoSize;
+      height: auto;
+      align-items: flex-start; 
+      break-inside: auto;
+    }
+
+    div.experience-desc { break-inside: auto; }
+    div.positions { break-inside: auto; }
 
     div.position{
       $gap: 24px;
@@ -481,6 +489,10 @@ div.experiences {
       $margin-top: 1em;
 
       div.from-to { white-space: nowrap; }
+
+      details.desc > summary {
+        break-after: auto;
+      }
 
       details.desc .markdown ul {
         list-style-position: outside;
@@ -493,6 +505,8 @@ div.experiences {
       details.desc ~ .tech-org-container { display: none !important; }
       details.desc[open] ~ .tech-org-container { display: block !important; }
 
+      div.after-list { break-inside: auto; }
+
       div.tech-stack {
         page-break-inside: avoid;
         display: flex;
@@ -504,6 +518,7 @@ div.experiences {
         margin-top: $margin-top;
 
         .tech-logo {
+          break-inside: avoid;
           height: $logoHeight;
           width: auto;
           display: block;
@@ -522,6 +537,7 @@ div.experiences {
         margin-top: $margin-top;
 
         .org-logo {
+          break-inside: avoid;
           height: $logoHeight;
           width: auto;
           display: block;
