@@ -483,69 +483,72 @@ div.experiences {
       div.experience-desc { 
         break-inside: auto; 
 
-        div.positions { break-inside: auto; }
+        div.positions { 
+          break-inside: auto;
 
-        div.position{
-          $gap: 24px;
-          $logoHeight: 24px;
-          $margin-top: 1em;
+          div.position{
+            $gap: 24px;
+            $logoHeight: 24px;
+            $margin-top: 1em;
+            break-inside: auto;
 
-          div.from-to { white-space: nowrap; }
+            div.from-to { white-space: nowrap; }
 
-          details.desc > summary {
-            break-after: auto;
-          }
-
-          details.desc .markdown ul {
-            list-style-position: outside;
-            padding-left: 1.25em;
-            margin: 0.5rem 0;
-          }
-          details.desc .markdown li { margin: 0.2rem 0; }
-          details.desc .markdown li::marker { color: var(--color-text-soft); }
-
-          details.desc ~ .tech-org-container { display: none !important; }
-          details.desc[open] ~ .tech-org-container { display: block !important; }
-
-          div.after-list { break-inside: auto; }
-
-          div.tech-org-container {
-
-            div.tech-stack {
-              page-break-inside: avoid;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: flex-start;
-              align-items: center;      
-              column-gap: $gap;
-              row-gap: $gap;
-              margin-top: $margin-top;
-
-              .tech-logo {
-                break-inside: avoid;
-                height: $logoHeight;
-                width: auto;
-                display: block;
-                object-fit: contain;
-              }
+            details.desc > summary {
+              break-after: auto;
             }
 
-            div.organisations {
-              page-break-inside: avoid;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: flex-start;
-              align-items: center;
-              column-gap: $gap;
-              row-gap: $gap;
-              margin-top: $margin-top;
+            details.desc .markdown ul {
+              list-style-position: outside;
+              padding-left: 1.25em;
+              margin: 0.5rem 0;
+            }
+            details.desc .markdown li { margin: 0.2rem 0; }
+            details.desc .markdown li::marker { color: var(--color-text-soft); }
 
-              .org-logo {
-                break-inside: avoid;
-                height: $logoHeight;
-                width: auto;
-                display: block;
-                object-fit: contain;
+            details.desc ~ .tech-org-container { display: none !important; }
+            details.desc[open] ~ .tech-org-container { display: block !important; }
+
+            div.after-list { break-inside: auto; }
+
+            div.tech-org-container {
+
+              div.tech-stack {
+                page-break-inside: avoid;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;      
+                column-gap: $gap;
+                row-gap: $gap;
+                margin-top: $margin-top;
+
+                .tech-logo {
+                  break-inside: avoid;
+                  height: $logoHeight;
+                  width: auto;
+                  display: block;
+                  object-fit: contain;
+                }
+              }
+
+              div.organisations {
+                page-break-inside: avoid;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: $gap;
+                row-gap: $gap;
+                margin-top: $margin-top;
+
+                .org-logo {
+                  break-inside: avoid;
+                  height: $logoHeight;
+                  width: auto;
+                  display: block;
+                  object-fit: contain;
+                }
               }
             }
           }
