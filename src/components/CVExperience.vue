@@ -459,7 +459,7 @@ div.experiences {
 
     div.company{
       column-gap: 24px;
-      $companyLogoSize: 64px;
+      $companyLogoSize: 48px;
       grid-template-columns: 64px 1fr;
       grid-auto-rows: auto;
       break-inside: auto;
@@ -486,7 +486,7 @@ div.experiences {
 
         div.position{
           $gap: 24px;
-          $logoHeight: 32px;
+          $logoHeight: 24px;
           $margin-top: 1em;
 
           div.from-to { white-space: nowrap; }
