@@ -456,17 +456,6 @@ div.experiences {
 
   div.experiences { display: block !important; }
 
-  .company, .experience-top, .positions, .position, .tech-org-container, .after-list,
-  details.desc{ 
-    break-inside: avoid;
-  }
-
-  .page-break {
-    display: block;
-    break-after: page;
-    height: 0; margin: 0; padding: 0;
-  }
-
   div.experiences-top {
     min-height: $companyLogoSize;
     height: auto;
@@ -474,18 +463,13 @@ div.experiences {
   }
 
   div.company{
-    display: grid !important;
-    grid-template-columns: 64px 1fr !important;
-    column-gap: 16px !important;
+    column-gap: 24px;
     $companyLogoSize: 64px;
+    grid-template-columns: 64px 1fr;
       
-    img { break-inside: avoid; }
-
     img.company-logo {
-      max-height: $companyLogoSize !important;
-      height: auto;
+      page-break-inside: avoid; 
       max-width: $companyLogoSize * 1.1;
-      width: auto;
       height: $companyLogoSize;
       object-fit: contain;
       padding: 3px;
