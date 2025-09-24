@@ -549,7 +549,7 @@ div.experiences {
 
     div.position{
       $gap: 24px;
-      $logoHeight: 32px;
+      $logoHeight: 16px;
       $margin-top: 1em;
 
       div.tech-stack {
