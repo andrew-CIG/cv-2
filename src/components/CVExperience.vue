@@ -316,6 +316,8 @@ div.experiences {
     grid-auto-rows: minmax(72px, auto);
     column-gap: 32px;
 
+    div.page-break { display: none; }
+
     img.company-logo {
       page-break-inside: avoid;
       max-width: $companyLogoSize * 1.1;
@@ -443,12 +445,27 @@ div.experiences {
     }
   }
 }
+.page-break { display: none; }
 
 @media print {
+  .page-break {
+    display: block;
+    break-after: page;
+    height: 0; margin: 0; padding: 0;
+  }
+
+  div.experiences { display: block !important; }
+
+  div.experiences-top {
+    min-height: $companyLogoSize;
+    height: auto;
+    align-items: flex-start; 
+  }
 
   div.company{
     column-gap: 24px;
     $companyLogoSize: 64px;
+    grid-template-columns: 64px 1fr;
       
     img.company-logo {
       page-break-inside: avoid; 
@@ -462,6 +479,18 @@ div.experiences {
       $gap: 24px;
       $logoHeight: 32px;
       $margin-top: 1em;
+
+      div.from-to { white-space: nowrap; }
+
+      details.desc .markdown ul {
+        list-style-position: outside;
+        padding-left: 1.25em;
+        margin: 0.5rem 0;
+      }
+      details.desc .markdown li { margin: 0.2rem 0; }
+
+      details.desc ~ .tech-org-container { display: non !important; }
+      details.desc[open] ~ .tech-org-container { display: block !important; }
 
       div.tech-stack {
         page-break-inside: avoid;
