@@ -480,6 +480,15 @@ div.experiences {
         break-inside: auto;
       }
 
+      div.line {
+        break-inside: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-position-line);
+        width: 2px;
+        height: auto;
+      }
+
       div.experience-desc { 
         break-inside: auto; 
 
