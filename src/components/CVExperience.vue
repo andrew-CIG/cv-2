@@ -449,11 +449,23 @@ div.experiences {
 
 @media print {
   .page-break {
+    display: block;
     break-after: page;
     height: 0; margin: 0; padding: 0;
   }
 
   div.experiences { display: block !important; }
+
+  .company, .experience-top, .positions, .position, .tech-org-container, .after-list,
+  details.desc{ 
+    break-inside: avoid;
+  }
+
+  .page-break {
+    display: block;
+    break-after: page;
+    height: 0; margin: 0; padding: 0;
+  }
 
   div.experiences-top {
     min-height: $companyLogoSize;
@@ -462,13 +474,18 @@ div.experiences {
   }
 
   div.company{
-    column-gap: 24px;
+    display: grid !important;
+    grid-template-columns: 64px 1fr !important;
+    column-gap: 16px !important;
     $companyLogoSize: 64px;
-    grid-template-columns: 64px 1fr;
       
+    img { break-inside: avoid; }
+
     img.company-logo {
-      page-break-inside: avoid; 
+      max-height: $companyLogoSize !important;
+      height: auto;
       max-width: $companyLogoSize * 1.1;
+      width: auto;
       height: $companyLogoSize;
       object-fit: contain;
       padding: 3px;
@@ -487,6 +504,7 @@ div.experiences {
         margin: 0.5rem 0;
       }
       details.desc .markdown li { margin: 0.2rem 0; }
+      details.desc .markdown li::marker { color: var(--color-text-soft); }
 
       details.desc ~ .tech-org-container { display: non !important; }
       details.desc[open] ~ .tech-org-container { display: block !important; }
