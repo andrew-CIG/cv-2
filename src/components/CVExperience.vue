@@ -449,10 +449,11 @@ div.experiences {
 
 @media print {
   .page-break {
-    display: block;
     break-after: page;
     height: 0; margin: 0; padding: 0;
   }
+
+  div.experiences { display: block !important; }
 
   div.experiences-top {
     min-height: $companyLogoSize;
