@@ -456,6 +456,7 @@ div.experiences {
 
   div.experiences { 
     display: block !important;
+    break-inside: auto;
 
     div.company{
       column-gap: 24px;
