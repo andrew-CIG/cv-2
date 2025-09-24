@@ -449,8 +449,8 @@ div.experiences {
 
 @media print {
   .page-break {
-    display: block;
-    break-after: page;
+    /* display: block; */
+    /* break-after: page; */
     height: 0; margin: 0; padding: 0;
   }
 
