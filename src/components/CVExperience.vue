@@ -496,6 +496,8 @@ div.experiences {
 
             div.intro.markdown { break-inside: auto; }
 
+            details.desc { break-inside: auto; }
+
             details.desc > summary { break-inside: auto; }
 
             details.desc .markdown ul {
