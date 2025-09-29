@@ -455,7 +455,7 @@ div.experiences {
   }
 
   div.experiences { 
-    display: block !important;
+    /* display: block !important; */
     break-inside: auto;
 
     div.company{
