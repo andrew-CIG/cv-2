@@ -51,7 +51,7 @@ div.languages {
     div.language {
       display: grid;
       column-gap: 10px;
-      grid-template-columns: 20px 100px 1fr;
+      grid-template-columns: 20px 64px 1fr;
     }
   }
 }
