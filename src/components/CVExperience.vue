@@ -459,9 +459,9 @@ div.experiences {
     break-inside: auto;
 
     div.company{
-      column-gap: 24px;
-      $companyLogoSize: 48px;
-      grid-template-columns: 64px 1fr;
+      column-gap: 20px;
+      $companyLogoSize: 40px;
+      grid-template-columns: 48px 1fr;
       grid-auto-rows: auto;
       break-inside: auto;
         
