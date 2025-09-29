@@ -315,7 +315,7 @@ div.experiences {
     grid-auto-rows: minmax(72px, auto);
     column-gap: 24px;
 
-    div.page-break { display: none; }
+    div.page-break { display: auto; }
 
     img.company-logo {
       page-break-inside: avoid;
