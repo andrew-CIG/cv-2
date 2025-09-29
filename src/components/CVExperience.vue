@@ -455,7 +455,7 @@ div.experiences {
   }
 
   div.experiences { 
-    /* display: block !important; */
+    display: block;
     /* break-inside: auto; */
 
     div.company{
@@ -521,7 +521,7 @@ div.experiences {
             details.desc .markdown li::marker { color: var(--color-text-soft); }
 
             details.desc ~ .tech-org-container { display: none !important; }
-            details.desc[open] ~ .tech-org-container { display: block !important; }
+            details.desc[open] ~ .tech-org-container { display: block; }
 
             div.after-list { break-inside: auto; }
 
