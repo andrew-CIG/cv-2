@@ -392,7 +392,7 @@ div.experiences {
 
           div.intro.markdown { margin-top: 0.5rem; margin-bottom: 0.75rem; }
 
-          details.desc { margin-top: 0.25rem; page-break-after: auto; }
+          details.desc { margin-top: 0.25rem; break-inside: auto; }
             details.desc>summary { cursor: pointer; margin: 0.25rem 0 0.5rem ; color: var(--color-text); }
 
           div.after-list.markdown { margin: 0.75rem 0 0.75rem }
