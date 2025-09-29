@@ -314,7 +314,7 @@ div.experiences {
     display: grid;
     grid-template-columns: $companyLogoSize 1fr;
     grid-auto-rows: minmax(72px, auto);
-    column-gap: 32px;
+    column-gap: 24px;
 
     div.page-break { display: none; }
 
