@@ -455,8 +455,8 @@ div.experiences {
   }
 
   div.experiences { 
-    display:flex;
-    /* break-inside: auto; */
+    display:contents;
+    break-inside: auto;
 
     div.company{
       column-gap: 24px;
