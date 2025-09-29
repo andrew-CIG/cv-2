@@ -7,7 +7,7 @@ import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
-
+import { ref, watch } from 'vue';
 
 const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
 const mdToHtml = (s: string): string=>
@@ -42,6 +42,12 @@ const iconSrc = (name: string, folder = 'companies') => {
 const hideOnError = (e: Event) => {
   (e.target as HTMLImageElement).style.display = 'none';
 };
+
+const allExpanded = ref(false);
+watch(allExpanded, (on) => {
+  document.querySelectorAll<HTMLDetailsElement>('details.desc')
+  .forEach(d => { d.open = on; });
+});
 
 type Position = {
   title: string;
@@ -211,6 +217,13 @@ let experiences: Experience[] = [
 
 <template>
   <div class="experience">
+    <div class="details-toggle">
+      <label class="switch">
+        <input type="checkbox" v-model="allExpanded" />
+        <span class="slider" aria-hidden="true"></span>
+        <span class="label">{{ allExpanded ? 'Collapse details' : 'Show details' }}</span>
+      </label>
+    </div>
     <h2>Experience</h2>
     <div class="experiences">
       <div class="company" v-for="exp in experiences">
@@ -303,6 +316,30 @@ let experiences: Experience[] = [
 </template>
 
 <style lang="scss" scoped>
+
+.details-toggle { display: flex; align-items: center; gap: .75rem; margin: .75rem 0 .5rem; }
+
+.switch { display: inline-flex; align-items: center; gap: .5rem; cursor: pointer; }
+.switch input { position: absolute; opacity: 0; pointer-events: none; }
+
+.switch .slider {
+  width: 42px; height: 24px;
+  border-radius: 999px;
+  background: var(--color-bg-mute);
+  position: relative; transition: background .2s ease;
+  border: 1px solid var(--color-border);
+}
+.switch .slider::after {
+  content: "";
+  position: absolute; top: 50%; left: 2px; transform: translateY(-50%);
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--color-bg); border: 1px solid var(--color-border);
+  transition: left .2s ease;
+}
+.switch input:checked + .slider { background: var(--color-accent-soft, #dbeafe); }
+.switch input:checked + .slider::after { left: 22px; }
+.switch .label { font-size: .9rem; color: var(--color-text); }
+
 $companyLogoSize: 80px;
 
 div.experiences {
