@@ -492,7 +492,7 @@ div.experiences {
   }
 
   div.experiences { 
-    /* use 'display: block' or 'display: flex; flex-direction: column;' */
+    // use 'display: block' or 'display: flex; flex-direction: column;'
     display: flex; 
     break-inside: auto;
 
@@ -520,12 +520,12 @@ div.experiences {
 
       div.line {
         display: none !important;
-        break-inside: auto;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: var(--color-position-line);
-        width: 2px;
-        height: auto;
+        // break-inside: auto;
+        // margin-left: auto;
+        // margin-right: auto;
+        // background-color: var(--color-position-line);
+        // width: 2px;
+        // height: auto;
       }
 
       div.experience-desc { 
