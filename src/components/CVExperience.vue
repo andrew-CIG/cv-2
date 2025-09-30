@@ -356,7 +356,7 @@ div.experiences {
     div.page-break { display: auto; }
 
     img.company-logo {
-      page-break-inside: avoid;
+      // break-inside: avoid;
       max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       background-color: #fff;
@@ -370,7 +370,7 @@ div.experiences {
       flex-direction: column;
       justify-content: center;
       height: $companyLogoSize;
-      page-break-before: avoid;
+      // break-before: avoid;
 
       div.company-name { 
         font-size: 1.2em;
@@ -395,8 +395,8 @@ div.experiences {
     }
 
     div.line {
-      page-break-before: avoid;
-      page-break-after: avoid;
+      // break-before: avoid;
+      // break-after: avoid;
       margin-left: auto;
       margin-right: auto;
       background-color: var(--color-position-line);
@@ -405,17 +405,17 @@ div.experiences {
     }
 
     div.experience-desc {
-      page-break-before: avoid;
-      page-break-after: auto;
+      // break-before: avoid;
+      // break-after: auto;
 
       div.positions {
-        page-break-before: avoid;
+        // break-before: avoid;
         display: flex;
         flex-direction: column;
         row-gap: 1.8em;
 
         div.position {
-          page-break-before: auto;
+          // break-before: auto;
 
           div.title { font-weight: bold; font-size: 1em; }
 
@@ -439,7 +439,7 @@ div.experiences {
           details.desc[open] ~ .tech-org-container {display: block; }
 
           div.tech-stack {
-            page-break-inside: avoid;
+            // break-inside: avoid;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -459,7 +459,7 @@ div.experiences {
           }
 
           div.organisations {
-            page-break-inside: avoid;
+            // break-inside: avoid;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -495,6 +495,7 @@ div.experiences {
     // use 'display: block' or 'display: flex; flex-direction: column;'
     display: block; 
     break-inside: auto;
+    row-gap: 16px;
 
     div.company{
       column-gap: 20px;
@@ -512,7 +513,7 @@ div.experiences {
       }
       
       div.experience-top {
-        min-height: $companyLogoSize;
+        min-height: $companyLogoSize; // or use '0'??
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
