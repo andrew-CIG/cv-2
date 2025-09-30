@@ -493,8 +493,8 @@ div.experiences {
 
   div.experiences { 
     // use 'display: block' or 'display: flex; flex-direction: column;'
-    display: flex; 
-    flex-direction: column;
+    display: block; 
+    // flex-direction: column;
     break-inside: auto;
 
     div.company{
@@ -516,9 +516,9 @@ div.experiences {
         min-height: 0;
         height: auto;
         align-items: flex-start; 
-        break-before: auto;
-        break-inside: auto;
-        break-after: auto;
+        break-before: auto !important;
+        break-inside: auto !important;
+        break-after: auto !important;
       }
 
       div.line {
