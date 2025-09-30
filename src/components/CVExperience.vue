@@ -517,7 +517,6 @@ div.experiences {
         align-items: flex-start; 
         break-before: auto !important;
         break-inside: auto !important;
-        break-after: auto !important;
       }
 
       div.line {
@@ -535,12 +534,12 @@ div.experiences {
 
       div.experience-desc { 
         break-before: auto;
-        break-after: auto;
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
         padding-left: 16px; 
 
         div.positions { 
+          // break-before: auto;
           break-inside: auto;
 
           div.position{
@@ -550,9 +549,18 @@ div.experiences {
             break-inside: auto;
 
             div.title { break-inside: auto; }
-            div.from-to { white-space: nowrap; break-inside: auto;}
-            div.intro.markdown { break-inside: auto; }
-            details.desc { break-inside: auto; }
+            div.from-to { 
+              white-space: nowrap; 
+              break-inside: auto;
+            }
+            div.intro.markdown { 
+              // break-before: auto; 
+              break-inside: auto; 
+            }
+            details.desc { 
+              // break-before: auto; 
+              break-inside: auto; 
+            }
 
             details.desc > summary { display: list-item; }
 
@@ -560,10 +568,12 @@ div.experiences {
               list-style-position: outside;
               padding-left: 1.25em;
               margin: 0.5rem 0;
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li { 
               margin: 0.2rem 0; 
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
@@ -571,12 +581,15 @@ div.experiences {
             details.desc ~ .tech-org-container { display: none; }
             details.desc[open] ~ .tech-org-container { display: block; }
 
-            div.after-list { break-inside: auto; }
+            div.after-list { 
+              // break-before: auto;
+              break-inside: auto; 
+            }
 
             div.tech-org-container {
 
               div.tech-stack {
-                page-break-inside: avoid;
+                break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
@@ -587,7 +600,6 @@ div.experiences {
                 margin-top: $margin-top;
 
                 .tech-logo {
-                  break-inside: avoid;
                   height: $logoHeight;
                   width: auto;
                   display: block;
@@ -596,7 +608,7 @@ div.experiences {
               }
 
               div.organisations {
-                page-break-inside: avoid;
+                break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
@@ -607,7 +619,6 @@ div.experiences {
                 margin-top: $margin-top;
 
                 .org-logo {
-                  break-inside: avoid;
                   height: $logoHeight;
                   width: auto;
                   display: block;
