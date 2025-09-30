@@ -521,7 +521,7 @@ div.experiences {
 
       div.line {
         // display: none !important;
-        // break-before: auto;
+        break-before: auto;
         break-inside: auto;
         align-self: stretch;
         overflow: visible;
