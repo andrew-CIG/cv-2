@@ -516,7 +516,9 @@ div.experiences {
         min-height: 0;
         height: auto;
         align-items: flex-start; 
+        break-before: auto;
         break-inside: auto;
+        break-after: auto;
       }
 
       div.line {
@@ -530,6 +532,8 @@ div.experiences {
       }
 
       div.experience-desc { 
+        break-before: auto;
+        break-after: auto;
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
         padding-left: 16px; 
