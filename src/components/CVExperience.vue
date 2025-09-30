@@ -492,7 +492,6 @@ div.experiences {
   }
 
   div.experiences { 
-    // use 'display: block' or 'display: flex; flex-direction: column;'
     display: block; 
     break-inside: auto;
     row-gap: 16px;
@@ -521,7 +520,7 @@ div.experiences {
       }
 
       div.line {
-        // display: none !important;
+        display: none !important;
         break-before: auto;
         break-inside: auto;
         align-self: stretch;
