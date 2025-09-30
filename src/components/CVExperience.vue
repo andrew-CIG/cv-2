@@ -7,6 +7,7 @@ import FPG2015 from "@/assets/experiences/2015-fpg.md";
 import move2019 from "@/assets/experiences/2019-move.md";
 import CIG2020 from "@/assets/experiences/2020-cig.md";
 import { marked } from "marked";
+import { onMounted, onBeforeUnmount } from "vue";
 
 const BASE = import.meta.env.BASE_URL; // e.g., "/cv-2/"
 const mdToHtml = (s: string): string=>
@@ -206,6 +207,43 @@ let experiences: Experience[] = [
     pageBreak: false,
   },
 ];
+
+// --- Print helpers: force-open <details> for print, then restore ---
+onMounted(() => {
+  const beforePrint = () => {
+    document.querySelectorAll<HTMLDetailsElement>("details.desc").forEach(d => {
+      if (!d.open) {
+        d.setAttribute("data-was-closed", "1");
+        d.open = true;
+      }
+    });
+  };
+  const afterPrint = () => {
+    document.querySelectorAll<HTMLDetailsElement>("details.desc[data-was-closed]").forEach(d => {
+      d.open = false;
+      d.removeAttribute("data-was-closed");
+    });
+  };
+
+  // Standard print events
+  window.addEventListener("beforeprint", beforePrint);
+  window.addEventListener("afterprint", afterPrint);
+
+  // Safari/Firefox compatibility via matchMedia
+  const mq = window.matchMedia("print");
+  const mqHandler = (e: MediaQueryListEvent) => (e.matches ? beforePrint() : afterPrint());
+  if (mq.addEventListener) mq.addEventListener("change", mqHandler);
+  else if ((mq as any).addListener) (mq as any).addListener(mqHandler);
+
+  // Cleanup
+  onBeforeUnmount(() => {
+    window.removeEventListener("beforeprint", beforePrint);
+    window.removeEventListener("afterprint", afterPrint);
+    if (mq.removeEventListener) mq.removeEventListener("change", mqHandler);
+    else if ((mq as any).removeListener) (mq as any).removeListener(mqHandler);
+  });
+});
+
 </script>
 
 <template>
@@ -473,7 +511,7 @@ div.experiences {
       }
       
       div.experience-top {
-        min-height: $companyLogoSize;
+        min-height: 0;
         height: auto;
         align-items: flex-start; 
         break-inside: auto;
@@ -505,7 +543,7 @@ div.experiences {
             div.intro.markdown { break-inside: auto; }
             details.desc { break-inside: auto; }
 
-            details.desc > summary { break-inside: auto; }
+            details.desc > summary { display: none !important; }
 
             details.desc .markdown ul {
               list-style-position: outside;
@@ -519,7 +557,7 @@ div.experiences {
             }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
 
-            details.desc ~ .tech-org-container { display: none !important; }
+            details.desc ~ .tech-org-container { display: none; }
             details.desc[open] ~ .tech-org-container { display: block; }
 
             div.after-list { break-inside: auto; }
