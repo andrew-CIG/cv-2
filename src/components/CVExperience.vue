@@ -516,11 +516,12 @@ div.experiences {
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
-        break-inside: auto !important;
+        break-inside: avoid;
       }
 
       div.line {
         // display: none !important;
+        // break-before: auto;
         break-inside: auto;
         align-self: stretch;
         overflow: visible;
