@@ -499,13 +499,11 @@ div.experiences {
     div.company{
       column-gap: 20px;
       $companyLogoSize: 40px;
-      grid-template-columns: 48px 2px minmax(0, 1fr);
+      grid-template-columns: 48px 1fr;
       grid-auto-rows: auto;
-      align-items: start;
       break-inside: auto;
         
       img.company-logo {
-        display: block;
         break-inside: avoid; 
         max-width: $companyLogoSize * 1.1;
         height: $companyLogoSize;
@@ -518,7 +516,7 @@ div.experiences {
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
-        break-inside: auto;
+        break-inside: avoid;
       }
 
       div.line {
@@ -536,22 +534,16 @@ div.experiences {
       }
 
       div.experience-desc { 
-        min-width: 0;
-        overflow: visible;
         break-before: auto;
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
         padding-left: 16px; 
 
         div.positions { 
-          break-before: auto;
-          min-width: 0;
-          overflow: visible;
+          // break-before: auto;
           break-inside: auto;
 
           div.position{
-            break-before: auto;
-            min-width: 0;
             $gap: 24px;
             $logoHeight: 24px;
             $margin-top: 1em;
@@ -563,11 +555,11 @@ div.experiences {
               break-inside: auto;
             }
             div.intro.markdown { 
-              break-before: auto; 
+              // break-before: auto; 
               break-inside: auto; 
             }
             details.desc { 
-              break-before: auto; 
+              // break-before: auto; 
               break-inside: auto; 
             }
 
@@ -577,12 +569,12 @@ div.experiences {
               list-style-position: outside;
               padding-left: 1.25em;
               margin: 0.5rem 0;
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li { 
               margin: 0.2rem 0; 
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
@@ -591,7 +583,7 @@ div.experiences {
             details.desc[open] ~ .tech-org-container { display: block; }
 
             div.after-list { 
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto; 
             }
 
