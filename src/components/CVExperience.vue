@@ -512,7 +512,7 @@ div.experiences {
       }
       
       div.experience-top {
-        min-height: 0;
+        min-height: $companyLogoSize;
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
