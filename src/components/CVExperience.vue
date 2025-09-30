@@ -580,7 +580,7 @@ div.experiences {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                padding-left: 32px;
+                padding-left: 56px;
                 align-items: center;      
                 column-gap: $gap;
                 row-gap: $gap;
@@ -600,7 +600,7 @@ div.experiences {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                padding-left: 32px;
+                padding-left: 56px;
                 align-items: center;
                 column-gap: $gap;
                 row-gap: $gap;
