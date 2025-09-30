@@ -225,7 +225,7 @@ onMounted(() => {
     });
   };
 
-  // Standard print events
+  // Chrome/Edge
   window.addEventListener("beforeprint", beforePrint);
   window.addEventListener("afterprint", afterPrint);
 
@@ -494,6 +494,7 @@ div.experiences {
   div.experiences { 
     // use 'display: block' or 'display: flex; flex-direction: column;'
     display: flex; 
+    flex-direction: column;
     break-inside: auto;
 
     div.company{
@@ -531,7 +532,7 @@ div.experiences {
       div.experience-desc { 
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
-        // padding-left: 16px; 
+        padding-left: 16px; 
 
         div.positions { 
           break-inside: auto;
