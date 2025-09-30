@@ -395,8 +395,8 @@ div.experiences {
     }
 
     div.line {
-      /* page-break-before: avoid; */
-      /* page-break-after: avoid; */
+      page-break-before: avoid;
+      page-break-after: avoid;
       margin-left: auto;
       margin-right: auto;
       background-color: var(--color-position-line);
@@ -405,17 +405,17 @@ div.experiences {
     }
 
     div.experience-desc {
-      /* page-break-before: avoid; */
-      /* page-break-after: auto; */
+      page-break-before: avoid;
+      page-break-after: auto;
 
       div.positions {
-        /* page-break-before: avoid; */
+        page-break-before: avoid;
         display: flex;
         flex-direction: column;
         row-gap: 1.8em;
 
         div.position {
-          /* page-break-before: auto; */
+          page-break-before: auto;
 
           div.title { font-weight: bold; font-size: 1em; }
 
@@ -482,7 +482,7 @@ div.experiences {
     }
   }
 }
-/* .page-break { display: none; } */
+.page-break { display: none; }
 
 @media print {
   .page-break {
@@ -568,7 +568,7 @@ div.experiences {
                 page-break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;      
                 column-gap: $gap;
                 row-gap: $gap;
@@ -587,7 +587,7 @@ div.experiences {
                 page-break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 column-gap: $gap;
                 row-gap: $gap;
