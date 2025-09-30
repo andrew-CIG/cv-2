@@ -527,13 +527,10 @@ div.experiences {
         height: auto;
       }
 
-      div.experience-desc {
-        border-left: 2px solid var(--color-position-line);
-        padding-left: 16px;
-      }
-
       div.experience-desc { 
-        break-inside: auto; 
+        break-inside: auto;
+        border-left: 2px solid var(--color-position-line);
+        padding-left: 16px; 
 
         div.positions { 
           break-inside: auto;
@@ -549,7 +546,7 @@ div.experiences {
             div.intro.markdown { break-inside: auto; }
             details.desc { break-inside: auto; }
 
-            details.desc > summary { display: none !important; }
+            /* details.desc > summary { display: list-item; } */
 
             details.desc .markdown ul {
               list-style-position: outside;
