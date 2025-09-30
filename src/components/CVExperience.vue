@@ -552,7 +552,7 @@ div.experiences {
             div.intro.markdown { break-inside: auto; }
             details.desc { break-inside: auto; }
 
-            /* details.desc > summary { display: list-item; } */
+            details.desc > summary { display: list-item; }
 
             details.desc .markdown ul {
               list-style-position: outside;
