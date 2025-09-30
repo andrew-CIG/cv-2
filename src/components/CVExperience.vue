@@ -521,16 +521,16 @@ div.experiences {
 
       div.line {
         display: none !important;
-        break-before: auto;
-        break-inside: auto;
-        align-self: stretch;
-        overflow: visible;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: var(--color-position-line);
-        width: 2px;
-        min-height: 0;
-        height: auto;
+        // break-before: auto;
+        // break-inside: auto;
+        // align-self: stretch;
+        // overflow: visible;
+        // margin-left: auto;
+        // margin-right: auto;
+        // background-color: var(--color-position-line);
+        // width: 2px;
+        // min-height: 0;
+        // height: auto;
       }
 
       div.experience-desc { 
