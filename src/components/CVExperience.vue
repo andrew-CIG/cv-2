@@ -494,7 +494,6 @@ div.experiences {
   div.experiences { 
     // use 'display: block' or 'display: flex; flex-direction: column;'
     display: block; 
-    // flex-direction: column;
     break-inside: auto;
 
     div.company{
@@ -522,13 +521,13 @@ div.experiences {
       }
 
       div.line {
-        display: none !important;
-        // break-inside: auto;
-        // margin-left: auto;
-        // margin-right: auto;
-        // background-color: var(--color-position-line);
-        // width: 2px;
-        // height: auto;
+        // display: none !important;
+        break-inside: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-position-line);
+        width: 2px;
+        height: auto;
       }
 
       div.experience-desc { 
@@ -552,7 +551,7 @@ div.experiences {
             div.intro.markdown { break-inside: auto; }
             details.desc { break-inside: auto; }
 
-            details.desc > summary { display: list-item; }
+            // details.desc > summary { display: list-item; }
 
             details.desc .markdown ul {
               list-style-position: outside;
