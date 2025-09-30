@@ -505,6 +505,7 @@ div.experiences {
       break-inside: auto;
         
       img.company-logo {
+        display: block;
         break-inside: avoid; 
         max-width: $companyLogoSize * 1.1;
         height: $companyLogoSize;
@@ -517,21 +518,21 @@ div.experiences {
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
-        break-inside: avoid;
+        break-inside: auto;
       }
 
       div.line {
-        display: none !important;
-        // break-before: auto;
-        // break-inside: auto;
-        // align-self: stretch;
-        // overflow: visible;
-        // margin-left: auto;
-        // margin-right: auto;
-        // background-color: var(--color-position-line);
-        // width: 2px;
-        // min-height: 0;
-        // height: auto;
+        // display: none !important;
+        break-before: auto;
+        break-inside: auto;
+        align-self: stretch;
+        overflow: visible;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-position-line);
+        width: 2px;
+        min-height: 0;
+        height: auto;
       }
 
       div.experience-desc { 
