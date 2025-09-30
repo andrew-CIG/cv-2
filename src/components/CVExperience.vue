@@ -531,7 +531,7 @@ div.experiences {
       div.experience-desc { 
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
-        padding-left: 16px; 
+        // padding-left: 16px; 
 
         div.positions { 
           break-inside: auto;
