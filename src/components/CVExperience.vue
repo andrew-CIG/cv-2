@@ -493,7 +493,8 @@ div.experiences {
 
   div.experiences { 
     // use 'display: block' or 'display: flex; flex-direction: column;'
-    display: block; 
+    display: flex;
+    flex-direction: column; 
     break-inside: auto;
 
     div.company{
