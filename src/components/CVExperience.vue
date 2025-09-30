@@ -527,10 +527,13 @@ div.experiences {
         height: auto;
       }
 
-      div.experience-desc { 
-        break-inside: auto; 
+      div.experience-desc {
         border-left: 2px solid var(--color-position-line);
         padding-left: 16px;
+      }
+
+      div.experience-desc { 
+        break-inside: auto; 
 
         div.positions { 
           break-inside: auto;
@@ -571,7 +574,8 @@ div.experiences {
                 page-break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
+                padding-left: 32px;
                 align-items: center;      
                 column-gap: $gap;
                 row-gap: $gap;
@@ -590,7 +594,8 @@ div.experiences {
                 page-break-inside: avoid;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
+                padding-left: 32px;
                 align-items: center;
                 column-gap: $gap;
                 row-gap: $gap;
