@@ -543,7 +543,7 @@ div.experiences {
         overflow: visible;
 
         div.positions { 
-          break-before: auto;
+          // break-before: auto;
           break-inside: auto;
 
           div.position{
@@ -558,11 +558,11 @@ div.experiences {
               break-inside: auto;
             }
             div.intro.markdown { 
-              break-before: auto; 
+              // break-before: auto; 
               break-inside: auto; 
             }
             details.desc { 
-              break-before: auto; 
+              // break-before: auto; 
               break-inside: auto; 
             }
 
@@ -572,12 +572,12 @@ div.experiences {
               list-style-position: outside;
               padding-left: 1.25em;
               margin: 0.5rem 0;
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li { 
               margin: 0.2rem 0; 
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
@@ -586,7 +586,7 @@ div.experiences {
             details.desc[open] ~ .tech-org-container { display: block; }
 
             div.after-list { 
-              break-before: auto;
+              // break-before: auto;
               break-inside: auto; 
             }
 
