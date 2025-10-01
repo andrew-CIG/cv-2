@@ -499,7 +499,8 @@ div.experiences {
     div.company{
       column-gap: 20px;
       $companyLogoSize: 40px;
-      grid-template-columns: 48px 1fr;
+      grid-template-columns: 48 px 2px minmax(0, 1fr); // 48px 1fr;
+      align-items: start; // new
       grid-auto-rows: auto;
       break-inside: auto;
         
@@ -512,11 +513,11 @@ div.experiences {
       }
       
       div.experience-top {
-        min-height: $companyLogoSize; // or use '0'??
+        min-height: 0; // use $companyLogoSize or '0'??
         height: auto;
         align-items: flex-start; 
         break-before: auto !important;
-        break-inside: avoid;
+        break-inside: auto; // or avoid?
       }
 
       div.line {
