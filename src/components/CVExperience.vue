@@ -499,7 +499,7 @@ div.experiences {
     div.company{
       column-gap: 20px;
       $companyLogoSize: 40px;
-      grid-template-columns: 48 px 2px minmax(0, 1fr); // 48px 1fr;
+      grid-template-columns: 48px 2px minmax(0, 1fr); // 48px 1fr;
       align-items: start; // new
       grid-auto-rows: auto;
       break-inside: auto;
@@ -510,6 +510,7 @@ div.experiences {
         height: $companyLogoSize;
         object-fit: contain;
         padding: 3px;
+        grid-column: 1; // new
       }
       
       div.experience-top {
@@ -521,17 +522,19 @@ div.experiences {
       }
 
       div.line {
-        display: none !important;
-        // break-before: auto;
-        // break-inside: auto;
-        // align-self: stretch;
-        // overflow: visible;
-        // margin-left: auto;
-        // margin-right: auto;
-        // background-color: var(--color-position-line);
-        // width: 2px;
-        // min-height: 0;
-        // height: auto;
+        // display: none !important;
+        display: block; // new
+        grid-column: 2; // new
+        break-before: auto;
+        break-inside: auto;
+        align-self: stretch;
+        overflow: visible;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-position-line);
+        width: 2px;
+        min-height: 0;
+        height: auto;
       }
 
       div.experience-desc { 
@@ -541,6 +544,7 @@ div.experiences {
         padding-left: 16px; 
         min-width: 0;
         overflow: visible;
+        grid-column: 3; // new
 
         div.positions { 
           // break-before: auto;
