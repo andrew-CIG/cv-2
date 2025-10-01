@@ -494,7 +494,7 @@ div.experiences {
   div.experiences { 
     display: block; 
     break-inside: auto;
-    row-gap: 16px;
+    row-gap: 24px;
 
     div.company{
       column-gap: 20px;
@@ -539,9 +539,11 @@ div.experiences {
         break-inside: auto;
         border-left: 2px solid var(--color-position-line);
         padding-left: 16px; 
+        min-width: 0;
+        overflow: visible;
 
         div.positions { 
-          // break-before: auto;
+          break-before: auto;
           break-inside: auto;
 
           div.position{
@@ -556,11 +558,11 @@ div.experiences {
               break-inside: auto;
             }
             div.intro.markdown { 
-              // break-before: auto; 
+              break-before: auto; 
               break-inside: auto; 
             }
             details.desc { 
-              // break-before: auto; 
+              break-before: auto; 
               break-inside: auto; 
             }
 
@@ -570,12 +572,12 @@ div.experiences {
               list-style-position: outside;
               padding-left: 1.25em;
               margin: 0.5rem 0;
-              // break-before: auto;
+              break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li { 
               margin: 0.2rem 0; 
-              // break-before: auto;
+              break-before: auto;
               break-inside: auto;
             }
             details.desc .markdown li::marker { color: var(--color-text-soft); }
@@ -584,7 +586,7 @@ div.experiences {
             details.desc[open] ~ .tech-org-container { display: block; }
 
             div.after-list { 
-              // break-before: auto;
+              break-before: auto;
               break-inside: auto; 
             }
 
