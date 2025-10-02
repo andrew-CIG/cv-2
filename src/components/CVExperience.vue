@@ -456,6 +456,11 @@ div.experiences {
     break-after: page;
     height: 0; margin: 0; padding: 0;
   }
+  .experience-desc p, .experience-desc li {
+    orphans: 2;
+    widows: 2;
+    break-inside: auto;
+  }
 
   div.experiences {
     display: block;
@@ -521,10 +526,7 @@ div.experiences {
             break-inside: auto;
 
             div.title { break-inside: auto; }
-            div.from-to { 
-              // white-space: nowrap; 
-              break-inside: auto; 
-            }
+            div.from-to { white-space: normal; break-inside: auto; }
             div.intro.markdown { break-inside: auto; }
 
             details.desc { break-inside: auto; }
@@ -537,7 +539,7 @@ div.experiences {
             /* logo rows */
             div.tech-org-container {
               div.tech-stack, div.organisations {
-                break-inside: avoid;
+                break-inside: auto;
                 display: flex; flex-wrap: wrap; justify-content: flex-start;
                 padding-left: 56px; align-items: center;
                 column-gap: $gap; row-gap: $gap; margin-top: $margin-top;
