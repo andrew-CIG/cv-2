@@ -353,8 +353,6 @@ div.experiences {
     grid-auto-rows: minmax(72px, auto);
     column-gap: 24px;
 
-    div.page-break { display: auto; }
-
     img.company-logo {
       // break-inside: avoid;
       max-width: $companyLogoSize * 1.1;
@@ -590,6 +588,163 @@ div.experiences {
   }
 }
 
+@media print {
+  .page-break {
+    display: block;
+    break-after: page;
+    height: 0; margin: 0; padding: 0;
+  }
+
+  div.experiences { 
+    display: block; 
+    break-inside: auto;
+    row-gap: 16px;
+    margin-top: 1em;
+
+    div.company{
+      column-gap: 20px;
+      $companyLogoSize: 40px;
+      grid-template-columns: 48px 2px minmax(0, 1fr); // 48px 1fr;
+      align-items: start; // new
+      grid-auto-rows: auto;
+      break-inside: auto;
+        
+      img.company-logo {
+        break-inside: avoid; 
+        max-width: $companyLogoSize * 1.1;
+        height: $companyLogoSize;
+        object-fit: contain;
+        padding: 3px;
+        grid-column: 1; // new
+      }
+      
+      div.experience-top {
+        min-height: 0; // use $companyLogoSize or '0'??
+        height: auto;
+        align-items: flex-start; 
+        break-before: auto !important;
+        break-inside: auto; // or avoid?
+      }
+
+      div.line {
+        // display: none !important;
+        display: block; // new
+        grid-column: 2; // new
+        break-before: auto;
+        break-inside: auto;
+        align-self: stretch;
+        overflow: visible;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-position-line);
+        width: 2px;
+        min-height: 0;
+        height: auto;
+      }
+
+      div.experience-desc { 
+        break-before: auto;
+        break-inside: auto;
+        border-left: 2px solid var(--color-position-line);
+        padding-left: 16px; 
+        min-width: 0;
+        overflow: visible;
+        grid-column: 3; // new
+
+        div.positions { 
+          // break-before: auto;
+          break-inside: auto;
+
+          div.position{
+            $gap: 24px;
+            $logoHeight: 24px;
+            $margin-top: 1em;
+            break-inside: auto;
+
+            div.title { break-inside: auto; }
+            div.from-to { 
+              white-space: nowrap; 
+              break-inside: auto;
+            }
+            div.intro.markdown { 
+              // break-before: auto; 
+              break-inside: auto; 
+            }
+            details.desc { 
+              // break-before: auto; 
+              break-inside: auto; 
+            }
+
+            details.desc > summary { display: list-item; }
+
+            details.desc .markdown ul {
+              list-style-position: outside;
+              padding-left: 1.25em;
+              margin: 0.5rem 0;
+              // break-before: auto;
+              break-inside: auto;
+            }
+            details.desc .markdown li { 
+              margin: 0.2rem 0; 
+              // break-before: auto;
+              break-inside: auto;
+            }
+            details.desc .markdown li::marker { color: var(--color-text-soft); }
+
+            details.desc ~ .tech-org-container { display: none; }
+            details.desc[open] ~ .tech-org-container { display: block; }
+
+            div.after-list { 
+              // break-before: auto;
+              break-inside: auto; 
+            }
+
+            div.tech-org-container {
+
+              div.tech-stack {
+                break-inside: avoid;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding-left: 56px;
+                align-items: center;      
+                column-gap: $gap;
+                row-gap: $gap;
+                margin-top: $margin-top;
+
+                .tech-logo {
+                  height: $logoHeight;
+                  width: auto;
+                  display: block;
+                  object-fit: contain;
+                }
+              }
+
+              div.organisations {
+                break-inside: avoid;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding-left: 56px;
+                align-items: center;
+                column-gap: $gap;
+                row-gap: $gap;
+                margin-top: $margin-top;
+
+                .org-logo {
+                  height: $logoHeight;
+                  width: auto;
+                  display: block;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
 
@@ -599,7 +754,7 @@ div.experiences {
     grid-template-columns: 1fr;
       
     img.company-logo {
-      page-break-inside: avoid; 
+      break-inside: avoid; 
       max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       object-fit: contain;
@@ -612,7 +767,7 @@ div.experiences {
       $margin-top: 1em;
 
       div.tech-stack {
-        page-break-inside: avoid;
+        break-inside: avoid;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -630,7 +785,7 @@ div.experiences {
       }
 
       div.organisations {
-        page-break-inside: avoid;
+        break-inside: avoid;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
