@@ -480,7 +480,6 @@ div.experiences {
     }
   }
 }
-.page-break { display: none; }
 
 @media print {
   .page-break {
