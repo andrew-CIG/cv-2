@@ -472,7 +472,7 @@ div.experiences {
 
       img.company-logo { 
         grid-column: 1;
-        break-inside: avoid;
+        // break-inside: avoid;
         max-width: 44px;
         height: 40px;
         object-fit: contain;
@@ -521,7 +521,10 @@ div.experiences {
             break-inside: auto;
 
             div.title { break-inside: auto; }
-            div.from-to { white-space: nowrap; break-inside: auto; }
+            div.from-to { 
+              // white-space: nowrap; 
+              break-inside: auto; 
+            }
             div.intro.markdown { break-inside: auto; }
 
             details.desc { break-inside: auto; }
