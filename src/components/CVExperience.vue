@@ -492,27 +492,26 @@ div.experiences {
     display: block;
     break-inside: auto;
     row-gap: 24px;
+    margin-top: 1em;
 
     div.company {
-      /* corrected columns */
       grid-template-columns: 48px 2px minmax(0, 1fr);
       column-gap: 20px;
       align-items: start;
       grid-auto-rows: auto;
       break-inside: auto;
 
-      /* explicit placement for stability */
       img.company-logo { 
         grid-column: 1;
         break-inside: avoid;
-        max-width: 44px;   /* $companyLogoSize * 1.1 with 40px base */
-        height: 40px;      /* print logo cap */
+        max-width: 44px;
+        height: 40px;
         object-fit: contain;
         padding: 3px;
       }
 
       div.line {
-        display: block;           /* was: none */
+        display: block;
         grid-column: 2;
         align-self: stretch;
         background-color: var(--color-position-line);
@@ -521,7 +520,6 @@ div.experiences {
         height: auto;
         overflow: visible;
         break-inside: auto;
-        page-break-inside: auto;
       }
 
       div.experience-top {
