@@ -483,8 +483,6 @@ div.experiences {
     min-height: 0 !important;
     min-width: 0;
     overflow: visible;
-    page-break-inside: auto;
-    page-break-before: auto;
 
     div.company {
       display: grid;
@@ -494,7 +492,7 @@ div.experiences {
       grid-auto-rows: auto;
       break-inside: auto;
       padding: 0 !important;
-      white-space: nowrap;
+      white-space: collapse;
 
       img.company-logo { 
         grid-column: 1;
