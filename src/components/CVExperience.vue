@@ -352,7 +352,7 @@ div.experiences {
     display: grid;
     grid-template-columns: $companyLogoSize 2px minmax(0, 1fr);
     grid-auto-rows: minmax(72px, auto);
-    align-items: start; // new
+    align-items: start;
     column-gap: 24px;
     margin-bottom: 32px;
 
@@ -396,9 +396,9 @@ div.experiences {
     }
 
     div.line {
-      display: block; // new
+      display: block;
       grid-column: 2;
-      align-self: stretch; // new
+      align-self: stretch;
       margin-left: auto;
       margin-right: auto;
       background-color: var(--color-position-line);
@@ -421,8 +421,8 @@ div.experiences {
           div.title { font-weight: bold; font-size: 1em; }
 
           div.from-to {
-            display: block; // flex
-            // flex-direction: row;
+            display: flex;
+            flex-direction: row;
             column-gap: 5px;
             color: var(--color-text-soft);
             font-size: 0.9em;
