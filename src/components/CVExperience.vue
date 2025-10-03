@@ -395,15 +395,16 @@ div.experiences {
     }
 
     div.line {
-      display: block; // new
-      grid-column: 2;
-      align-self: stretch; // new
-      margin-left: auto;
-      margin-right: auto;
-      background-color: var(--color-position-line);
-      width: 2px;
-      height: auto;
-      overflow: visible;
+      display: none;
+      // display: block; // new
+      // grid-column: 2;
+      // align-self: stretch; // new
+      // margin-left: auto;
+      // margin-right: auto;
+      // background-color: var(--color-position-line);
+      // width: 2px;
+      // height: auto;
+      // overflow: visible;
     }
 
     div.experience-desc {
