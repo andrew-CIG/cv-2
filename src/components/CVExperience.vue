@@ -343,17 +343,19 @@ onMounted(() => {
 $companyLogoSize: 80px;
 
 div.experiences {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
+  display: block; //flex
+  // flex-direction: column;
+  row-gap: 24px; //16px
 
   div.company {
     display: grid;
-    grid-template-columns: $companyLogoSize 1fr;
+    grid-template-columns: $companyLogoSize 2px minmax(0, 1fr);
     grid-auto-rows: minmax(72px, auto);
+    align-items: start; // new
     column-gap: 24px;
 
     img.company-logo {
+      grid-column: 1;
       max-width: $companyLogoSize * 1.1;
       height: $companyLogoSize;
       background-color: #fff;
@@ -363,16 +365,17 @@ div.experiences {
     }
 
     div.experience-top {
-      display: flex;
-      flex-direction: column;
+      grid-column: 3;
+      display: block; // flex
+      // flex-direction: column;
       justify-content: center;
       height: $companyLogoSize;
 
       div.company-name { 
         font-size: 1.2em;
         font-weight: bold; 
-        display: flex;
-        flex-wrap: wrap;
+        display: block; // flex
+        // flex-wrap: wrap;
         align-items: baseline;
         column-gap: 0.5em;
 
@@ -391,14 +394,22 @@ div.experiences {
     }
 
     div.line {
+      display: block; // new
+      grid-column: 2;
+      align-self: stretch; // new
       margin-left: auto;
       margin-right: auto;
       background-color: var(--color-position-line);
       width: 2px;
       height: auto;
+      overflow: visible;
     }
 
     div.experience-desc {
+      grid-column: 3;
+      min-width: 0;
+      overflow: visible;
+
       div.positions {
         display: flex;
         flex-direction: column;
@@ -408,8 +419,8 @@ div.experiences {
           div.title { font-weight: bold; font-size: 1em; }
 
           div.from-to {
-            display: flex;
-            flex-direction: row;
+            display: block; // flex
+            // flex-direction: row;
             column-gap: 5px;
             color: var(--color-text-soft);
             font-size: 0.9em;
@@ -472,8 +483,9 @@ div.experiences {
     overflow: visible;
 
     div.company {
+      display: grid; // new
       grid-template-columns: 48px 2px minmax(0, 1fr);
-      column-gap: 20px;
+      column-gap: 16px;
       align-items: start;
       grid-auto-rows: auto;
       break-inside: auto;
