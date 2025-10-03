@@ -483,9 +483,11 @@ div.experiences {
     min-height: 0 !important;
     min-width: 0;
     overflow: visible;
+    page-break-inside: auto;
+    page-break-before: auto;
 
     div.company {
-      display: grid; // new
+      display: grid;
       grid-template-columns: 48px 2px minmax(0, 1fr);
       column-gap: 16px;
       align-items: start;
@@ -554,11 +556,9 @@ div.experiences {
             details.desc { break-inside: auto; }
             details.desc > summary { display: list-item; }
 
-            /* show logos only when details is open (print handlers ensure open) */
             details.desc ~ .tech-org-container { display: none; }
             details.desc[open] ~ .tech-org-container { display: block; }
 
-            /* logo rows */
             div.tech-org-container {
               div.tech-stack, div.organisations {
                 break-inside: auto;
