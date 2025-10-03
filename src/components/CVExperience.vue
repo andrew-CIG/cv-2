@@ -491,7 +491,7 @@ div.experiences {
       grid-auto-rows: auto;
       break-inside: auto;
       padding: 0 !important;
-      white-space: normal;
+      white-space-collapse: preserve-breaks;
 
       img.company-logo { 
         grid-column: 1;
