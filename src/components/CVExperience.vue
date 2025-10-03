@@ -350,8 +350,7 @@ div.experiences {
 
   div.company {
     display: grid;
-    grid-template-columns: $companyLogoSize 2px minmax(0, 1fr);
-    grid-auto-rows: minmax(72px, auto);
+    grid-template-columns: $companyLogoSize 1fr;
     align-items: start;
     column-gap: 24px;
     margin-bottom: 32px;
