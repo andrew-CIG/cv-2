@@ -535,6 +535,7 @@ div.experiences {
               min-width: 0;
             }
             div.intro.markdown { break-inside: auto; }
+            div.intro.markdown:first-child { margin-top: 0 !important;}
 
             details.desc { break-inside: auto; }
             details.desc > summary { display: list-item; }
@@ -560,6 +561,7 @@ div.experiences {
               }
             }
           }
+          div.position:first-child { margin-top: 0;}
         }
       }
     }
