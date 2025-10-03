@@ -346,6 +346,7 @@ div.experiences {
   display: block; //flex
   // flex-direction: column;
   row-gap: 24px; //16px
+  margin-top: 24px;
 
   div.company {
     display: grid;
