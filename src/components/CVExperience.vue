@@ -343,9 +343,9 @@ onMounted(() => {
 $companyLogoSize: 80px;
 
 div.experiences {
-  display: block; //flex
-  // flex-direction: column;
-  row-gap: 24px; //16px
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
   margin-top: 24px;
 
   div.company {
