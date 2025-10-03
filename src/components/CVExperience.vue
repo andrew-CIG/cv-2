@@ -501,7 +501,8 @@ div.experiences {
       }
 
       div.line {
-        display: block;
+        display: flex;
+        flex-direction: column;
         grid-column: 2;
         align-self: stretch;
         background-color: var(--color-position-line);
