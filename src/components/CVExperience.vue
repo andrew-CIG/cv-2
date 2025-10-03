@@ -479,10 +479,10 @@ div.experiences {
     break-inside: auto;
     row-gap: 24px;
     margin-top: 1em;
-    margin-bottom: 80px;
     min-height: 0 !important;
     min-width: 0;
     overflow: visible;
+    padding-bottom: 60px;
 
     div.company {
       display: grid; // new
