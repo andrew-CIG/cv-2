@@ -360,8 +360,8 @@ div.experiences {
       height: $companyLogoSize;
       background-color: #fff;
       object-fit: contain;
-      padding: 3px;
-      border-radius: 3px;
+      // padding: 3px;
+      // border-radius: 3px;
     }
 
     div.experience-top {
