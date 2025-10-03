@@ -501,15 +501,17 @@ div.experiences {
       }
 
       div.line {
-        display: block;
-        grid-column: 2;
-        align-self: stretch;
-        background-color: var(--color-position-line);
-        width: 2px;
-        min-height: 0;
-        height: auto;
-        overflow: visible;
-        break-inside: auto;
+        display: none;
+        // display: flex;
+        // flex-direction: column;
+        // grid-column: 2;
+        // align-self: stretch;
+        // background-color: var(--color-position-line);
+        // width: 2px;
+        // min-height: 0;
+        // height: auto;
+        // overflow: visible;
+        // break-inside: auto;
       }
 
       div.experience-top {
