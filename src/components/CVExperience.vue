@@ -493,6 +493,8 @@ div.experiences {
       align-items: start;
       grid-auto-rows: auto;
       break-inside: auto;
+      padding: 0 !important;
+      white-space: nowrap;
 
       img.company-logo { 
         grid-column: 1;
