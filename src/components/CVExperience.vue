@@ -395,16 +395,15 @@ div.experiences {
     }
 
     div.line {
-      display: none;
-      // display: block; // new
-      // grid-column: 2;
-      // align-self: stretch; // new
-      // margin-left: auto;
-      // margin-right: auto;
-      // background-color: var(--color-position-line);
-      // width: 2px;
-      // height: auto;
-      // overflow: visible;
+      display: block; // new
+      grid-column: 2;
+      align-self: stretch; // new
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--color-position-line);
+      width: 2px;
+      height: auto;
+      overflow: visible;
     }
 
     div.experience-desc {
@@ -503,17 +502,16 @@ div.experiences {
       }
 
       div.line {
-        display: none;
-        // display: flex;
-        // flex-direction: column;
-        // grid-column: 2;
-        // align-self: stretch;
-        // background-color: var(--color-position-line);
-        // width: 2px;
-        // min-height: 0;
-        // height: auto;
-        // overflow: visible;
-        // break-inside: auto;
+        display: flex;
+        flex-direction: column;
+        grid-column: 2;
+        align-self: stretch;
+        background-color: var(--color-position-line);
+        width: 2px;
+        min-height: 0;
+        height: auto;
+        overflow: visible;
+        break-inside: auto;
       }
 
       div.experience-top {
