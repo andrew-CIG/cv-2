@@ -494,7 +494,7 @@ div.experiences {
       grid-auto-rows: auto;
       break-inside: auto;
       padding: 0 !important;
-      white-space: nowrap;
+      // white-space: nowrap;
 
       img.company-logo { 
         grid-column: 1;
@@ -515,6 +515,7 @@ div.experiences {
         height: auto;
         overflow: visible;
         break-inside: auto;
+        white-space: nowrap;
       }
 
       div.experience-top {
