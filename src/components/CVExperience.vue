@@ -354,7 +354,7 @@ div.experiences {
     grid-auto-rows: minmax(72px, auto);
     align-items: start; // new
     column-gap: 24px;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
 
     img.company-logo {
       grid-column: 1;
