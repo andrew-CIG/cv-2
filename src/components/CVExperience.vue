@@ -479,7 +479,7 @@ div.experiences {
     break-inside: auto;
     row-gap: 24px;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 80px;
     min-height: 0 !important;
     min-width: 0;
     overflow: visible;
@@ -503,7 +503,6 @@ div.experiences {
 
       div.line {
         display: block;
-        // flex-direction: column;
         grid-column: 2;
         align-self: stretch;
         background-color: var(--color-position-line);
