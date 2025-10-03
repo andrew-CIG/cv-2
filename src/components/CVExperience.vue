@@ -495,6 +495,7 @@ div.experiences {
       break-inside: auto;
       padding: 0 !important;
       // white-space: nowrap;
+      white-space-collapse: collapse;
 
       img.company-logo { 
         grid-column: 1;
@@ -536,7 +537,6 @@ div.experiences {
         padding-left: 16px;
         min-width: 0;
         overflow: visible;
-        white-space: nowrap;
 
         div.positions {
           break-inside: auto;
