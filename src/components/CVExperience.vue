@@ -515,6 +515,7 @@ div.experiences {
         height: auto;
         overflow: visible;
         break-inside: auto;
+        page-break-inside: auto;
       }
 
       div.experience-top {
