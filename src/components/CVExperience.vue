@@ -375,8 +375,8 @@ div.experiences {
       div.company-name { 
         font-size: 1.2em;
         font-weight: bold; 
-        display: block; // flex
-        // flex-wrap: wrap;
+        display: flex; 
+        flex-wrap: wrap;
         align-items: baseline;
         column-gap: 0.5em;
 
