@@ -479,6 +479,7 @@ div.experiences {
     break-inside: auto;
     row-gap: 24px;
     margin-top: 1em;
+    margin-bottom: 1em;
     min-height: 0 !important;
     min-width: 0;
     overflow: visible;
@@ -493,7 +494,7 @@ div.experiences {
 
       img.company-logo { 
         grid-column: 1;
-        // break-inside: avoid;
+        break-inside: avoid;
         max-width: 44px;
         height: 40px;
         object-fit: contain;
