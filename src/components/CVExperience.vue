@@ -515,7 +515,6 @@ div.experiences {
         height: auto;
         overflow: visible;
         break-inside: auto;
-        page-break-inside: auto;
       }
 
       div.experience-top {
@@ -525,7 +524,6 @@ div.experiences {
         align-items: flex-start;
         break-before: auto !important;
         break-inside: auto;
-        white-space: nowrap;
       }
 
       div.experience-desc {
@@ -538,6 +536,7 @@ div.experiences {
         padding-left: 16px;
         min-width: 0;
         overflow: visible;
+        white-space: nowrap;
 
         div.positions {
           break-inside: auto;
